@@ -1,0 +1,333 @@
+---
+title: "Parasoziale Beziehungen im Zeitverlauf"
+subtitle: "(Computergestützte) Inhaltsanalyse von parasozialen Beziehungen auf YouTube"
+institute: "<br><br>Johannes Gutenberg-Universität Mainz<br>BA Inhaltsanalyse: Inhalte öffentlicher Kommunikation KF G<br>Wintersemester 2024/2025"
+author: "Felix Dietrich"
+logo: img/logo.png
+# footer: "BA Inhaltsanalyse (CCS Track) | 24-2 | Felix Dietrich"
+bibliography: "bib/24-2-ia.bib"
+csl: "bib/apa.csl"
+format: revealjs
+# css: fonts.css
+---
+
+```{r}
+#| include: false
+
+library(tidyverse)
+```
+
+
+# Willkommen!
+
+- Sie können horizontal durch die Sitzungen und vertikal innerhalb der Sitzungen navigieren
+- Verwenden Sie die Pfeiltasten
+- Verwenden Sie "M", um das Menü zu öffnen
+- Die Kurs-Website und alle Folien finden Sie unter <https://felixdidi.github.io/24-2-ia>
+- Drücken Sie `?` auf Ihrer Tastatur, um mehr darüber zu erfahren, wie Sie durch die Folien navigieren können!
+
+# Sitzung 01: Einführung
+
+<br>
+
+![](img/01/psb.jpeg){height=300px}
+
+<br>
+
+:::callout-warning
+## Ressourcen für diese Sitzung
+<https://felixdidi.github.io/24-2-ia/>
+
+@krippendorffContentAnalysisIntroduction2018; @neuendorfContentAnalysisGuidebook2017; @oehmer-pedrazziStandardisierteInhaltsanalyseKommunikationswissenschaft2023; @roesslerInhaltsanalyse2017; 
+:::
+
+:::aside
+Bild generiert mit FLUX.1-schnell: "A person waving towards a movie character on TV as a black and white cartoon"
+:::
+
+## Das Genre "Family-Vlog"
+
+::::columns
+
+:::column
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/n8vPNdYPnIs?si=mdjKkRlez5fjj1p4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+4 Mio. Aufrufe; 6,6 Mio. Abonnenten
+
+:::
+:::column
+> "You guys don’t know how much you mean to my daughter. You guys are so special and so amazing and I hope you guys know how many little people you make so happy. My daughter will forever know what family is because of you guys! Please shout out my daughter Haylee Heidt from Saskatoon Saskatchewan. She is 12 and in grade 6"
+
+> "I love you Titus and I love you right away I love all of you guys and your dad and mum ❤️ "
+:::
+::::
+
+:::fragment
+<br>
+
+- **Haben Sie schonmal ein ähnliches Video geschaut?**
+- **Was denken Sie: Warum schauen Menschen sich so etwas an?**
+:::
+
+## Los geht's!
+
+:::{.fragment .semi-fade-out fragment-index=1}
+
+**Welche sind die wichtigsten Fragen, die in dieser Sitzung beantwortet werden sollen?**
+
+- Worum geht es in diesem Kurs?
+- Was werde ich lernen?
+- Was werde ich tun (müssen)?
+
+:::
+
+:::{.fragment .fade-in-then-semi-out fragment-index=1}
+
+**Kurs-Website**
+
+- Verfügbar unter <https://felixdidi.github.io/24-2-ia>
+- Bitte nach dieser Sitzung im Detail ansehen
+
+:::
+
+:::fragment
+
+**Kursmaterial**
+
+- Wird über die Kurs-Website (und Moodle) bereitgestellt
+- Bitte prüfen Sie, ob Sie Zugang zur Moodle-Plattform haben
+- Sie sollten automatisch zum Moodle-Kurs hinzugefügt werden
+- Wenn Sie bis Ende dieser Woche keinen Zugang haben, schreiben Sie bitte eine E-Mail
+
+:::
+
+***
+
+### Vorstellungsrunde
+
+::::columns
+:::column
+:::{.fragment .semi-fade-out fragment-index=1}
+![](img/01/fd.jpg){width="85%" style="border: 2px solid #fabd2f; margin-left: 0 !important; margin-top: -20px; margin-bottom: 30px"}
+
+**Über Felix**
+
+- Doktorand & wiss. Mitarbeiter<br>am Fachbereich Medienpsychologie<br>*JGU Mainz*
+:::
+:::
+:::column
+
+:::{.fragment .fade-in-then-semi-out fragment-index=1}
+**Meine Forschungsinteressen umfassen:**
+
+- Rezeption und Wirkung von Unterhaltungsmedien
+- Algorithmische Kuratierung von Medieninhalten
+- Digitale Autonomie & mentale Gesundheit
+- Open & Computational Communication Science
+:::
+
+:::fragment
+
+**Und Sie?**
+
+- Wie ist Ihr Name?
+- Was ist Ihr Haupt- und Nebenfach?
+- Haben Sie schonmal etwas von PSI/PSB gehört? Wie groß ist Ihr Interesse an computergestützten Analysemethoden?
+
+:::
+:::
+::::
+
+***
+
+### Seminarübersicht
+
+*Theoretische Grundlagen & Empirische Umsetzung*
+
+| Datum      | Thema                                                |
+|------------|------------------------------------------------------|
+| 24.10.24   | Einführung & Organisation                            |
+| 31.10.24   | Parasoziale Beziehungen im Zeitverlauf               |
+| 07.11.24   | Eine Problemstellung entwickeln                      |
+| 14.11.24   | Grundlagen der manuellen Inhaltsanalyse              |
+| 21.11.24   | Chancen & Risiken automatisierter Methoden           |
+| 28.11.24   | Automatisierte Inhaltsanalyse 1                      |
+| 05.12.24   | Automatisierte Inhaltsanalyse 2                      |
+| 12.12.24   | Codebuch & Goldstandard                              |
+| 19.12.24   | Durchführung Inhaltsanalyse                          |
+
+***
+
+### Seminarübersicht
+
+*Auswertung & Aufbereitung*
+
+| Datum      | Thema                                                |
+|------------|------------------------------------------------------|
+| 09.01.25   | Datenanalyse 1: Reliabilität und Validität           |
+| 16.01.25   | Datenanalyse 2: Hypothesentests                      |
+| 23.01.25   | Rezfo 2025 (Keine Sitzung)                           |
+| 30.01.25   | Datenanalyse 3: Ergebnisaufbereitung                 |
+| 06.02.25   | Semesterabschluss und Informationen zum Projektbericht|
+| 17.03.25   | Einreichungsfrist für Hausarbeiten                   |
+
+<br><br>Hinweis: Die Seminarstruktur kann an die individuellen Bedürfnisse und Interessen der Projektgruppen angepasst werden.
+
+***
+
+### Was werde ich lernen?
+
+:::{.fragment .semi-fade-out fragment-index=1}
+
+**Expertise**
+
+- Forschung zur digitalen Mediennutzung, Fokus auf parasoziale Phänomene
+- Anwendung von **Inhaltsanalyse** auf Medieninhalte
+
+:::
+
+:::{.fragment .fade-in-then-semi-out fragment-index=1}
+
+**Methodische Kompetenz**
+
+- Entwicklung empirischer Forschungsdesigns zur Inhaltsanalyse (Schwerpunkt **Computational Communication Science**)
+- Durchführung und Dokumentation von **Datenanalyse** und Reflexion der methodischen Grenzen
+
+:::
+
+:::fragment
+
+**Persönliche Kompetenz**
+
+- **Problemlösungskompetenz** bei forschungsorientierten Aufgaben
+- **Übertragung** des Wissens auf ähnliche Fragestellungen
+
+:::
+
+***
+
+### Was muss ich tun?
+
+:::{.fragment .semi-fade-out fragment-index=1}
+
+**Seminar-Sitzungen**
+
+- Nehmen Sie an den Seminar-Sitzungen teil
+
+:::
+
+:::{.fragment .fade-in-then-semi-out fragment-index=1}
+
+**Leseaufgabe (siehe "Vorbereitung" im Seminarplan)**
+
+- Lesen Sie die bereitgestellte Literatur, um sich auf eine Seminar-Sitzung vorzubereiten
+- Orientieren Sie sich bei der Lektüre an den Fragen, die am Ende der letzten Sitzung gestellt wurden
+- Sie sollten in der Lage sein, diese Fragen in der Sitzung zu beantworten
+
+:::
+
+:::fragment
+
+**Wie man liest und wie man *nicht* lesen sollte?**
+
+- Lesen Sie wissenschaftliche Literatur nicht wie einen Roman
+- Beginnen Sie mit Titel, Zusammenfassung und Zwischenüberschriften, um einen ersten Eindruck zu gewinnen
+- Wenn Sie digital lesen, suchen Sie nach Schlüsselwörtern
+- Überlegen Sie: "Was will ich von diesem Text?"
+- Beantworten Sie Ihre eigenen Fragen (ich werde auch einige stellen)
+
+:::
+  
+***
+
+### Was muss ich tun?
+
+:::{.fragment .semi-fade-out fragment-index=1}
+
+**Arbeit in den Arbeitsgruppen**
+
+- Gruppenarbeit im Seminar: ca. 5 Studierende pro Gruppe  
+- Maximal 5 Arbeitsgruppen im Seminar  
+- Prinzip: "Learning by doing"  
+- Studierende sammeln praktische Erfahrungen in Arbeitsgruppen (AGs)  
+- Austausch mit anderen AGs: Kennenlernen von Methoden, Themen und Arbeitsweisen  
+- Feedback geben und erhalten: zur eigenen und zu anderer AG-Arbeit
+:::
+
+:::{.fragment fragment-index=1}
+
+**Präsentation des Projektfortschritts (nicht benotet)**
+
+- Wöchentliche Gruppensitzungen während des Seminartermins  
+- Fester Bestandteil: 5-Minuten-Gruppenbericht, präsentiert von einem Gruppenmitglied  
+- Jedes Mitglied präsentiert im Laufe des Seminars einmal  
+- Nach jedem Bericht: Feedbackrunde (Gruppe und Seminarteilnehmer)  
+- Alternative Sitzungen: offene Arbeitssitzung oder Sprechstunde  
+- Weitere Infos zur Gruppenarbeit: siehe Aufgabe Woche 1
+  
+:::
+
+***
+
+### Was muss ich tun?
+
+**Abgabe von Methodenübungen (nicht benotet)**
+
+*In der Gruppe:*
+
+- Allgemeine Aufgaben für alle Gruppen: in der Spalte "Aufgaben" der Seminarübersicht
+  - Müssen i.d.R. nicht abgegeben werden
+  - Orientieren sich am Fortschritt der Gruppenarbeit
+  
+*Individuell:*
+
+- Insgesamt drei "Hausaufgaben" zu Methodenübungen
+  - Abgabe der *R*-Datei via Moodle
+  - Weitere Informationen in den entsprechenden Sitzungen
+
+***
+
+### Was muss ich tun?
+
+**Benotete Leistung ("Prüfungsleistung")**
+
+- Informationen auf der Kurswebsite & in der letzten Sitzung
+
+## Allgemeine Literatur
+
+::::columns
+:::{.column width="33%"}
+![](https://images-na.ssl-images-amazon.com/images/I/51+sDU+LbxL._SX347_BO1,204,203,200_.jpg)
+:::
+:::{.column width="33%"}
+![](https://media.springernature.com/full/springer-static/cover-hires/book/978-3-658-36179-2?as=webp)
+:::
+:::{.column width="33%"}
+![](https://pictures.abebooks.com/isbn/9781506395661-us.jpg)
+:::
+::::
+
+***
+
+:::big-text
+Soweit Fragen?
+:::
+
+<br><br>
+
+:::center-text
+<https://felixdidi.github.io/24-2-ia>
+:::
+
+
+***
+
+:::big-text
+Gruppenbildung
+:::
+
+
+
+# Literaturangaben
+

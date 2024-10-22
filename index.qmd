@@ -1,0 +1,150 @@
+---
+title: "Parasoziale Beziehungen im Zeitverlauf"
+subtitle: "(Computergestützte) Inhaltsanalyse von parasozialen Beziehungen auf YouTube"
+author: "Felix Dietrich"
+categories:
+  - "BA Inhaltsanalyse: Inhalte öffentlicher Kommunikation KF G"
+  - "Wintersemester 2024/2025"
+csl: "bib/apa.csl"
+bibliography: "bib/24-2-ia.bib"
+---
+
+Parasoziale Beziehungen (PSB) sind einseitige Verbindungen zwischen Mediennutzer:innen und Medienpersonae, welche im Gegensatz zur parasozialen Interaktion (PSI) jedoch über einzelne Rezeptionssituationen hinausreichen. Ähnlich zwischenmenschlichen Beziehungen haben PSBs einen Prozesscharakter: Nach der Entstehung werden sie gepflegt, entwickeln sich weiter und können durch eine Trennung beendet werden. Entgegen der theoretischen Konzeptionalisierung basiert ein Großteil der empirischen Befunde zu PSBs jedoch auf korrelativen Querschnittsdaten, wodurch "die dynamischen Entwicklungen parasozialer Phänomene und deren Wechselwirkungen mit anderen Einflussfaktoren im Zeitverlauf" [@liebers60JahreForschung2017, p. 48–49] bislang wenig Beachtung erhielten. Mithilfe eines großformatigen Datensatzes von YouTube-Videos (Family-Vlogs) sowie den zugehörigen Nutzer:innen-Kommentaren werden wir im Rahmen des Seminars Prädiktoren für sowie die zeitliche Entwicklung von Intimität (Beziehungsnähe) und Intensität (affektive Valenz) parasozialer Beziehungen mit Social-Media-Personae untersuchen.
+
+Der Kurs ist Teil des Computational Methods Angebotes, d.h. er bietet die Möglichkeit, Verfahren der automatischen Inhaltsanalyse kennenzulernen und praktisch an Beispielen einzuüben. Es steht den Studierenden jedoch frei, im Rahmen der Projektarbeit manuelle Inhaltsanalysen durchzuführen.
+
+## Seminarübersicht
+
+**Hinweis**: Folien, Übungen und Materialien zur Sitzungsvorbereitung werden im Laufe des Semesters ergänzt und aktualisiert. Bitte besuchen Sie die Kurs-Website regelmäßig!
+
+**Vorbereitung**: Die in der Spalte "Vorbereitung" verlinkten Aufgaben sind in Vorbereitung auf die anstehende Sitzung zeitnah vor der Sitzung zu erledigen!
+
+**Aufgaben**: Die in der Spalte "Aufgaben" verlinkten Aufgaben sind in der Nachbereitung einer Sitzung zeitnah nach der jeweiligen Sitzung zu erledigen!
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(gt)
+library(tidyverse)
+d <- readxl::read_xlsx("schedule.xlsx")
+```
+
+```{r}
+#| echo: false
+
+d |>
+  mutate(
+    Datum = as.Date(Datum),
+    Woche = ifelse(is.na(Woche), "", Woche)
+  ) |>
+  gt() |>
+  text_transform(cells_body(columns = c(Thema, Sitzungsart)),
+    fn = function(x) {
+      ifelse(str_detect(x, "Rezfo 2025"),
+             str_c("<p style='opacity: .4;'>", x, "</p>"),
+             x
+      )
+    }
+  ) |>
+  text_transform(cells_body(columns = c(Vorbereitung)),
+    fn = function(x) {
+      ifelse(is.na(x), str_c("<a style='opacity: 0.1;'>", fontawesome::fa("book"),"</a>"),
+        str_c("<a href =", x, ">", fontawesome::fa("book"), "</a>")
+      )
+    }
+  ) |>
+  text_transform(cells_body(columns = c(Folien)),
+    fn = function(x) {
+      ifelse(is.na(x), str_c("<a style='opacity: 0.1;'>", fontawesome::fa("laptop"),"</a>"),
+        str_c("<a href =", x, ">", fontawesome::fa("laptop"), "</a>")
+      )
+    }
+  ) |>
+  text_transform(cells_body(columns = c(Aufgaben)),
+    fn = function(x) {
+      ifelse(is.na(x), str_c("<a style='opacity: 0.1;'>", fontawesome::fa("file-circle-check"),"</a>"),
+        str_c("<a href =", x, ">", fontawesome::fa("file-circle-check"), "</a>")
+      )
+    }
+  ) |> 
+  fmt_date(Datum, date_style = 30, locale = "de") |>
+  sub_missing(columns = c(Datum, Thema, Sitzungsart), missing_text = "") |>
+  cols_align(
+    align = "center", 
+    columns = c(Woche, Vorbereitung, Folien, Aufgaben)
+    ) |>
+  cols_align(
+    align = "left", 
+    columns = c(Datum, Thema, Sitzungsart)
+    ) |>
+  cols_width(
+    "Datum" ~ px(75),
+    "Vorbereitung" ~ px(80),
+    "Folien" ~ px(80),
+    "Aufgaben" ~ px(80),
+  ) |>
+  tab_options(quarto.disable_processing = TRUE) |>
+  tab_row_group(label = "Einführung", rows = 1) |>
+  tab_row_group(label = "Theoretische Grundlagen", rows = 2:3) |>
+  tab_row_group(label = "Empirische Umsetzung", rows = 4:10) |>
+  tab_row_group(label = "Auswertung & Aufbereitung", rows = 11:14) |>
+  tab_row_group(label = "Abschluss", rows = 15:16) |>
+  tab_style(
+    style = list(
+      cell_text(align = "center"),
+      cell_fill(color = "#D3D3D3")
+    ),
+    locations = cells_row_groups(groups = TRUE)
+  ) |>
+  row_group_order(groups = c("Einführung", "Theoretische Grundlagen", "Empirische Umsetzung",
+                             "Auswertung & Aufbereitung", "Abschluss"))
+
+```
+
+## Was werde ich lernen?
+
+Nach dem Kurs haben Sie einen grundlegenden Überblick über aktuelle Themen und Fragestellungen der Forschung zu digitaler Unterhaltungsmediennutzung mit einem Fokus auf parasoziale Phänomene (parasoziale Interaktion & Beziehung). Sie erwerben weiterhin ein Verständnis für die Anwedung (computergestützter) Methoden zur Analyse von Medieninhalten (Inhaltsanalyse); Sie sind in der Lage, das erworbene Wissen auf neue Forschungsgebiete anzuwenden und eigene spezifische Forschungsfragen zu entwickeln.
+
+### Methodische Kompetenz
+
+Sie sind in der Lage, selbstständig eine theoretisch fundierte Problemstellung und ein Forschungsdesign im Bereich der empirischen Medienunterhaltungsforschung mit einem Schwerpunkt auf Computational Communication Science zu entwickeln; Sie können Analysen mit einem der in den Übungen vorgestellten methodischen Ansätze durchführen; Sie können die Ergebnisse Ihrer Analysen in einem Forschungsbericht dokumentieren und die Grenzen Ihrer Erkenntnisse hinsichtlich Reliabilität und Validität reflektieren.
+
+### Persönliche Kompetenz
+
+Der Kurs unterstützt Sie bei der Entwicklung von Problemlösungskompetenzen im Hinblick auf forschungsdesignorientierte Fragestellungen. Durch das selbstständige Lösen von Übungsaufgaben und die Umsetzung eines eigenen Forschungsprojekts wird Ihre Fähigkeit gefördert, den gelernten Stoff auf verwandte Fragestellungen zu übertragen, so dass Sie in Zukunft eigene forschungsorientierte Aufgabenstellungen sicher angehen können.
+
+## Was muss ich tun?
+
+Der Kurs wird in wöchentlichen Seminar-Sitzungen abgehalten. Die Sitzungen werden *nicht* gestreamt und nicht aufgezeichnet. Die meisten Kursmaterialien werden über diese Kurs-Website bereitgestellt. Alle Studierenden, die am Kurs teilnehmen, müssen jedoch auch Zugang zum virtuellen Lernraum auf der [Moodle-Plattform](https://lms.uni-mainz.de) haben, da vertrauliche Kursmaterialien über Moodle bereitgestellt/freigegeben werden können und Übungen dort eingereicht werden müssen.
+
+### Studienleistungen zur Erbringung der aktiven Teilnahme
+
+Wenn Sie eine Note für den Kurs erhalten möchten, sind Sie verpflichtet, die folgenden regelmäßigen Leistungen zu erbringen. Diese Leistungen werden nicht benotet. Allerdings: Wenn Sie diese Aufgaben nicht erfüllen, können Sie den Kurs nicht bestehen.
+
+**Wöchentliche Vorbereitung auf die Seminar-Sitzungen:** Um sich auf eine Seminar-Sitzung vorzubereiten, klicken Sie bitte auf das Icon in der Spalte "Vorbereitung" in der Kursübersicht. Dort erhalten Sie detaillierte Informationen zur Vorbereitung. Es kann zum Beispiel sein, dass Sie Literatur lesen müssen und/oder dass Sie einige Fragen gestellt bekommen. Sie sollten in der Lage sein, diese Fragen in der Sitzung zu beantworten. Im Laufe des Semesters kann weiteres Vorbereitungsmaterial hinzukommen. Schauen Sie daher bitte regelmäßig und rechtzeitig vor der nächsten Sitzung auf der Kurswebsite nach.
+
+**Arbeit in den Arbeitsgruppen:** Die Gruppenarbeit im Seminar umfasst jeweils ca. fünf Studierende pro Gruppe, was in der Regel zu maximal fünf Arbeitsgruppen führt. Diese Zusammenarbeit basiert auf dem Prinzip "Learning by doing", wobei die Studierenden direkt in ihren Arbeitsgruppen (AGs) praktische Erfahrungen sammeln. Dabei profitieren Sie nicht nur von der eigenen Gruppenarbeit, sondern auch vom Austausch mit anderen AGs: Sie können deren Methoden, Themen und Arbeitsweisen kennenlernen und so Ihren eigenen Arbeitsprozess bereichern. Ein wichtiger Bestandteil dieses Lernprozesses ist das Geben und Empfangen von Feedback – sowohl zur eigenen Arbeit als auch zur Arbeit der anderen AGs.
+
+**Präsentation des Projektfortschritts:** Die Gruppensitzungen finden wöchentlich im Rahmen des Seminartermins statt. Ein fester Bestandteil jeder Sitzung ist der 5-Minuten-Gruppenbericht, der von einem Gruppenmitglied präsentiert wird. Jedes Mitglied ist im Laufe des Seminars einmal für einen Bericht zuständig. Nach jedem Bericht gibt es eine Feedbackrunde, in der sowohl die Gruppe als auch der Rest des Seminars Rückmeldungen geben können. Falls in einer Sitzung keine Gruppenberichte anstehen, dient diese als offene Arbeitssitzung oder Sprechstunde, in der offene Fragen geklärt und individuelle Anliegen besprochen werden können. Weitere allgemeine Informationen zur Gruppenarbeit finden Sie in der [Aufgabe zu Woche 1](exercises/e01.html). Allgemeine Aufgaben für alle Gruppen finden sich jeweils in der Spalte "Aufgaben" der Seminarübersicht der jeweiligen Woche.
+
+### Schriftlicher Projektbericht (benotet)
+
+Der Projektbericht soll pro Gruppenmitglied maximal 10 Seiten umfassen, wobei insgesamt etwa 10.000 Wörter (ca. 40 Seiten) als Richtwert gelten. Die Seitenanzahl ist jedoch lediglich eine Orientierung; im Vordergrund steht die Qualität der Ausarbeitung. Entscheidend ist eine fundierte Bearbeitung des Themas, eine sorgfältige Analyse der Daten sowie eine sachgerechte Einordnung der Ergebnisse. Wichtige Grafiken und Tabellen sollen in den Text integriert werden, während ergänzende Analysen im Anhang Platz finden. Die Hausarbeit soll die folgenden Bestandteile enthalten: Einleitung, Theorie-/Literaturteil, Methoden, Ergebnisse und Diskussion. Zudem ist die Dokumentation der eigenen Arbeit unerlässlich, wobei Sie selbstverständlich die im Verlauf des Semester angefertigte Dokumentation weiterverwerten können. Wichtig ist, dass es nicht zwingend "signifikante" Ergebnisse geben muss – der Lernprozess steht im Vordergrund. Die Einhaltung der Formalien und Regeln wissenschaftlicher Arbeit ist notenrelevant. Viele Inhalte und Anforderungen werden bereits im Verlauf des Semester in den Kleingruppen besprochen — bei Bedarf können jedoch auch Sprechstundentermine vereinbart werden, um konkrete Fragen zu besprechen.
+
+Weitere Informationen zur Hausarbeit finden Sie auf [der hier verlinkten Seite](exercises/term_paper.html) und werden in der letzten Sitzung des Semesters besprochen.
+
+## Ergänzende Angebote
+
+Die JGU bietet einige spezielle Angebote, die Ihnen die Studiengestaltung erleichtern:
+
+- "Blended Counseling"-Module mit Tipps und Übungen u.a. zu Entspannung, Projektplanung, Stressbewältigung: <https://www.pbs.uni-mainz.de/3868-2/>
+- Angebote (u.a. Kurse, Sprechstunden, Beratung bei Schreibproblemen) der psychotherapeutischen Beratungsstelle: <https://www.pbs.uni-mainz.de/>
+- Tipps bei Entscheidungsschwierigkeiten, zu u.a. Lernstrategien, Prüfungsangst, Schlafstörungen: <https://www.pbs.uni-mainz.de/>; insbesondere Zeitmanagement: <https://www.pbs.uni-mainz.de/files/2018/10/Tipps_zum_Zeitmanagement_neues_Logo.pdf>
+- Selbsthilfeportal mit Tipps, Podcasts rund ums Studium: <https://www.me-at-jgu.de/>
+- Selbstverständlich können Sie zunächst auch auf diejenigen zugehen, die Sie bereits kennen: mich, andere Dozierende und das Studienbüro
+
+## Disclaimer
+
+Die Texte in diesem Seminarplan wurden teilweise mit der Hilfe von "KI"-Software überarbeitet und übersetzt [@openaiChatGPT2024; @deeplDeepL2024].

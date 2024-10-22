@@ -1,0 +1,42 @@
+project:
+  type: website
+  lib-dir: site_libs
+
+website:
+  sidebar:
+    style: "floating"
+    align: "center"
+    logo: "img/logo.png"
+    search: true
+    contents:
+      - section: "Kursinformationen"
+        contents:
+          - href: "index.qmd"
+            text: "Übersicht"
+          - href: "https://lms.uni-mainz.de"
+            text: "Moodle"
+          - href: "https://www.mediapsychology.ifp.uni-mainz.de/felix-dietrich/"
+            text: "Kontakt"
+          - href: "exercises/term_paper.html"
+            text: "Hausarbeit"
+      - section: "Materialien"
+        contents:
+          - href: "slides/slides.html"
+            text: "Folien"
+
+format:
+  html:
+    toc: true
+    number-sections: false
+    smooth-scroll: true
+    footnotes-hover: true
+    code-fold: false
+  #  code-tools: true
+    code-line-numbers: true
+    highlight-style: gruvbox
+    lang: de-DE
+theme:
+  light: [cosmo, theme.scss]
+  
+execute:
+  freeze: auto

@@ -1,0 +1,49 @@
+---
+title: "Aufgabe 01"
+author: "Felix Dietrich"
+categories:
+  - "BA Inhaltsanalyse: Inhalte öffentlicher Kommunikation KF G"
+  - "Wintersemester 2024/2025"
+# csl: "../bib/apa.csl"
+# bibliography: "../bib/24-1-nmok.bib"
+# suppress-bibliography: true
+# link-citations: false
+---
+
+## Machen Sie sich mit dem Kurs vertraut
+
+Bitte lesen Sie die Kurs-Website sorgfältig durch und sammeln Sie alle Fragen, die sich ergeben könnten, damit Sie sie in der nächsten Sitzung stellen können.
+
+## Bildung der Arbeitsgruppen
+
+Bilden Sie eine Arbeitsgruppe mit maximal 5 Studierenden und melden Sie die Zusammensetzung im Anschluss an die erste Sitzung (spätestens Freitag, 25.10. 12:00 Uhr) via E-Mail an den Dozenten.
+
+## Arbeit in den Arbeitsgruppen
+
+Die Gruppenarbeit im Seminar umfasst jeweils ca. fünf Studierende pro Gruppe, was in der Regel zu maximal fünf Arbeitsgruppen führt. Diese Zusammenarbeit basiert auf dem Prinzip "Learning by doing", wobei die Studierenden direkt in ihren Arbeitsgruppen (AGs) praktische Erfahrungen sammeln. Dabei profitieren Sie nicht nur von der eigenen Gruppenarbeit, sondern auch vom Austausch mit anderen AGs: Sie können deren Methoden, Themen und Arbeitsweisen kennenlernen und so Ihren eigenen Arbeitsprozess bereichern. Ein wichtiger Bestandteil dieses Lernprozesses ist das Geben und Empfangen von Feedback – sowohl zur eigenen Arbeit als auch zur Arbeit der anderen AGs.
+
+### Struktur der wöchentlichen Gruppensitzungen
+
+Die Gruppensitzungen finden wöchentlich im Rahmen des Seminartermins statt. Ein fester Bestandteil jeder Sitzung ist der **5-Minuten-Gruppenbericht**, der von einem Gruppenmitglied präsentiert wird. Jedes Mitglied ist im Laufe des Seminars einmal für einen Bericht zuständig. Nach jedem Bericht gibt es eine Feedbackrunde, in der sowohl die Gruppe als auch der Rest des Seminars Rückmeldungen geben können. Falls in einer Sitzung keine Gruppenberichte anstehen, dient diese als offene Arbeitssitzung oder Sprechstunde, in der offene Fragen geklärt und individuelle Anliegen besprochen werden können.
+
+Darüber hinaus gibt es in vielen Sitzungen **Refresher und Diskussionen zu methodischen Grundlagen** sowie Besprechungen der nächsten Arbeitsschritte der einzelnen Gruppen. Diese Struktur hilft dabei, den Arbeitsprozess klar und fokussiert zu gestalten.
+
+### Aufgabenverteilung und Gruppenberichte
+
+Um eine klare Aufgabenverteilung sicherzustellen, ist jedes Gruppenmitglied einmal federführend für ein bestimmtes Sitzungsthema sowie den dazugehörigen Bericht in der jeweils nächsten Sitzung. Die Verantwortung umfasst:
+
+- **Protokollierung des Diskussionsprozesses** in der Arbeitsgruppe,
+- **Vorbereitung einer Kurzpräsentation** (5 Minuten, 2-3 Folien), die den aktuellen Stand der Gruppenarbeit zusammenfasst,
+- **Upload der Präsentationsfolien** bis spätestens Donnerstag, 8 Uhr, vor der nächsten Sitzung.
+
+Diese klare Aufgabenstruktur ermöglicht es, die Arbeitsschritte effizient zu organisieren und sicherzustellen, dass jedes Gruppenmitglied aktiv zur Arbeit der AG beiträgt.
+
+### Tipps für eine erfolgreiche Gruppenarbeit
+
+1. **Effiziente Aufgabenverteilung**: Verteilen Sie frühzeitig die Verantwortlichkeiten für die verschiedenen Arbeitsschritte und Berichte. Sorgen Sie dafür, dass alle Gruppenmitglieder gleichermaßen in die inhaltliche Arbeit einbezogen werden, auch wenn die Koordination einzelner Schritte von bestimmten Personen übernommen wird.
+
+2. **Kommunikation und Zusammenarbeit**: Nutzen Sie regelmäßige Treffen und digitale Tools (Messenger, E-Mail, Videokonferenzen), um in Kontakt zu bleiben und sich über Fortschritte und Herausforderungen auszutauschen.
+
+3. **Feedbackkultur und kontinuierliches Lernen**: Sehen Sie Feedback als wertvolle Lernmöglichkeit. Die regelmäßigen Feedbackrunden helfen Ihnen, Ihre Arbeit zu verbessern und von anderen Gruppen zu lernen. Indem Sie die Arbeitsweisen anderer AGs beobachten und aktiv Rückmeldungen einholen, können Sie Ihre eigenen Methoden und Ergebnisse optimieren.
+
+Durch diese strukturierte und interaktive Arbeitsweise werden Sie nicht nur fachlich, sondern auch methodisch und im Bereich der Teamarbeit profitieren.

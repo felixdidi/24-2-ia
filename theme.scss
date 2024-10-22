@@ -1,0 +1,53 @@
+/*-- scss:defaults --*/
+$link-color: #3c3836;
+$primary: #ffffff;
+$body-color: #3c3836;
+
+/*style banner*/
+.quarto-title-banner {
+  background: var(--bs-body-bg) !important;
+}
+/*style headings*/
+h2 {
+  font-weight: 900 !important;
+}
+
+/*style hyperlinks*/
+.content a {
+  color: var(--bs-body-color) !important;
+  text-decoration: underline !important;
+  text-decoration-color: var(--bs-border-color) !important;
+  transition: 0.3s !important;
+}
+.content a:hover {
+  color: var(--bs-body-color) !important;
+  text-decoration-style: wavy !important;
+}
+#title-block-header a {
+  color: var(--bs-body-color) !important;
+}
+
+/*style sidebar*/
+.sidebar nav[role=doc-toc] ul>li>a.active, .sidebar nav[role=doc-toc] ul>li>ul>li>a.active {
+  color: var(--bs-body-color) !important;
+  border-left: 1px solid var(--bs-body-color) !important;
+}
+.sidebar nav[role=doc-toc] ul>li>a:hover, .sidebar nav[role=doc-toc] ul>li>ul>li>a:hover {
+  color: var(--bs-body-color) !important;
+  border-left: 1px solid var(--bs-body-color) !important;
+}
+
+/*hide unwanted output*/
+.cell-output.cell-output-stdout {
+  display: none;
+}
+
+/*style tables*/
+.gt_table {
+  font-family: inherit !important;
+}
+
+/*style tabset*/
+.nav-link, .nav-link:hover {
+  color: var(--bs-body-color) !important;
+}
