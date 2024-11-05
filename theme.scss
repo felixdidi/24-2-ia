@@ -1,22 +1,30 @@
 /*-- scss:defaults --*/
+@import url(https://fonts.bunny.net/css?family=aleo:400,400i,700,700i,900,900i);
 $link-color: #3c3836;
 $primary: #ffffff;
 $body-color: #3c3836;
+$font-family-sans-serif: "Aleo", sans-serif !default;
+
+/*add hyphenation*/
+p, .abstract {
+  -moz-hyphens: auto;
+  -o-hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
 
 /*style banner*/
 .quarto-title-banner {
   background: var(--bs-body-bg) !important;
-}
-/*style headings*/
-h2 {
-  font-weight: 900 !important;
 }
 
 /*style hyperlinks*/
 .content a {
   color: var(--bs-body-color) !important;
   text-decoration: underline !important;
-  text-decoration-color: var(--bs-border-color) !important;
+  text-decoration-color: #fabd2f !important;
+  text-decoration-thickness: 2px;
   transition: 0.3s !important;
 }
 .content a:hover {
@@ -45,9 +53,23 @@ h2 {
 /*style tables*/
 .gt_table {
   font-family: inherit !important;
+  font-size: 0.9rem !important;
 }
 
 /*style tabset*/
 .nav-link, .nav-link:hover {
   color: var(--bs-body-color) !important;
 }
+
+/*style selections*/
+::-moz-selection {
+  /* Code for Firefox */
+  color: var(--primary);
+  background: #fabd2f;
+}
+
+::selection {
+  color: var(--primary);
+  background: #fabd2f;
+}
+

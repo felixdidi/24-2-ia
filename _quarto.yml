@@ -1,6 +1,20 @@
 project:
   type: website
   lib-dir: site_libs
+  
+author:
+  - name: Felix Dietrich
+    affiliation: 01 501
+
+categories:
+  - "BA Inhaltsanalyse: Inhalte öffentlicher Kommunikation KF G"
+  - "Wintersemester 2024/2025"
+  
+lang: de
+language:
+  title-block-author-single: "Dozent"
+  title-block-affiliation-single: "Raum"
+  title-block-published: ""
 
 website:
   sidebar:

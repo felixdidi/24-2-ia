@@ -1,6 +1,6 @@
 ---
-title: "Parasoziale Beziehungen im Zeitverlauf"
-subtitle: "(Computergestützte) Inhaltsanalyse von parasozialen Beziehungen auf YouTube"
+title: "BA Inhaltsanalyse"
+subtitle: "Parasoziale Beziehungen im Zeitverlauf: (Computergestützte) Inhaltsanalyse von parasozialen Beziehungen auf YouTube"
 institute: "<br><br>Johannes Gutenberg-Universität Mainz<br>BA Inhaltsanalyse: Inhalte öffentlicher Kommunikation KF G<br>Wintersemester 2024/2025"
 author: "Felix Dietrich"
 logo: img/logo.png
@@ -64,8 +64,6 @@ Bild generiert mit FLUX.1-schnell: "A person waving towards a movie character on
 ::::
 
 :::fragment
-<br>
-
 - **Haben Sie schonmal ein ähnliches Video geschaut?**
 - **Was denken Sie: Warum schauen Menschen sich so etwas an?**
 :::

@@ -1,13 +1,13 @@
 /*-- scss:defaults --*/
-
-//$font-family-sans-serif: sans-serif !default;
+@import url(https://fonts.bunny.net/css?family=aleo:400,400i,700,700i,900,900i);
+$font-family-sans-serif: "Aleo", sans-serif !default;
 $presentation-font-size-root: 24px !default;
 $presentation-line-height: 1.2;
 
 // colors
 $body-bg: #ffffff !default;
 $body-color: #3c3836 !default;
-$link-color: #fabd2f !default;
+$link-color: #3c3836 !default;
 $selection-bg: #fabd2f !default;
 $red: #cc241d;
 $green: #98971a;
@@ -29,6 +29,19 @@ $presentation-heading-color: #3c3836 !default;
 
 .reveal a {
   line-height: 1.3em;
+  text-decoration: underline !important;
+  text-decoration-color: #fabd2f !important;
+  text-decoration-thickness: 2px;
+  transition: 0.3s !important;
+}
+
+.reveal a:hover {
+  color: var(--body-color) !important;
+  text-decoration-style: wavy !important;
+}
+
+.reveal .progress {
+  color: #fabd2f;
 }
 
 /*********************************************

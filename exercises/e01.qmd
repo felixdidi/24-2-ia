@@ -1,9 +1,5 @@
 ---
 title: "Aufgabe 01"
-author: "Felix Dietrich"
-categories:
-  - "BA Inhaltsanalyse: Inhalte öffentlicher Kommunikation KF G"
-  - "Wintersemester 2024/2025"
 # csl: "../bib/apa.csl"
 # bibliography: "../bib/24-1-nmok.bib"
 # suppress-bibliography: true

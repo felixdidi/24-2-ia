@@ -1,9 +1,5 @@
 ---
 title: "Wöchentliche Vorbereitung auf die Seminar-Sitzung"
-author: "Felix Dietrich"
-categories:
-  - "BA Inhaltsanalyse: Inhalte öffentlicher Kommunikation KF G"
-  - "Wintersemester 2024/2025"
 csl: "../bib/apa-cv.csl"
 bibliography: "../bib/24-2-ia.bib"
 suppress-bibliography: true

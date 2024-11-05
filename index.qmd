@@ -1,17 +1,10 @@
 ---
-title: "Parasoziale Beziehungen im Zeitverlauf"
-subtitle: "(Computergestützte) Inhaltsanalyse von parasozialen Beziehungen auf YouTube"
-author: "Felix Dietrich"
-categories:
-  - "BA Inhaltsanalyse: Inhalte öffentlicher Kommunikation KF G"
-  - "Wintersemester 2024/2025"
+title: "BA Inhaltsanalyse"
+subtitle: "Parasoziale Beziehungen im Zeitverlauf: (Computergestützte) Inhaltsanalyse von parasozialen Beziehungen auf YouTube"
+abstract: "Parasoziale Beziehungen (PSB) sind einseitige Verbindungen zwischen Mediennutzer:innen und Medienpersonae, welche im Gegensatz zur parasozialen Interaktion (PSI) jedoch über einzelne Rezeptionssituationen hinausreichen. Ähnlich zwischenmenschlichen Beziehungen haben PSBs einen Prozesscharakter: Nach der Entstehung werden sie gepflegt, entwickeln sich weiter und können durch eine Trennung beendet werden. Entgegen der theoretischen Konzeptionalisierung basiert ein Großteil der empirischen Befunde zu PSBs jedoch auf korrelativen Querschnittsdaten, wodurch 'die dynamischen Entwicklungen parasozialer Phänomene und deren Wechselwirkungen mit anderen Einflussfaktoren im Zeitverlauf' [@liebers60JahreForschung2017, p. 48–49] bislang wenig Beachtung erhielten. Mithilfe eines großformatigen Datensatzes von YouTube-Videos (Family-Vlogs) sowie den zugehörigen Nutzer:innen-Kommentaren werden wir im Rahmen des Seminars Prädiktoren für sowie die zeitliche Entwicklung von Intimität (Beziehungsnähe) und Intensität (affektive Valenz) parasozialer Beziehungen mit Social-Media-Personae untersuchen. Der Kurs ist Teil des Computational Methods Angebotes, d.h. er bietet die Möglichkeit, Verfahren der automatischen Inhaltsanalyse kennenzulernen und praktisch an Beispielen einzuüben. Es steht den Studierenden jedoch frei, im Rahmen der Projektarbeit manuelle Inhaltsanalysen durchzuführen."
 csl: "bib/apa.csl"
 bibliography: "bib/24-2-ia.bib"
 ---
-
-Parasoziale Beziehungen (PSB) sind einseitige Verbindungen zwischen Mediennutzer:innen und Medienpersonae, welche im Gegensatz zur parasozialen Interaktion (PSI) jedoch über einzelne Rezeptionssituationen hinausreichen. Ähnlich zwischenmenschlichen Beziehungen haben PSBs einen Prozesscharakter: Nach der Entstehung werden sie gepflegt, entwickeln sich weiter und können durch eine Trennung beendet werden. Entgegen der theoretischen Konzeptionalisierung basiert ein Großteil der empirischen Befunde zu PSBs jedoch auf korrelativen Querschnittsdaten, wodurch "die dynamischen Entwicklungen parasozialer Phänomene und deren Wechselwirkungen mit anderen Einflussfaktoren im Zeitverlauf" [@liebers60JahreForschung2017, p. 48–49] bislang wenig Beachtung erhielten. Mithilfe eines großformatigen Datensatzes von YouTube-Videos (Family-Vlogs) sowie den zugehörigen Nutzer:innen-Kommentaren werden wir im Rahmen des Seminars Prädiktoren für sowie die zeitliche Entwicklung von Intimität (Beziehungsnähe) und Intensität (affektive Valenz) parasozialer Beziehungen mit Social-Media-Personae untersuchen.
-
-Der Kurs ist Teil des Computational Methods Angebotes, d.h. er bietet die Möglichkeit, Verfahren der automatischen Inhaltsanalyse kennenzulernen und praktisch an Beispielen einzuüben. Es steht den Studierenden jedoch frei, im Rahmen der Projektarbeit manuelle Inhaltsanalysen durchzuführen.
 
 ## Seminarübersicht
 
