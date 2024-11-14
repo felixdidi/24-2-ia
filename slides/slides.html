@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="de"><head>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-html/tabby.min.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -7,11 +7,13 @@
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/quarto-contrib/quarto-timer-1.0.0/timer.js"></script>
+<link href="../site_libs/quarto-contrib/quarto-timer-1.0.0/timer.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Felix Dietrich">
-  <title>Parasoziale Beziehungen im Zeitverlauf</title>
+  <title>BA Inhaltsanalyse</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -346,8 +348,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Parasoziale Beziehungen im Zeitverlauf</h1>
-  <p class="subtitle">(Computergestützte) Inhaltsanalyse von parasozialen Beziehungen auf YouTube</p>
+  <h1 class="title">BA Inhaltsanalyse</h1>
+  <p class="subtitle">Parasoziale Beziehungen im Zeitverlauf: (Computergestützte) Inhaltsanalyse von parasozialen Beziehungen auf YouTube</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -412,7 +414,6 @@ Felix Dietrich
 </blockquote>
 </div></div>
 <div class="fragment">
-<p><br></p>
 <ul>
 <li><strong>Haben Sie schonmal ein ähnliches Video geschaut?</strong></li>
 <li><strong>Was denken Sie: Warum schauen Menschen sich so etwas an?</strong></li>
@@ -728,6 +729,602 @@ Felix Dietrich
 <p>Siehe Vorbereitung Sitzung 2</p>
 </div>
 </section></section>
+<section>
+<section id="sitzung-02-parasoziale-beziehungen-im-zeitverlauf" class="title-slide slide level1 center">
+<h1>Sitzung 02: Parasoziale Beziehungen im Zeitverlauf</h1>
+<p><br></p>
+<p><img data-src="img/02/time_series.jpeg" height="300"></p>
+<p><br></p>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Ressourcen für diese Sitzung</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="citation" data-cites="walterInitiationEvolutionPSRs2023">Walter et al. (<a href="#/literaturangaben" role="doc-biblioref" onclick="">2023</a>)</span>; <span class="citation" data-cites="leithParasocialCuesUbiquity2021">Leith (<a href="#/literaturangaben" role="doc-biblioref" onclick="">2021</a>)</span></p>
+</div>
+</div>
+</div>
+
+<aside><div>
+<p>Bild generiert mit FLUX.1-schnell: “A time series graph on TV as a black and white cartoon”</p>
+</div></aside></section>
+<section id="unterhaltungserleben-klassische-definition" class="slide level2 center">
+<h2>Unterhaltungserleben: Klassische Definition</h2>
+<div class="fragment semi-fade-out" data-fragment-index="1">
+<p>In der kommunikationswissenschaftlichen Unterhaltungsforschung wird Medienunterhaltung meist als <strong>Rezeptionsphänomen</strong> definiert:</p>
+<blockquote>
+<p>Unterhaltung ist, was Rezipienten als unterhaltsam wahrnehmen</p>
+<p><span class="citation" data-cites="bosshartMediaEntertainment1998">Bosshart &amp; Macconi (<a href="#/literaturangaben" role="doc-biblioref" onclick="">1998</a>)</span></p>
+</blockquote>
+</div>
+<div class="fragment fade-in-then-semi-out" data-fragment-index="1">
+<p>Traditionell wird das Unterhaltungserleben als <strong>angenehmer und positiver Erlebenszustand</strong> beschrieben:</p>
+<blockquote>
+<p>“enjoyment typically has been defined using terms associated with pleasure and measured as a positive emotional reaction to content”</p>
+<p><span class="citation" data-cites="raneyEntertainmentEnjoymentMedia2019">Raney &amp; Bryant (<a href="#/literaturangaben" role="doc-biblioref" onclick="">2019, S. 324</a>)</span></p>
+</blockquote>
+</div>
+<div class="fragment">
+<p>Die klassischen Definitionen des Unterhaltungserlebens nehmen somit eine rein <strong>hedonische Sichtweise</strong> ein: Unterhaltungserleben ist das reine Vergnügen an der Medienrezeption</p>
+<p><strong>Problem</strong>: Die <strong>rein hedonische Perspektive</strong> klassischer Unterhaltungstheorien vernachlässigt die Rezeption von Stimuli, die zunächst zu <strong>aversiven Reaktionen</strong> führen</p>
+</div>
+
+
+<aside><div>
+<p>Bosshart, L., &amp; Macconi, I. (1998). Media Entertainment. <em>Communication Research Trends, 18</em>(3), 3–8.</p>
+</div><div>
+<p>Raney, A. A., &amp; Bryant, J. (2019). Entertainment and Enjoyment as Media Effect. In M. B. Oliver, A. A. Raney, &amp; J. Bryant (Hrsg.), <em>Media Effects: Advances in Theory and Research</em> (4. Aufl., S. 324–341). Routledge. https://doi.org/10.4324/9780429491146-21</p>
+</div></aside></section>
+<section id="aktuelle-ansätze-zum-unterhaltungserleben-zwei-prozess-modelle" class="slide level2 center">
+<h2>Aktuelle Ansätze zum Unterhaltungserleben: Zwei-Prozess-Modelle</h2>
+<p>Neuere <strong>Zwei-Prozess-Modelle des Unterhaltungserlebens</strong> berücksichtigen auch die non-hedonische Seite der Medienunterhaltung</p>
+<div class="fragment">
+<div class="columns">
+<div class="column">
+<br>
+<center>
+<strong>Basic Psychological Needs</strong>
+<hr>
+
+</center>
+<ul>
+<li>Menschen streben nicht (nur) nach hedonischem Glück, sondern nach <strong>psychologischem Wachstum</strong> <span class="citation" data-cites="ryanSelfdeterminationTheoryFacilitation2000">(Self-Determination Theory, <a href="#/literaturangaben" role="doc-biblioref" onclick="">Ryan &amp; Deci, 2000</a>)</span></li>
+<li>Grundlegende psych. Bedürfnisse:
+<ul>
+<li>Kompetenz</li>
+<li>Autonomie</li>
+<li>Soziale Verbundenheit</li>
+</ul></li>
+<li>Mediennutzung orientiert sich an diesen Bedürfnissen <span class="citation" data-cites="tamboriniMediaEnjoymentNeed2011">(bspw. <a href="#/literaturangaben" role="doc-biblioref" onclick="">Tamborini et al., 2011</a>)</span></li>
+</ul>
+</div><div class="column">
+<br>
+<center>
+<strong>Appreciation</strong>
+<hr>
+
+</center>
+<ul>
+<li>Statt Streben nach Unterhaltung, Suche nach <strong>“Meaningful Entertainment”</strong> <span class="citation" data-cites="oliverEntertainmentPleasurableMeaningful2011">(<a href="#/literaturangaben" role="doc-biblioref" onclick="">Oliver &amp; Raney, 2011</a>)</span></li>
+<li>Form des Genusses von Medien auf höherer kognitiver Ebene</li>
+<li>Wird empfunden bei:
+<ul>
+<li>Moralischer/ästhetischer Schönheit</li>
+<li>Erinnerung an die eigene Endlichkeit und den Sinn des Lebens</li>
+</ul></li>
+</ul>
+</div></div>
+</div>
+
+
+
+<aside><div>
+<p>Oliver, M. B., &amp; Raney, A. A. (2011). Entertainment as Pleasurable and Meaningful: Identifying Hedonic and Eudaimonic Motivations for Entertainment Consumption. <em>Journal of Communication, 61</em>(5), 984–1004. https://doi.org/10.1111/j.1460-2466.2011.01585.x</p>
+</div><div>
+<p>Ryan, R. M., &amp; Deci, E. L. (2000). Self-Determination Theory and the Facilitation of Intrinsic Motivation, Social Development, and Well-Being. <em>American Psychologist, 55</em>, 68–78.</p>
+</div><div>
+<p>Tamborini, R., Grizzard, M., Bowman, N. D., Reinecke, L., Lewis, R. J., &amp; Eden, A. (2011). Media Enjoyment as Need Satisfaction: The Contribution of Hedonic and Nonhedonic Needs. <em>Journal of Communication, 61</em>(6), 1025–1042. https://doi.org/10.1111/j.1460-2466.2011.01593.x</p>
+</div></aside></section>
+<section id="warum-forschen-wir-dazu" class="slide level2 center">
+<h2>Warum forschen wir dazu?</h2>
+
+<p><strong>Psychologisches Wohlbefinden</strong></p>
+<blockquote>
+<p>“Optimal psychological functioning and experience”</p>
+<p><span class="citation" data-cites="ryanHappinessHumanPotentials2001">Ryan &amp; Deci (<a href="#/literaturangaben" role="doc-biblioref" onclick="">2001</a>, p.&nbsp;142)</span></p>
+</blockquote>
+<div class="fragment">
+<div class="columns">
+<div class="column">
+<br>
+<center>
+<strong>Hedonia</strong>
+<hr>
+
+</center>
+<ul>
+<li>Fokus auf Glück und Lebenszufriedenheit</li>
+<li>Erreichen von Freude (positiver Affekt)</li>
+<li>Schmerzvermeidung (Vermeidung von negativem Affekt)</li>
+<li>Manchmal auch subjektives Wohlbefinden genannt</li>
+</ul>
+</div><div class="column">
+<br>
+<center>
+<strong>Eudaimonia</strong>
+<hr>
+
+</center>
+<ul>
+<li>Fokus auf volle Funktionsfähigkeit</li>
+<li>Bedeutsamkeit / Sinn (Meaning)</li>
+<li>Selbstverwirklichung</li>
+</ul>
+</div></div>
+</div>
+<aside><div>
+<p>Ryan, R. M., &amp; Deci, E. L. (2001). On happiness and human potentials: A review of research on hedonic and eudaimonic well-being. <em>Annual Review of Psychology, 52</em>, 141–166. https://doi.org/10.1146/annurev.psych.52.1.141</p>
+</div></aside></section>
+<section id="zwei-kontinua-modelle-der-psychischen-gesundheit" class="slide level2 center">
+<h2>Zwei-Kontinua-Modelle der psychischen Gesundheit</h2>
+<p>im Zusammenhang mit computervermittelter Kommunikation, siehe <span class="citation" data-cites="meierComputermediatedCommunicationSocial2021">Meier &amp; Reinecke (<a href="#/literaturangaben" role="doc-biblioref" onclick="">2021</a>)</span></p>
+<br>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+<div style="border: 2px solid #fabd2f; border-radius: 10px; padding: 10px 40px; font-weight: bold;">
+Mentale Gesundheit
+</div>
+<div style="display: flex; gap: 60px;">
+<div style="border: 2px solid #fabd2f; border-radius: 10px; padding: 20px; width: 400px;">
+<div style="font-weight: bold;">
+Psychopathologie
+</div>
+<ul style="margin: 10px 0; padding-left: 20px;">
+<li>
+Psychische Erkrankung
+</li>
+<li>
+Persönliches Leiden
+</li>
+<li>
+Beeinträchtigung der Lebensfunktionen
+</li>
+<li>
+Dysfunktion
+</li>
+</ul>
+</div>
+<div style="display: flex; flex-direction: column; border: 2px solid #fabd2f; border-radius: 10px; padding: 20px; width: 400px;">
+<div style="font-weight: bold;">
+Psychologisches Wohlbefinden
+</div>
+<ul style="margin: 10px 0; padding-left: 20px;">
+<li>
+Glück und Lebenszufriedenheit
+</li>
+<li>
+Persönliches Wachstum
+</li>
+<li>
+Entfaltung und Lebensqualität
+</li>
+</ul>
+<div style="display: flex; gap: 20px; margin-top: 10px; justify-content: center; width: 100%;">
+<div style="border: 2px solid #fabd2f; border-radius: 10px; padding: 10px 20px; font-weight: bold;">
+Hedonia
+</div>
+<div style="border: 2px solid #fabd2f; border-radius: 10px; padding: 10px 20px; font-weight: bold;">
+Eudaimonia
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+
+<aside><div>
+<p>Meier, A., &amp; Reinecke, L. (2021). Computer-mediated communication, social media, and mental health: A conceptual and empirical meta-review. <em>Communication Research, 48</em>(8), 1182–1209. https://doi.org/10.1177/0093650220958224</p>
+</div></aside></section>
+<section id="besprechung-der-literatur" class="slide level2 center">
+<h2>Besprechung der Literatur</h2>
+<div class="columns">
+<div class="column" style="width:66%;">
+<ul>
+<li>Wie entstehen PSBs?</li>
+<li>Was sind potentielle Prädiktoren für die Intensität von PSBs?</li>
+<li>Was meint Leith mit “verbal immediacy”? Notieren Sie sich Fragen zu möglichen Unklarheiten</li>
+<li>Was sind potentielle Unterschiede bei PSI und PSB zu Social-Media-Persönlichkeiten im Vergleich zu TV-Personae (z.B. Charaktere in einem Film oder Nachrichtensprecher:innen)</li>
+<li>Überlegen Sie sich, inwiefern das alles auf das Anwendungsbeispiel der Family-Vlogs zutreffen kann</li>
+</ul>
+</div><div class="column" style="width:33%;">
+                    <div id="lit-psb"></div>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            initializeTimer("lit-psb", 1200, "interaction");
+                        });
+                    </script>
+                
+</div></div>
+
+
+<aside><div>
+<p>Walter, N., Andrews, E. A., &amp; Tukachinsky Forster, R. (2023). Initiation and Evolution of PSRs. In R. Tukachinsky Forster (Hrsg.), <em>The Oxford Handbook of Parasocial Experiences</em> (1. Aufl., S. 125–146). Oxford University Press. https://doi.org/10.1093/oxfordhb/9780197650677.013.5</p>
+</div><div>
+<p>Leith, A. P. (2021). Parasocial Cues: The Ubiquity of Parasocial Relationships on Twitch. <em>Communication Monographs, 88</em>(1), 111–129. https://doi.org/10.1080/03637751.2020.1868544</p>
+</div></aside></section>
+<section id="parasoziale-phänomene" class="slide level2 center">
+<h2>Parasoziale Phänomene</h2>
+<ul>
+<li>Das Konzept der parasozialen Interaktion (PSI) geht zurück auf <span class="citation" data-cites="hortonMassCommunicationParasocial1956">Horton &amp; Wohl (<a href="#/literaturangaben" role="doc-biblioref" onclick="">1956</a>)</span></li>
+<li>In ihrer Forschung über die Rezeption von Fernsehmoderatoren stellten sie fest, dass diese oft die <strong>Illusion einer direkten Interaktion</strong> mit dem Publikum vermitteln</li>
+<li>Das Fernsehen hat keinen Rückkanal, parasoziale Interaktionen stellen <strong>“Schein”-Beziehungen</strong> zwischen Mediennutzer:innen und Persona dar</li>
+<li>Es besteht eine <strong>“wahrgenommene Reziprozität”</strong> zwischen Mediennutzer:innen und Persona</li>
+<li>PSI entsteht durch automatisierte Prozesse der sozialen Wahrnehmung:
+<ul>
+<li>Wir kategorisieren unwillkürlich alle Objekte in unserer Umgebung in unbelebte Dinge und soziale Akteure</li>
+<li>Medienpersonae werden als <strong>soziale Akteure</strong> kategorisiert und behandelt, obwohl eine direkte Interaktion mit ihnen nicht möglich ist</li>
+</ul></li>
+<li>siehe auch <span class="citation" data-cites="hartmannHortonWohlRevisited2011">Hartmann &amp; Goldhoorn (<a href="#/literaturangaben" role="doc-biblioref" onclick="">2011</a>)</span>, <span class="citation" data-cites="rubinLonelinessParasocialInteraction1985">Rubin et al. (<a href="#/literaturangaben" role="doc-biblioref" onclick="">1985</a>)</span></li>
+</ul>
+
+
+
+<aside><div>
+<p>Hartmann, T., &amp; Goldhoorn, C. (2011). Horton and wohl revisited: Exploring viewers’ experience of parasocial interaction. <em>Journal of Communication, 61</em>(6), 1104–1121. https://doi.org/10.1111/j.1460-2466.2011.01595.x</p>
+</div><div>
+<p>Horton, D., &amp; Wohl, R. (1956). Mass communication and para-social interaction: Observations on intimacy at a distance. <em>Psychiatry, 19</em>(3), 215–229. https://doi.org/10.1080/00332747.1956.11023049</p>
+</div><div>
+<p>Rubin, A. M., Perse, E. M., &amp; Powell, R. A. (1985). Loneliness, parasocial interaction, and local television news viewing. <em>Human Communication Research, 12</em>(2), 155–180. https://doi.org/10.1111/j.1468-2958.1985.tb00071.x</p>
+</div></aside></section>
+<section id="von-der-psi-zur-psb" class="slide level2 center">
+<h2>Von der PSI zur PSB</h2>
+<ul>
+<li>Eine Reihe von Einflussfaktoren bestimmen die Stärke der PSI, z.B.:
+<ul>
+<li>die <strong>Obtrusivität</strong> der Persona, d.h. ihre Medienpräsenz oder Aufdringlichkeit</li>
+<li>die <strong>Persistenz</strong> der Persona, d.&nbsp;h. die Dauer und Häufigkeit ihres Auftretens</li>
+<li>die <strong>direkte Ansprache</strong> der Mediennutzer:in durch die Persona</li>
+<li>Die <strong>Attraktivität</strong> der Persona</li>
+<li>der <strong>Grad des Anthropomorphismus</strong> (Menschenähnlichkeit) der Persona und ihre <strong>Realitätsnähe</strong> (z.B. menschlich vs.&nbsp;außerirdisch)</li>
+</ul></li>
+<li>Aus PSI können sich im Laufe der Zeit <strong>parasoziale Beziehungen</strong> (PSB) entwickeln, die längerfristige Bindungen zu einer Persona beschreiben</li>
+<li>Parasoziale Beziehungen stellen in der Regel keine innigen Freundschaften dar und leisten für die Mehrheit der Rezipienten keinen Ersatz für reale Beziehungen</li>
+<li>siehe z.B. <span class="citation" data-cites="tukachinskyTheorizingDevelopmentParasocial2019">Tukachinsky &amp; Stever (<a href="#/literaturangaben" role="doc-biblioref" onclick="">2019</a>)</span>, <span class="citation" data-cites="walterInitiationEvolutionPSRs2023">Walter et al. (<a href="#/literaturangaben" role="doc-biblioref" onclick="">2023</a>)</span></li>
+</ul>
+
+
+<aside><div>
+<p>Tukachinsky, R., &amp; Stever, G. (2019). Theorizing development of parasocial engagement. <em>Communication Theory, 29</em>(3), 297–318. https://doi.org/10.1093/ct/qty032</p>
+</div><div>
+<p>Walter, N., Andrews, E. A., &amp; Tukachinsky Forster, R. (2023). Initiation and evolution of PSRs. In R. Tukachinsky Forster (Ed.), <em>The Oxford Handbook of Parasocial Experiences</em> (1st ed., pp.&nbsp;125–146). Oxford University Press. https://doi.org/10.1093/oxfordhb/9780197650677.013.5</p>
+</div></aside></section>
+<section id="verbal-immediacy" class="slide level2 center">
+<h2>Verbal Immediacy</h2>
+<div class="fragment semi-fade-out" data-fragment-index="1">
+<blockquote>
+<p>“Past studies have also found that <strong>NLP tools like LIWC</strong> can identify and score messages for language that conveys closeness and immediacy (Borelli et al., 2011; Pennebaker &amp; King, 1999). Namely, <strong>verbal immediacy scores increased in closer relationships</strong> (Cegala, 1989) and decreased when individuals were less involved (Borelli et al., 2011; Cohn et al., 2004).”</p>
+<p><span class="citation" data-cites="leithParasocialCuesUbiquity2021">Leith (<a href="#/literaturangaben" role="doc-biblioref" onclick="">2021, S. 116</a>)</span></p>
+</blockquote>
+</div>
+<div class="fragment" data-fragment-index="1">
+<blockquote>
+<p>“Bazarova et al.&nbsp;(2013) used LIWC to score the verbal immediacy of close friends on Facebook in comparison to strangers. They found that <strong>verbal immediacy correlated with partner familiarity</strong>. Public messages to friends had a greater verbal immediacy score than the public messages to strangers . . . It is therefore <strong>expected that the messages to a PSR partner are more like the messages to a friend than a stranger</strong>.”</p>
+<p><span class="citation" data-cites="leithParasocialCuesUbiquity2021">Leith (<a href="#/literaturangaben" role="doc-biblioref" onclick="">2021, S. 120</a>)</span></p>
+</blockquote>
+</div>
+
+<aside><div>
+<p>Leith, A. P. (2021). Parasocial Cues: The Ubiquity of Parasocial Relationships on Twitch. <em>Communication Monographs, 88</em>(1), 111–129. https://doi.org/10.1080/03637751.2020.1868544</p>
+</div></aside></section>
+<section id="verbal-immediacy-1" class="slide level2 center">
+<h2>Verbal Immediacy</h2>
+<blockquote>
+<p>“The LIWC score for verbal immediacy is the <strong>arithmetic mean</strong> for <strong>first-person singular pronouns, present focus, discrepancies, words greater than six letters, and articles</strong>, with the last two scores being inversely scored”</p>
+<p><span class="citation" data-cites="leithParasocialCuesUbiquity2021">Leith (<a href="#/literaturangaben" role="doc-biblioref" onclick="">2021, S. 120</a>)</span></p>
+</blockquote>
+
+<aside><div>
+<p>Leith, A. P. (2021). Parasocial Cues: The Ubiquity of Parasocial Relationships on Twitch. <em>Communication Monographs, 88</em>(1), 111–129. https://doi.org/10.1080/03637751.2020.1868544</p>
+</div></aside></section></section>
+<section>
+<section id="sitzung-03-eine-problemstellung-entwickeln" class="title-slide slide level1 center">
+<h1>Sitzung 03: Eine Problemstellung entwickeln</h1>
+<p><br></p>
+<p><img data-src="img/03/thinking.jpeg" height="300"></p>
+<p><br></p>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Ressourcen für diese Sitzung</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="citation" data-cites="doeringForschungsmethodenUndEvaluation2022">Döring (<a href="#/literaturangaben" role="doc-biblioref" onclick="">2022</a>)</span></p>
+</div>
+</div>
+</div>
+
+<aside><div>
+<p>Bild generiert mit FLUX.1-schnell: “A female character on a TV screen thinking very hard as a black and white cartoon”</p>
+</div></aside></section>
+<section id="mögliche-diskussionspunkte" class="slide level2 center">
+<h2>Mögliche Diskussionspunkte</h2>
+<div class="columns">
+<div class="column" style="width:66%;">
+<ul>
+<li>Inwiefern bilden sich die von Ihnen genannten Konstrukte in Medien<strong>inhalt</strong> ab (z.B. Nutzer:innenkommentare, bildlich oder textuell im Video)? Wie <strong>implizit oder explizit</strong> ist das Konstrukt in diesen Inhalten vorhanden?
+<ul>
+<li>z.B. Übertragung normativer Fragen (Ethik) auf empirisch messbare Dimensionen</li>
+<li>z.B. Emotionales Empfinden → Ausdrucksformen</li>
+</ul></li>
+<li>Inwiefern lassen sich diese Fragestellungen auch in <strong>anderen Nutzungskontexten</strong> untersuchen?
+<ul>
+<li>z.B. Fernsehen (nur Inhalte, keine Nutzer:innenreaktionen)</li>
+<li>z.B. Podcasts</li>
+<li>siehe auch zukünftige Sitzung zu Datenerhebung</li>
+</ul></li>
+<li>Welche <strong>Limitationen</strong> könnte ein <strong>inhaltsbasierter Ansatz</strong> haben, und wie können wir diese möglichst gering halten?</li>
+</ul>
+</div><div class="column" style="width:33%;">
+                    <div id="problemstellung1"></div>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            initializeTimer("problemstellung1", 1800, "interaction");
+                        });
+                    </script>
+                
+</div></div>
+</section></section>
+<section>
+<section id="sitzung-04-grundlagen-der-manuellen-inhaltsanalyse" class="title-slide slide level1 center">
+<h1>Sitzung 04: Grundlagen der manuellen Inhaltsanalyse</h1>
+<p><br></p>
+<p><img data-src="img/04/manual.jpeg" height="300"></p>
+<p><br></p>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Ressourcen für diese Sitzung</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="citation" data-cites="krippendorffContentAnalysisIntroduction2018">Krippendorff (<a href="#/literaturangaben" role="doc-biblioref" onclick="">2018</a>)</span>; <span class="citation" data-cites="neuendorfContentAnalysisGuidebook2017">Neuendorf (<a href="#/literaturangaben" role="doc-biblioref" onclick="">2017</a>)</span>; <span class="citation" data-cites="oehmer-pedrazziStandardisierteInhaltsanalyseKommunikationswissenschaft2023">Oehmer-Pedrazzi et al. (<a href="#/literaturangaben" role="doc-biblioref" onclick="">2023</a>)</span>; <span class="citation" data-cites="roesslerInhaltsanalyse2017">Rössler (<a href="#/literaturangaben" role="doc-biblioref" onclick="">2017</a>)</span></p>
+</div>
+</div>
+</div>
+
+<aside><div>
+<p>Bild generiert mit FLUX.1-schnell: “A person on a TV screen manually working on a machine with many gears as a black and white cartoon”</p>
+</div></aside></section>
+<section id="sozialwissenschaftliche-methoden" class="slide level2 center">
+<h2>Sozialwissenschaftliche Methoden</h2>
+<p><img data-src="img/04/methods_social_science.png" height="400"></p>
+</section>
+<section id="definition-der-inhaltsanalyse" class="slide level2 center">
+<h2>Definition der Inhaltsanalyse</h2>
+
+<blockquote>
+<p>“Content analysis is a research <strong>technique</strong> for the <strong>objective, systematic, and quantitative</strong> description of the <strong>manifest</strong> content of communication.”</p>
+<p><span class="citation" data-cites="berelsonContentAnalysisCommunication1952">Berelson (<a href="#/literaturangaben" role="doc-biblioref" onclick="">1952</a>, p.&nbsp;18)</span></p>
+</blockquote>
+<p><img data-src="img/04/berelson_p19.png" height="300"></p>
+<aside><div>
+<p>Berelson, B. R. (1952). <em>Content analysis in communication research</em>. Free Press.</p>
+</div></aside></section>
+<section class="slide level2 center">
+
+<p><strong>Gibt es ein Problem mit diesem Tweet?</strong></p>
+<p><img data-src="img/04/trump_greta.jpg" height="350"></p>
+<div class="fragment">
+<p><strong>Manifester vs.&nbsp;latenter Inhalt</strong></p>
+<ul>
+<li><em>Manifest</em>: Elemente, die physisch vorhanden und zählbar sind</li>
+<li><em>Latent</em>: Konstrukte, die nicht direkt gemessen werden können
+<ul>
+<li>Messung durch die Bewertung der Codierer:in…</li>
+<li>…oder mehrere manifeste Indikatoren</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section class="slide level2 center">
+
+
+
+<blockquote>
+<p>“Content analysis is a research <strong>technique</strong> for making <strong>replicable and valid inferences</strong> from <strong>texts (or other meaningful matter)</strong> to the <strong>contexts of their use</strong>.”</p>
+<p><span class="citation" data-cites="krippendorffContentAnalysisIntroduction2018">Krippendorff (<a href="#/literaturangaben" role="doc-biblioref" onclick="">2018</a>, p.&nbsp;18)</span></p>
+</blockquote>
+<div class="fragment">
+<blockquote>
+<p>“Content analysis is a <strong>summarizing, quantitative</strong> analysis of <strong>messages</strong> that <strong>follows the standards of the scientific method</strong> (including attention to objectivity–intersubjectivity, a priori design, reliability, validity, generalizability, replicability, and hypothesis testing based on theory) and is <strong>not limited as to the types of variables that may be measured</strong> or the <strong>context in which the messages are created or presented</strong>.”</p>
+<p><span class="citation" data-cites="neuendorfContentAnalysisGuidebook2017">Neuendorf (<a href="#/literaturangaben" role="doc-biblioref" onclick="">2017</a>, p.&nbsp;17)</span></p>
+</blockquote>
+</div>
+<aside><div>
+<p>Krippendorff, K. (2018). <em>Content analysis: An introduction to its methodology</em> (Fourth Edition). SAGE.</p>
+</div><div>
+<p>Neuendorf, K. A. (2017). <em>The Content Analysis Guidebook</em>. SAGE Publications, Inc.&nbsp;https://doi.org/10.4135/9781071802878</p>
+</div></aside></section>
+<section class="slide level2 center">
+
+<h3 id="die-mythen-der-inhaltsanalyse">Die Mythen der Inhaltsanalyse</h3>
+
+
+<ol type="1">
+<li>Die Inhaltsanalyse beschränkt sich auf einfache Analysen</li>
+<li>Jeder kann eine Inhaltsanalyse durchführen; sie erfordert keine besondere Vorbereitung</li>
+<li>Der Begriff <em>Inhaltsanalyse</em> bezieht sich auf <em>alle</em> Untersuchungen von Nachrichten (z.B. was ist mit „qualitativer Inhaltsanalyse“?)</li>
+<li>Die Inhaltsanalyse ist nur für den akademischen Gebrauch bestimmt</li>
+</ol>
+<div class="fragment">
+<p><strong>Kann man nur das analysieren, was “im” Text ist?</strong> (wie der Inhalt eines Containers)</p>
+</div>
+<div class="fragment">
+<blockquote>
+<p>“The term ‘content’ in content analysis is something of a misnomer because verbal materials may be examined for <strong>content, for form (e.g., style, structure), function, or sequence of communications</strong>”</p>
+<p><span class="citation" data-cites="smithContentAnalysisNarrative2000">Smith (<a href="#/literaturangaben" role="doc-biblioref" onclick="">2000</a>, p.&nbsp;314)</span></p>
+</blockquote>
+</div>
+<aside><div>
+<p>Neuendorf, K. A. (2017). <em>The Content Analysis Guidebook</em>. SAGE Publications, Inc.&nbsp;https://doi.org/10.4135/9781071802878</p>
+</div><div>
+<p>Smith, C. P. (2000). Content analysis and narrative analysis. In H. T. Reis &amp; C. M. Judd (Eds.), <em>Handbook of research methods in social and personality psychology</em> (pp.&nbsp;313–335). Cambridge University Press.</p>
+</div></aside></section>
+<section class="slide level2 center">
+
+<h3 id="ziele-der-inhaltsanalyse">Ziele der Inhaltsanalyse</h3>
+
+<ul>
+<li>Beschreibung des Nachrichteninhalts
+<ul>
+<li>im Allgemeinen nicht problematisch - aber siehe Problem latenter vs.&nbsp;manifester Inhalt</li>
+<li>z.B. „Inwieweit kommen populistische Kommunikationsstrategien in extremistischen Propagandavideos vor?“ <span class="citation" data-cites="schmittPopulistVoicesExtremist2018">(vgl. <a href="#/literaturangaben" role="doc-biblioref" onclick="">Schmitt et al., 2018</a>)</span></li>
+</ul></li>
+<li>Die Untersuchung der Qualität von Botschaften
+<ul>
+<li>erfordert einen (normativen) Rahmen</li>
+<li>z.B. „Gibt es einen Unterschied zwischen rechtsextremen und islamistischen Propagandavideos in Bezug auf den Einsatz populistischer Kommunikationsstrategien?“ <span class="citation" data-cites="schmittPopulistVoicesExtremist2018">(vgl. <a href="#/literaturangaben" role="doc-biblioref" onclick="">Schmitt et al., 2018</a>)</span></li>
+</ul></li>
+<li>Inferenz
+<ul>
+<li>erfordert zusätzliche Daten oder tiefgreifende theoretische Annahmen</li>
+<li>prognostische Inferenz (z.B. „Welchen Einfluss haben populistische Kommunikationsstrategien in extremistischen Propagandavideos auf die Zuschauer?“)</li>
+<li>diagnostische Inferenz (z.B. „Welche Elemente der Diskursarchitektur fördern die Verwendung bestimmter populistischer Kommunikationsstrategien?“)</li>
+</ul></li>
+</ul>
+<aside><div>
+<p>Schmitt, J., Winkler, J., Lutz, S., Dietrich, F., &amp; Rieger, D. (2018, May 24–28). <em>Populist voices in extremist online videos: A content analysis of right-wing and Islamic extremist YouTube videos</em> [Conference Presentation]. 68th Annual Conference of the International Communication Association (ICA), Prague, Czech Republic.</p>
+</div></aside></section>
+<section class="slide level2 center">
+
+<p><strong>Forschungsobjekte</strong></p>
+<ul>
+<li><strong>Private Kommunikation</strong>, z.B. Briefe, Privatgespräche, private Nachrichten</li>
+<li><strong>Öffentliche Kommunikation</strong>, z.B. öffentliche Reden, Medienberichte von Print-, Online-, TV- und Radiosendern, Protokolle von Parlamentsdebatten, Beiträge in sozialen Medien, Anzeigen, …</li>
+<li><strong>Visuelle Objekte</strong> (Fotos, Diagramme usw.) vs.&nbsp;<strong>geschriebener Text</strong> vs.&nbsp;<strong>gesprochener Text</strong> (muss vor der Analyse transkribiert werden)</li>
+</ul>
+<div class="fragment">
+<p><strong>Potenziale der Inhaltsanalyse</strong></p>
+<ul>
+<li>Quantitative Beschreibung von <strong>großen Mengen</strong> von Nachrichten</li>
+<li>Ermöglicht <strong>retrospektive Längsschnittstudien</strong></li>
+<li>Keine <strong>Verweigerungen</strong> oder <strong>Aussteiger</strong></li>
+<li><strong>Nicht-Reaktivität</strong></li>
+<li>Anwendbar auf <strong>alle Formen der Kommunikation</strong></li>
+</ul>
+</div>
+</section>
+<section class="slide level2 center">
+
+<h3 id="einheiten">Einheiten</h3>
+<ul>
+<li><em>Population</em>: Gesamtheit der Medienbotschaften, über die die Studie Schlussfolgerungen ziehen soll</li>
+<li><em>Untersuchungseinheiten</em>: Formal definierte Einheiten (im Codebuch), die die Grundlage für eine Analyse bilden, z.B. Zeitungsausgaben, Twitter-Posts von bestimmten Accounts innerhalb eines bestimmten Zeitraums usw.</li>
+<li><em>Analyseeinheiten</em>: Einheiten, die kodiert werden und auf denen die Ergebnisse beruhen sollen (z.B. Tweets, Artikel, Fotos, Absätze, Sätze, Wörter usw.)</li>
+</ul>
+<div class="fragment">
+<p><strong>Welche möglichen Analyseeinheiten sehen Sie hier?</strong></p>
+<p><img data-src="img/04/newspage_screenshot.png" height="250"></p>
+</div>
+<div class="fragment">
+<p>Artikel-Ebene, Absatz-Ebene, Satz-Ebene, Bild-Ebene, Wort-Ebene</p>
+</div>
+</section>
+<section class="slide level2 center">
+
+<h3 id="design-entscheidungen">Design-Entscheidungen</h3>
+
+<img data-src="img/04/design_decisions.png" class="r-stretch"></section>
+<section class="slide level2 center">
+
+<p><strong>Materialien für die manuelle Kodierung</strong></p>
+<ul>
+<li><strong>Codebuch</strong>: System von Regeln und Anweisungen für die Auswahl und Kodierung von Nachrichten
+<ul>
+<li>Grundlegende Definitionen von theoretischen Begriffen</li>
+<li>Untersuchungseinheiten und Analyseeinheiten</li>
+<li>Kriterien für die Aufnahme</li>
+<li>System der zu kodierenden Kategorien</li>
+<li>Detaillierte Kodierungsanweisungen</li>
+</ul></li>
+<li><strong>Kodierschema</strong>: Heutzutage typischerweise eine Datendatei im Tabellenformat</li>
+<li><strong>Kodiererschulungen und anschließende Reliabilitätstests</strong></li>
+</ul>
+<p>Beispiel für ein Codebuch hier: <a href="https://osf.io/2z3dk/" class="uri">https://osf.io/2z3dk/</a></p>
+</section>
+<section id="inhaltsanalyse-nach-den-standards-der-wissenschaftlichen-methode" class="slide level2 center">
+<h2>Inhaltsanalyse nach den Standards der wissenschaftlichen Methode</h2>
+
+<blockquote>
+<p>“Content analysis is a summarizing, quantitative analysis of messages that <strong>follows the standards of the scientific method (including attention to objectivity–intersubjectivity, a priori design, reliability, validity, generalizability, replicability, and hypothesis testing based on theory)</strong> and is not limited as to the types of variables that may be measured or the context in which the messages are created or presented.”</p>
+<p><span class="citation" data-cites="neuendorfContentAnalysisGuidebook2017">Neuendorf (<a href="#/literaturangaben" role="doc-biblioref" onclick="">2017</a>, p.&nbsp;17)</span></p>
+</blockquote>
+<aside><div>
+<p>Neuendorf, K. A. (2017). <em>The Content Analysis Guidebook</em>. SAGE Publications, Inc.&nbsp;https://doi.org/10.4135/9781071802878</p>
+</div></aside></section>
+<section class="slide level2 center">
+
+
+<h3 id="objektivität-intersubjektivität">Objektivität-Intersubjektivität</h3>
+<ul>
+<li><em>Objektivität</em>: Vermeidung von Voreingenommenheit des Beobachters</li>
+<li>Aber: Soziale Konstruktion der Wirklichkeit</li>
+</ul>
+<div class="fragment">
+<p><img data-src="img/04/duck_rabbit.png" height="300"></p>
+<ul>
+<li>Nicht: “Ist es wahr?”, sondern <em>“Sind wir uns einig, dass es wahr ist?”</em>.</li>
+<li><em>Intersubjektivität</em></li>
+</ul>
+</div>
+<aside><div>
+<p>Neuendorf, K. A. (2017). <em>The Content Analysis Guidebook</em>. SAGE Publications, Inc.&nbsp;https://doi.org/10.4135/9781071802878</p>
+</div></aside></section>
+<section class="slide level2 center">
+
+
+<h3 id="a-priori-design">A priori design</h3>
+<ul>
+<li>Wird bei Inhaltsanalysen oft verletzt</li>
+<li>Alle Entscheidungen müssen getroffen werden, bevor der Messprozess beginnt!
+<ul>
+<li>Variablen</li>
+<li>ihre Messung</li>
+<li>Kodierregeln</li>
+</ul></li>
+<li><em>Menschliche Kodierung</em>: das Kodierbuch und das Kodierformular müssen im Voraus erstellt werden</li>
+<li><em>Automatisierte Kodierung</em>: das Wörterbuch, der Promt, oder ein anderes Kodierungsprotokoll sollte im Voraus erstellt werden</li>
+</ul>
+<aside><div>
+<p>Neuendorf, K. A. (2017). <em>The Content Analysis Guidebook</em>. SAGE Publications, Inc.&nbsp;https://doi.org/10.4135/9781071802878</p>
+</div></aside></section>
+<section class="slide level2 center">
+
+
+<h3 id="darüber-hinaus">Darüber hinaus…</h3>
+<ul>
+<li><em>Verallgemeinerbarkeit</em>: siehe „The Computational Niche“ in der nächsten Sitzung</li>
+<li><em>Replizierbarkeit</em>: werden wir am Rande besprechen</li>
+<li><em>Hypothesenprüfung auf der Grundlage von Theorie</em>: gute Problemstellung entwickeln</li>
+<li><em>Reliabilität und Valdität</em>: Wird in einer eigenen Sitzung behandelt</li>
+</ul>
+<aside><div>
+<p>Neuendorf, K. A. (2017). <em>The Content Analysis Guidebook</em>. SAGE Publications, Inc.&nbsp;https://doi.org/10.4135/9781071802878</p>
+</div></aside></section>
+<section class="slide level2 center">
+
+<div class="big-text">
+<p>Fragen?</p>
+</div>
+</section></section>
 <section id="literaturangaben" class="title-slide slide level1 smaller scrollable">
 <h1>Literaturangaben</h1>
 
@@ -738,17 +1335,68 @@ Felix Dietrich
 </div>
 </div>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-berelsonContentAnalysisCommunication1952" class="csl-entry" role="listitem">
+Berelson, B. R. (1952). <em>Content Analysis in Communication Research</em>. Free Press.
+</div>
+<div id="ref-bosshartMediaEntertainment1998" class="csl-entry" role="listitem">
+Bosshart, L., &amp; Macconi, I. (1998). Media Entertainment. <em>Communication Research Trends</em>, <em>18</em>(3), 3–8.
+</div>
+<div id="ref-doeringForschungsmethodenUndEvaluation2022" class="csl-entry" role="listitem">
+Döring, N. (2022). <em>Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften</em>. Springer Berlin Heidelberg. <a href="https://doi.org/10.1007/978-3-662-64762-2">https://doi.org/10.1007/978-3-662-64762-2</a>
+</div>
+<div id="ref-hartmannHortonWohlRevisited2011" class="csl-entry" role="listitem">
+Hartmann, T., &amp; Goldhoorn, C. (2011). Horton and Wohl Revisited: Exploring Viewers’ Experience of Parasocial Interaction. <em>Journal of Communication</em>, <em>61</em>(6), 1104–1121. <a href="https://doi.org/10.1111/j.1460-2466.2011.01595.x">https://doi.org/10.1111/j.1460-2466.2011.01595.x</a>
+</div>
+<div id="ref-hortonMassCommunicationParasocial1956" class="csl-entry" role="listitem">
+Horton, D., &amp; Wohl, R. (1956). Mass Communication and Para-Social Interaction: Observations on Intimacy at a Distance. <em>Psychiatry</em>, <em>19</em>(3), 215–229. <a href="https://doi.org/10.1080/00332747.1956.11023049">https://doi.org/10.1080/00332747.1956.11023049</a>
+</div>
 <div id="ref-krippendorffContentAnalysisIntroduction2018" class="csl-entry" role="listitem">
-Krippendorff, K. (2018). <em>Content analysis: An introduction to its methodology</em> (Fourth Edition). SAGE.
+Krippendorff, K. (2018). <em>Content Analysis: An Introduction to Its Methodology</em> (Fourth Edition). SAGE.
+</div>
+<div id="ref-leithParasocialCuesUbiquity2021" class="csl-entry" role="listitem">
+Leith, A. P. (2021). Parasocial Cues: <span>The</span> Ubiquity of Parasocial Relationships on <span>Twitch</span>. <em>Communication Monographs</em>, <em>88</em>(1), 111–129. <a href="https://doi.org/10.1080/03637751.2020.1868544">https://doi.org/10.1080/03637751.2020.1868544</a>
+</div>
+<div id="ref-meierComputermediatedCommunicationSocial2021" class="csl-entry" role="listitem">
+Meier, A., &amp; Reinecke, L. (2021). Computer-Mediated Communication, Social Media, and Mental Health: A Conceptual and Empirical Meta-Review. <em>Communication Research</em>, <em>48</em>(8), 1182–1209. <a href="https://doi.org/10.1177/0093650220958224">https://doi.org/10.1177/0093650220958224</a>
 </div>
 <div id="ref-neuendorfContentAnalysisGuidebook2017" class="csl-entry" role="listitem">
 Neuendorf, K. A. (2017). <em>The <span>Content Analysis Guidebook</span></em>. SAGE Publications, Inc. <a href="https://doi.org/10.4135/9781071802878">https://doi.org/10.4135/9781071802878</a>
 </div>
 <div id="ref-oehmer-pedrazziStandardisierteInhaltsanalyseKommunikationswissenschaft2023" class="csl-entry" role="listitem">
-Oehmer-Pedrazzi, F., Kessler, S. H., Humprecht, E., Sommer, K., &amp; Castro, L. (Eds.). (2023). <em>Standardisierte Inhaltsanalyse in der Kommunikationswissenschaft – Standardized Content Analysis in Communication Research: Ein Handbuch - A Handbook</em>. Springer Fachmedien Wiesbaden. <a href="https://doi.org/10.1007/978-3-658-36179-2">https://doi.org/10.1007/978-3-658-36179-2</a>
+Oehmer-Pedrazzi, F., Kessler, S. H., Humprecht, E., Sommer, K., &amp; Castro, L. (Hrsg.). (2023). <em>Standardisierte Inhaltsanalyse in der Kommunikationswissenschaft – Standardized Content Analysis in Communication Research: Ein Handbuch - A Handbook</em>. Springer Fachmedien Wiesbaden. <a href="https://doi.org/10.1007/978-3-658-36179-2">https://doi.org/10.1007/978-3-658-36179-2</a>
+</div>
+<div id="ref-oliverEntertainmentPleasurableMeaningful2011" class="csl-entry" role="listitem">
+Oliver, M. B., &amp; Raney, A. A. (2011). Entertainment as Pleasurable and Meaningful: <span>Identifying</span> Hedonic and Eudaimonic Motivations for Entertainment Consumption. <em>Journal of Communication</em>, <em>61</em>(5), 984–1004. <a href="https://doi.org/10.1111/j.1460-2466.2011.01585.x">https://doi.org/10.1111/j.1460-2466.2011.01585.x</a>
+</div>
+<div id="ref-raneyEntertainmentEnjoymentMedia2019" class="csl-entry" role="listitem">
+Raney, A. A., &amp; Bryant, J. (2019). Entertainment and Enjoyment as Media Effect. In M. B. Oliver, A. A. Raney, &amp; J. Bryant (Hrsg.), <em>Media Effects: <span>Advances</span> in Theory and Research</em> (4. Aufl., S. 324–341). Routledge. <a href="https://doi.org/10.4324/9780429491146-21">https://doi.org/10.4324/9780429491146-21</a>
 </div>
 <div id="ref-roesslerInhaltsanalyse2017" class="csl-entry" role="listitem">
 Rössler, P. (2017). <em>Inhaltsanalyse</em> (3. überarbeitete Auflage, Online-Ausgabe). UVK Verlagsgesellschaft mbH. <a href="https://doi.org/10.36198/9783838547060">https://doi.org/10.36198/9783838547060</a>
+</div>
+<div id="ref-rubinLonelinessParasocialInteraction1985" class="csl-entry" role="listitem">
+Rubin, A. M., Perse, E. M., &amp; Powell, R. A. (1985). Loneliness, Parasocial Interaction, and Local Television News Viewing. <em>Human Communication Research</em>, <em>12</em>(2), 155–180. <a href="https://doi.org/10.1111/j.1468-2958.1985.tb00071.x">https://doi.org/10.1111/j.1468-2958.1985.tb00071.x</a>
+</div>
+<div id="ref-ryanSelfdeterminationTheoryFacilitation2000" class="csl-entry" role="listitem">
+Ryan, R. M., &amp; Deci, E. L. (2000). Self-Determination Theory and the Facilitation of Intrinsic Motivation, Social Development, and Well-Being. <em>American Psychologist</em>, <em>55</em>, 68–78.
+</div>
+<div id="ref-ryanHappinessHumanPotentials2001" class="csl-entry" role="listitem">
+Ryan, R. M., &amp; Deci, E. L. (2001). On Happiness and Human Potentials: A Review of Research on Hedonic and Eudaimonic Well-Being. <em>Annual Review of Psychology</em>, <em>52</em>, 141–166. <a href="https://doi.org/10.1146/annurev.psych.52.1.141">https://doi.org/10.1146/annurev.psych.52.1.141</a>
+</div>
+<div id="ref-schmittPopulistVoicesExtremist2018" class="csl-entry" role="listitem">
+Schmitt, J., Winkler, J., Lutz, S., Dietrich, F., &amp; Rieger, D. (2018, Mai 24–28). <em>Populist Voices in Extremist Online Videos: <span>A</span> Content Analysis of Right-Wing and <span>Islamic</span> Extremist <span>YouTube</span> Videos</em> [Conference Presentation]. 68th <span>Annual Conference</span> of the <span>International Communication Association</span> (<span>ICA</span>), Prague, Czech Republic.
+</div>
+<div id="ref-smithContentAnalysisNarrative2000" class="csl-entry" role="listitem">
+Smith, C. P. (2000). Content Analysis and Narrative Analysis. In H. T. Reis &amp; C. M. Judd (Hrsg.), <em>Handbook of Research Methods in Social and Personality Psychology</em> (S. 313–335). Cambridge University Press.
+</div>
+<div id="ref-tamboriniMediaEnjoymentNeed2011" class="csl-entry" role="listitem">
+Tamborini, R., Grizzard, M., Bowman, N. D., Reinecke, L., Lewis, R. J., &amp; Eden, A. (2011). Media Enjoyment as Need Satisfaction: The Contribution of Hedonic and Nonhedonic Needs. <em>Journal of Communication</em>, <em>61</em>(6), 1025–1042. <a href="https://doi.org/10.1111/j.1460-2466.2011.01593.x">https://doi.org/10.1111/j.1460-2466.2011.01593.x</a>
+</div>
+<div id="ref-tukachinskyTheorizingDevelopmentParasocial2019" class="csl-entry" role="listitem">
+Tukachinsky, R., &amp; Stever, G. (2019). Theorizing Development of Parasocial Engagement. <em>Communication Theory</em>, <em>29</em>(3), 297–318. <a href="https://doi.org/10.1093/ct/qty032">https://doi.org/10.1093/ct/qty032</a>
+</div>
+<div id="ref-walterInitiationEvolutionPSRs2023" class="csl-entry" role="listitem">
+Walter, N., Andrews, E. A., &amp; Tukachinsky Forster, R. (2023). Initiation and Evolution of <span>PSRs</span>. In R. Tukachinsky Forster (Hrsg.), <em>The <span>Oxford Handbook</span> of <span>Parasocial Experiences</span></em> (1. Aufl., S. 125–146). Oxford University Press. <a href="https://doi.org/10.1093/oxfordhb/9780197650677.013.5">https://doi.org/10.1093/oxfordhb/9780197650677.013.5</a>
 </div>
 </div>
 </section>
@@ -1040,12 +1688,12 @@ Rössler, P. (2017). <em>Inhaltsanalyse</em> (3. überarbeitete Auflage, Online-
         // flash "checked"
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
-        button.setAttribute("title", "Copied!");
+        button.setAttribute("title", "Kopiert");
         let tooltip;
         if (window.bootstrap) {
           button.setAttribute("data-bs-toggle", "tooltip");
           button.setAttribute("data-bs-placement", "left");
-          button.setAttribute("data-bs-title", "Copied!");
+          button.setAttribute("data-bs-title", "Kopiert");
           tooltip = new bootstrap.Tooltip(button, 
             { trigger: "manual", 
               customClass: "code-copy-button-tooltip",
