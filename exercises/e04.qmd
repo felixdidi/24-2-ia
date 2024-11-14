@@ -1,0 +1,33 @@
+---
+title: "Aufgabe 04"
+---
+
+## Arbeitsauftrag: Reflexion und Fortschritt des Projekts
+
+**Ziel:** Diskutieren Sie den aktuellen Fortschritt Ihres Projekts im Team und nutzen Sie dafür das Feedback, das Sie in der letzten Sitzung zu Ihrer Problemstellung erhalten haben. Gehen Sie ebenfalls noch einmal auf die Denkanstöße ein, die Ihnen bereits bekannt sind (diese sind unten noch einmal aufgeführt). Der Fokus liegt darauf, Ihr Projekt zu reflektieren und, wenn nötig, entsprechende Überarbeitungen vorzunehmen.
+
+Beachten Sie, dass die Einreichung noch ein "Work in Progress" ist und keine finale Ausarbeitung Ihres Projekts darstellt. In den kommenden Wochen werden wir das Projekt schrittweise weiterentwickeln. Ihre jetzigen Erkenntnisse und Änderungen sollten Sie in Bezug auf die folgenden Punkte zusammenfassen:
+
+1. **Exakte Formulierung der Problemstellung / zentrale forschungsleitende Frage**  
+   - Definieren Sie präzise, welches Problem Ihr Projekt untersucht und formulieren Sie eine klar fokussierte Fragestellung, die Ihr Forschungsziel beschreibt.
+
+2. **Zentrale unabhängige Variable(n)**  
+   - Listen Sie die Schlüsselfaktoren oder Einflussgrößen auf, die Sie in Ihrem Projekt als unabhängige Variablen verwenden und die das Ergebnis (abhängige Variablen) beeinflussen sollen.
+
+3. **Zentrale abhängige Variable**  
+   - Identifizieren Sie die Hauptvariable(n), die in Ihrem Projekt gemessen wird bzw. die Ergebnisse, die durch die unabhängigen Variablen beeinflusst werden.
+
+**Vorgehensweise:** Besprechen Sie in Ihrer Gruppe, wie Sie das Feedback und die Denkanstöße in Ihre Problemstellung und Forschungsfragen einfließen lassen können. Falls notwendig, nehmen Sie Anpassungen oder Änderungen an Ihrem Projekt vor. 
+
+Bitte senden Sie Ihre Antwort (1x pro Gruppe) bis spätestens **Dienstag, 19.11. um 12 Uhr** mittags per E-Mail an den Dozenten.
+
+## Weitere Denkanstöße
+
+- Inwiefern bilden sich die von Ihnen genannten Konstrukte in Medien**inhalt** ab (z.B. Nutzer:innenkommentare, bildlich oder textuell im Video)? Wie **implizit oder explizit** ist das Konstrukt in diesen Inhalten vorhanden?
+  - z.B. Übertragung normativer Fragen (Ethik) auf empirisch messbare Dimensionen
+  - z.B. Emotionales Empfinden → Ausdrucksformen
+- Inwiefern lassen sich diese Fragestellungen auch in **anderen Nutzungskontexten** untersuchen?
+  - z.B. Fernsehen (nur Inhalte, keine Nutzer:innenreaktionen)
+  - z.B. Podcasts
+  - siehe auch zukünftige Sitzung zu Datenerhebung
+- Welche **Limitationen** könnte ein **inhaltsbasierter Ansatz** haben, und wie können wir diese möglichst gering halten?
