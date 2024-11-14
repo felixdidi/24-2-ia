@@ -1,9 +1,5 @@
 ---
 title: "Informationen zum Projektbericht"
-# csl: "../bib/apa.csl"
-# bibliography: "../bib/24-1-nmok.bib"
-# suppress-bibliography: true
-# link-citations: false
 ---
 
 ## Inhalt

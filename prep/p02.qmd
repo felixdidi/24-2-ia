@@ -1,6 +1,6 @@
 ---
 title: "Wöchentliche Vorbereitung auf die Seminar-Sitzung"
-csl: "../bib/apa-cv.csl"
+csl: https://www.zotero.org/styles/apa-cv
 bibliography: "../bib/24-2-ia.bib"
 suppress-bibliography: true
 link-citations: false
