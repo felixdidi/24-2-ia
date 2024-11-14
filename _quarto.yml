@@ -37,6 +37,8 @@ website:
         contents:
           - href: "slides/slides.html"
             text: "Folien"
+          - href: "literature.html"
+            text: "Literatur"
 
 format:
   html:

@@ -1,0 +1,12 @@
+---
+title: "Literatur"
+csl: https://www.zotero.org/styles/apa
+bibliography: "bib/24-2-ia.bib"
+link-citations: false
+nocite: '@*'
+---
+
+Anbei finden Sie als Nachschlagewerk eine Sammlung aller Literaturangaben, die im Rahmen dieses Kurses (bspw. in Übungen oder auch auf den Folien) genannt wurden oder die anderweitig (bspw. als ergänzende Literatur) für Sie relevant sein könnten.
+
+::: {#refs}
+:::
