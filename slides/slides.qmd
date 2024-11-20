@@ -456,7 +456,7 @@ Ryan, R. M., & Deci, E. L. (2001). On happiness and human potentials: A review o
 
 **Psychologisches Wohlbefinden**
 
->“Optimal psychological functioning and experience”
+>"Optimal psychological functioning and experience”
 >
 > @ryanHappinessHumanPotentials2001 [p. 142]
 
@@ -724,7 +724,7 @@ Smith, C. P. (2000). Content analysis and narrative analysis. In H. T. Reis & C.
 
 1. Die Inhaltsanalyse beschränkt sich auf einfache Analysen
 2. Jeder kann eine Inhaltsanalyse durchführen; sie erfordert keine besondere Vorbereitung
-3. Der Begriff *Inhaltsanalyse* bezieht sich auf *alle* Untersuchungen von Nachrichten (z.B. was ist mit „qualitativer Inhaltsanalyse“?)
+3. Der Begriff *Inhaltsanalyse* bezieht sich auf *alle* Untersuchungen von Nachrichten (z.B. was ist mit "qualitativer Inhaltsanalyse"?)
 4. Die Inhaltsanalyse ist nur für den akademischen Gebrauch bestimmt
 
 :::fragment
@@ -752,14 +752,14 @@ Schmitt, J., Winkler, J., Lutz, S., Dietrich, F., & Rieger, D. (2018, May 24–2
 
 - Beschreibung des Nachrichteninhalts
   - im Allgemeinen nicht problematisch - aber siehe Problem latenter vs. manifester Inhalt
-  - z.B. „Inwieweit kommen populistische Kommunikationsstrategien in extremistischen Propagandavideos vor?“ [vgl. @schmittPopulistVoicesExtremist2018]
+  - z.B. "Inwieweit kommen populistische Kommunikationsstrategien in extremistischen Propagandavideos vor?" [vgl. @schmittPopulistVoicesExtremist2018]
 - Die Untersuchung der Qualität von Botschaften
   - erfordert einen (normativen) Rahmen
-  - z.B. „Gibt es einen Unterschied zwischen rechtsextremen und islamistischen Propagandavideos in Bezug auf den Einsatz populistischer Kommunikationsstrategien?“ [vgl. @schmittPopulistVoicesExtremist2018]
+  - z.B. "Gibt es einen Unterschied zwischen rechtsextremen und islamistischen Propagandavideos in Bezug auf den Einsatz populistischer Kommunikationsstrategien?" [vgl. @schmittPopulistVoicesExtremist2018]
 - Inferenz
   - erfordert zusätzliche Daten oder tiefgreifende theoretische Annahmen
-  - prognostische Inferenz (z.B. „Welchen Einfluss haben populistische Kommunikationsstrategien in extremistischen Propagandavideos auf die Zuschauer?“)
-  - diagnostische Inferenz (z.B. „Welche Elemente der Diskursarchitektur fördern die Verwendung bestimmter populistischer Kommunikationsstrategien?“)
+  - prognostische Inferenz (z.B. "Welchen Einfluss haben populistische Kommunikationsstrategien in extremistischen Propagandavideos auf die Zuschauer?")
+  - diagnostische Inferenz (z.B. "Welche Elemente der Diskursarchitektur fördern die Verwendung bestimmter populistischer Kommunikationsstrategien?")
 
 ***
 
@@ -879,11 +879,154 @@ Neuendorf, K. A. (2017). *The Content Analysis Guidebook*. SAGE Publications, In
 
 ### Darüber hinaus...
 
-- *Verallgemeinerbarkeit*: siehe „The Computational Niche“ in der nächsten Sitzung
+- *Verallgemeinerbarkeit*: siehe "The Computational Niche" in der nächsten Sitzung
 - *Replizierbarkeit*: werden wir am Rande besprechen
 - *Hypothesenprüfung auf der Grundlage von Theorie*: gute Problemstellung entwickeln
 - *Reliabilität und Valdität*: Wird in einer eigenen Sitzung behandelt
 
+
+***
+
+:::big-text
+Fragen?
+:::
+
+## Die vorliegenden Daten zu Family-Vlogs
+
+- *n* = 280.427 Kommentare unter
+- 2.265 Videos
+- aus 13 Kanälen
+- *M*<sub>Kommentare/Person</sub> = 8.00 (*SD* = 8.68)
+- *M*<sub>Beziehungsdauer</sub> = 453 Tage
+- *M*<sub>Abonnenten/Kanal</sub> = 5,07 Mio.
+
+**Kanäle**
+
+::::columns
+:::column
+- \@travandcor
+- \@throughryanseyes
+- \@theedwardsfamily
+- \@thejohnsonfam
+- \@onyxfamilyshow
+- \@thecrosbys
+- \@louisepentland
+:::
+:::column
+- \@justjordan33
+- \@kayceerachelwonderland
+- \@familiadiamond
+- \@coleandsav
+- \@cjsocool
+- \@bramfam
+:::
+::::
+
+# Sitzung 05: Chancen & Risiken automatisierter Methoden
+
+<br>
+
+![](img/05/updown.jpeg){height=300px}
+
+<br>
+
+:::callout-warning
+## Ressourcen für diese Sitzung
+@vanatteveldtWhenCommunicationMeets2018
+:::
+
+:::aside
+Bild generiert mit FLUX.1-schnell: "A person on a TV screen showing one hand thumbs up and one hand thumbs down as a black and white cartoon"
+:::
+
+## Chancen, Herausforderungen und Fallstricke der computergestützten Kommunikationswissenschaft
+
+:::aside
+van Atteveldt, W., & Peng, T.-Q. (2018). When communication meets computation: Opportunities, challenges, and pitfalls in computational communication science. *Communication Methods and Measures, 12*(2-3), 81–92. <https://doi.org/10.1080/19312458.2018.1458084>
+:::
+
+- Wie können Sie die Möglichkeiten von CCS im Hinblick auf Ihr Forschungsinteresse nutzen?
+- Wie können Sie mögliche Fallstricke in Bezug auf Ihr Forschungsinteresse vermeiden?
+
+basierend auf @vanatteveldtWhenCommunicationMeets2018
+
+:::fragment
+
+::::columns
+::: {.column width="40%"}
+
+<br><center>
+**Chancen**
+<hr></hr>
+</center>
+
+- Vom Selbstbericht zum tatsächlichen Verhalten
+- Von Laborexperimenten zu Studien über das echte soziale Umfeld
+- Von Small-N zu Large-N
+- Von solitärer zu kollaborativer Forschung
+
+:::
+
+::: {.column width="60%"}
+
+<br><center>
+**Herausforderungen und Fallstricke**
+<hr></hr>
+</center>
+
+- Wie können wir Forschungsdaten zugänglich machen?
+- Sind "Big Data" immer gute Daten?
+- Sind computergestützte Messmethoden valide und reliabel?
+- Was ist verantwortungsvolles und ethisches Vorgehen in der computergestützten Kommunikationsforschung?
+- (Wie erhalten wir die erforderlichen Fähigkeiten und Infrastrukturen?)
+
+:::
+::::
+
+:::
+
+***
+
+## The Computational Niche
+
+:::aside
+Margolin, D. B. (2019). Computational contributions: A symbiotic approach to integrating big, observational data studies into the communication field. *Communication Methods and Measures, 13*(4), 229–247. <https://doi.org/10.1080/19312458.2019.1639144>
+:::
+
+- Wie passt Ihr Forschungsinteresse in die "Computational Niche?
+- Wie könnten Sie die von @margolinComputationalContributionsSymbiotic2019 vorgeschlagenen Empfehlungen umsetzen?
+
+:::fragment
+
+*Relationship between comparative advantages (rows) and recommendations (columns)*
+
+:::{style="font-size: 15px;"}
+
+|                                | Provide Multi-Causal Inventories                                                               | Report Informative Findings                                      | Measure Important Variables "As Is”                                                    | Use Purposive Samples                                                                   |
+|--------------------------------|------------------------------------------------------------------------------------------------|------------------------------------------------------------------|----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| Test External Validity         | Fully articulate state of prior knowledge                                                      | Give "null finding” equal importance                             | Converts construct validity concerns to evaluations of theoretical boundary conditions | Guides field to deploy systematic, controlled variation across studies                  |
+| Explore Theoretical Relevance  |                                                                                                | Identify when prior expectations are weak for relevant variables | Identifies theories that do and do not explain real world phenomena                    |                                                                                         |
+| Audition Hypotheses for Field  | Provide all hypotheses that fit the data                                                       |                                                                  |                                                                                        | Show that an effect holds in a specific, defined, sub-group and so may be generalizable |
+| Create Unimaginable Hypotheses | Researchers must go beyond "most intuitive” explanation and acknowledge competing alternatives |                                                                  | Encourages theoretical interrogation of unexpected predictors                          | Reduce reliance on face valid comparisons that disguise counterintuitive differences    |
+
+:::
+
+:::
+
+***
+
+### Sinnvolle Fragen stellen
+
+:::aside
+Jungherr, A., & Theocharis, Y. (2017). The empiricist’s challenge: Asking meaningful questions in political science in the age of big data. *Journal of Information Technology & Politics, 14*(2), 97–109. <https://doi.org/10.1080/19331681.2017.1312187>
+:::
+
+basierend auf @jungherrEmpiricistsChallengeAsking2017
+
+1. Nutzung neuer Daten, um bestehende Theorien zu überprüfen, aber vor allem, um neue Theorien zu entwickeln, die auf **neuen Erkenntnissen** beruhen, die mit den bisherigen Forschungsinstrumenten nicht hätten gewonnen werden können
+2. Entwicklung neuer Konzepte und Messmethoden, die uns in Kombination dabei helfen können, besser zu verstehen, wie die von dieser neuen Datenquelle erfassten Einstellungen und Verhaltensweisen nicht nur auf größere Phänomene, sondern auch auf unser bestehendes Verständnis abgebildet werden, wodurch klarer wird, **welche Schlüsse wir bei der Untersuchung komplexer sozialer und politischer Prozesse ziehen können - und welche nicht**.
+3. Unsere erkenntnistheoretischen Instrumente und Methoden neu bewerten und durch interdisziplinäre Zusammenarbeit neu abstimmen, so dass sie **synergisieren**, anstatt miteinander zu konkurrieren
+4. Sicherstellen, dass das gesamte Forschungsprogramm im Einklang mit **wissenschaftlichen Werten, Ethik und Praktiken** steht
 
 ***
 
