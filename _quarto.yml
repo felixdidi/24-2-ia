@@ -17,7 +17,7 @@ language:
   title-block-published: ""
 
 website:
-  site-url: https://felixdidi.github.io/24-2-nmok
+  site-url: https://felixdidi.github.io
   sidebar:
     style: "floating"
     align: "center"
