@@ -17,6 +17,7 @@ language:
   title-block-published: ""
 
 website:
+  site-url: https://felixdidi.github.io/24-2-nmok
   sidebar:
     style: "floating"
     align: "center"
@@ -51,6 +52,7 @@ format:
     code-line-numbers: true
     highlight-style: gruvbox
     lang: de-DE
+    link-external-newwindow: true
 theme:
   light: [cosmo, theme.scss]
   
