@@ -8,7 +8,7 @@
 
 <meta name="author" content="Felix Dietrich">
 
-<title>Aufgabe 01</title>
+<title>Aufgabe 06</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -81,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Aufgabe 01</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Aufgabe 06</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -174,14 +208,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#machen-sie-sich-mit-dem-kurs-vertraut" id="toc-machen-sie-sich-mit-dem-kurs-vertraut" class="nav-link active" data-scroll-target="#machen-sie-sich-mit-dem-kurs-vertraut">Machen Sie sich mit dem Kurs vertraut</a></li>
-  <li><a href="#bildung-der-arbeitsgruppen" id="toc-bildung-der-arbeitsgruppen" class="nav-link" data-scroll-target="#bildung-der-arbeitsgruppen">Bildung der Arbeitsgruppen</a></li>
-  <li><a href="#arbeit-in-den-arbeitsgruppen" id="toc-arbeit-in-den-arbeitsgruppen" class="nav-link" data-scroll-target="#arbeit-in-den-arbeitsgruppen">Arbeit in den Arbeitsgruppen</a>
-  <ul class="collapse">
-  <li><a href="#struktur-der-wöchentlichen-gruppensitzungen" id="toc-struktur-der-wöchentlichen-gruppensitzungen" class="nav-link" data-scroll-target="#struktur-der-wöchentlichen-gruppensitzungen">Struktur der wöchentlichen Gruppensitzungen</a></li>
-  <li><a href="#aufgabenverteilung-und-gruppenberichte" id="toc-aufgabenverteilung-und-gruppenberichte" class="nav-link" data-scroll-target="#aufgabenverteilung-und-gruppenberichte">Aufgabenverteilung und Gruppenberichte</a></li>
-  <li><a href="#tipps-für-eine-erfolgreiche-gruppenarbeit" id="toc-tipps-für-eine-erfolgreiche-gruppenarbeit" class="nav-link" data-scroll-target="#tipps-für-eine-erfolgreiche-gruppenarbeit">Tipps für eine erfolgreiche Gruppenarbeit</a></li>
-  </ul></li>
+  <li><a href="#laden-und-inspizieren-des-youtube-kommentare-datensatzes" id="toc-laden-und-inspizieren-des-youtube-kommentare-datensatzes" class="nav-link active" data-scroll-target="#laden-und-inspizieren-des-youtube-kommentare-datensatzes">Laden und Inspizieren des YouTube-Kommentare Datensatzes</a></li>
+  <li><a href="#laden-der-zugehörigen-videos-und-transkription" id="toc-laden-der-zugehörigen-videos-und-transkription" class="nav-link" data-scroll-target="#laden-der-zugehörigen-videos-und-transkription">Laden der zugehörigen Videos und Transkription</a></li>
   </ul>
 </nav>
     </div>
@@ -190,7 +218,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Aufgabe 01</h1>
+<h1 class="title">Aufgabe 06</h1>
   <div class="quarto-categories">
     <div class="quarto-category">BA Inhaltsanalyse: Inhalte öffentlicher Kommunikation KF G</div>
     <div class="quarto-category">Wintersemester 2024/2025</div>
@@ -224,43 +252,20 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="machen-sie-sich-mit-dem-kurs-vertraut" class="level2">
-<h2 class="anchored" data-anchor-id="machen-sie-sich-mit-dem-kurs-vertraut">Machen Sie sich mit dem Kurs vertraut</h2>
-<p>Bitte lesen Sie die Kurs-Website sorgfältig durch und sammeln Sie alle Fragen, die sich ergeben könnten, damit Sie sie in der nächsten Sitzung stellen können.</p>
+<p>Bitte nutzen Sie für alle Übungen dass Wissen, dass Sie sich aus dem Vorbereitungsskript für die heutige Sitzung angeeignet haben. Es ist nicht verboten, dieses zur Orientierung zu verwenden, Sie müssen nicht alle Funktionen auswendig kennen ;-)</p>
+<section id="laden-und-inspizieren-des-youtube-kommentare-datensatzes" class="level2">
+<h2 class="anchored" data-anchor-id="laden-und-inspizieren-des-youtube-kommentare-datensatzes">Laden und Inspizieren des YouTube-Kommentare Datensatzes</h2>
+<p>Sie können den Datensatz ganz einfach einladen über den folgenden Befehl:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>comments <span class="ot">&lt;-</span> <span class="fu">read_parquet</span>(<span class="st">"http://data.felix-dietrich.de/comments.parquet.gzip"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Schauen Sie sich die Daten an und überlegen Sie sich 2-3 interessante deskriptive Werte, die wir uns zu diesen Daten anschauen könnten. Setzen Sie dies nach Möglichkeit in R um. Bauen Sie außerdem mindestens eine Grafik.</p>
 </section>
-<section id="bildung-der-arbeitsgruppen" class="level2">
-<h2 class="anchored" data-anchor-id="bildung-der-arbeitsgruppen">Bildung der Arbeitsgruppen</h2>
-<p>Bilden Sie eine Arbeitsgruppe mit maximal 5 Studierenden und melden Sie die Zusammensetzung im Anschluss an die erste Sitzung (spätestens Freitag, 25.10. 12:00 Uhr) via E-Mail an den Dozenten.</p>
-</section>
-<section id="arbeit-in-den-arbeitsgruppen" class="level2">
-<h2 class="anchored" data-anchor-id="arbeit-in-den-arbeitsgruppen">Arbeit in den Arbeitsgruppen</h2>
-<p>Die Gruppenarbeit im Seminar umfasst jeweils ca. fünf Studierende pro Gruppe, was in der Regel zu maximal fünf Arbeitsgruppen führt. Diese Zusammenarbeit basiert auf dem Prinzip “Learning by doing”, wobei die Studierenden direkt in ihren Arbeitsgruppen (AGs) praktische Erfahrungen sammeln. Dabei profitieren Sie nicht nur von der eigenen Gruppenarbeit, sondern auch vom Austausch mit anderen AGs: Sie können deren Methoden, Themen und Arbeitsweisen kennenlernen und so Ihren eigenen Arbeitsprozess bereichern. Ein wichtiger Bestandteil dieses Lernprozesses ist das Geben und Empfangen von Feedback – sowohl zur eigenen Arbeit als auch zur Arbeit der anderen AGs.</p>
-<section id="struktur-der-wöchentlichen-gruppensitzungen" class="level3">
-<h3 class="anchored" data-anchor-id="struktur-der-wöchentlichen-gruppensitzungen">Struktur der wöchentlichen Gruppensitzungen</h3>
-<p>Die Gruppensitzungen finden wöchentlich im Rahmen des Seminartermins statt. Ein fester Bestandteil jeder Sitzung ist der <strong>5-Minuten-Gruppenbericht</strong>, der von einem Gruppenmitglied präsentiert wird. Jedes Mitglied ist im Laufe des Seminars einmal für einen Bericht zuständig. Nach jedem Bericht gibt es eine Feedbackrunde, in der sowohl die Gruppe als auch der Rest des Seminars Rückmeldungen geben können. Falls in einer Sitzung keine Gruppenberichte anstehen, dient diese als offene Arbeitssitzung oder Sprechstunde, in der offene Fragen geklärt und individuelle Anliegen besprochen werden können.</p>
-<p>Darüber hinaus gibt es in vielen Sitzungen <strong>Refresher und Diskussionen zu methodischen Grundlagen</strong> sowie Besprechungen der nächsten Arbeitsschritte der einzelnen Gruppen. Diese Struktur hilft dabei, den Arbeitsprozess klar und fokussiert zu gestalten.</p>
-</section>
-<section id="aufgabenverteilung-und-gruppenberichte" class="level3">
-<h3 class="anchored" data-anchor-id="aufgabenverteilung-und-gruppenberichte">Aufgabenverteilung und Gruppenberichte</h3>
-<p>Um eine klare Aufgabenverteilung sicherzustellen, ist jedes Gruppenmitglied einmal federführend für ein bestimmtes Sitzungsthema sowie den dazugehörigen Bericht in der jeweils nächsten Sitzung. Die Verantwortung umfasst:</p>
-<ul>
-<li><strong>Protokollierung des Diskussionsprozesses</strong> in der Arbeitsgruppe,</li>
-<li><strong>Vorbereitung einer Kurzpräsentation</strong> (5 Minuten, 2-3 Folien), die den aktuellen Stand der Gruppenarbeit zusammenfasst,</li>
-<li><strong>Upload der Präsentationsfolien</strong> bis spätestens Donnerstag, 8 Uhr, vor der nächsten Sitzung.</li>
-</ul>
-<p>Diese klare Aufgabenstruktur ermöglicht es, die Arbeitsschritte effizient zu organisieren und sicherzustellen, dass jedes Gruppenmitglied aktiv zur Arbeit der AG beiträgt.</p>
-</section>
-<section id="tipps-für-eine-erfolgreiche-gruppenarbeit" class="level3">
-<h3 class="anchored" data-anchor-id="tipps-für-eine-erfolgreiche-gruppenarbeit">Tipps für eine erfolgreiche Gruppenarbeit</h3>
-<ol type="1">
-<li><p><strong>Effiziente Aufgabenverteilung</strong>: Verteilen Sie frühzeitig die Verantwortlichkeiten für die verschiedenen Arbeitsschritte und Berichte. Sorgen Sie dafür, dass alle Gruppenmitglieder gleichermaßen in die inhaltliche Arbeit einbezogen werden, auch wenn die Koordination einzelner Schritte von bestimmten Personen übernommen wird.</p></li>
-<li><p><strong>Kommunikation und Zusammenarbeit</strong>: Nutzen Sie regelmäßige Treffen und digitale Tools (Messenger, E-Mail, Videokonferenzen), um in Kontakt zu bleiben und sich über Fortschritte und Herausforderungen auszutauschen.</p></li>
-<li><p><strong>Feedbackkultur und kontinuierliches Lernen</strong>: Sehen Sie Feedback als wertvolle Lernmöglichkeit. Die regelmäßigen Feedbackrunden helfen Ihnen, Ihre Arbeit zu verbessern und von anderen Gruppen zu lernen. Indem Sie die Arbeitsweisen anderer AGs beobachten und aktiv Rückmeldungen einholen, können Sie Ihre eigenen Methoden und Ergebnisse optimieren.</p></li>
-</ol>
-<p>Durch diese strukturierte und interaktive Arbeitsweise werden Sie nicht nur fachlich, sondern auch methodisch und im Bereich der Teamarbeit profitieren.</p>
+<section id="laden-der-zugehörigen-videos-und-transkription" class="level2">
+<h2 class="anchored" data-anchor-id="laden-der-zugehörigen-videos-und-transkription">Laden der zugehörigen Videos und Transkription</h2>
+<p>Überlegen Sie sich, wie sie eine kleine Test-Stichprobe (bspw. <em>n</em> = 5) aus allen Videos ziehen können. Laden Sie diese Videos herunter und transkribieren sie nach Möglichkeit. Überlegen Sie sich, wie Sie ggf. auch zu den Inhalten des Videos eine erste grobe Analyse durchführen könnten.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

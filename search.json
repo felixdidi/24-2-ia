@@ -209,67 +209,91 @@
     ]
   },
   {
-    "objectID": "exercises/e04.html",
-    "href": "exercises/e04.html",
-    "title": "Aufgabe 04",
+    "objectID": "exercises/e06.html",
+    "href": "exercises/e06.html",
+    "title": "Aufgabe 06",
     "section": "",
-    "text": "Ziel: Diskutieren Sie den aktuellen Fortschritt Ihres Projekts im Team und nutzen Sie dafür das Feedback, das Sie in der letzten Sitzung zu Ihrer Problemstellung erhalten haben. Gehen Sie ebenfalls noch einmal auf die Denkanstöße ein, die Ihnen bereits bekannt sind (diese sind unten noch einmal aufgeführt). Der Fokus liegt darauf, Ihr Projekt zu reflektieren und, wenn nötig, entsprechende Überarbeitungen vorzunehmen.\nBeachten Sie, dass die Einreichung noch ein “Work in Progress” ist und keine finale Ausarbeitung Ihres Projekts darstellt. In den kommenden Wochen werden wir das Projekt schrittweise weiterentwickeln. Ihre jetzigen Erkenntnisse und Änderungen sollten Sie in Bezug auf die folgenden Punkte zusammenfassen:\n\nExakte Formulierung der Problemstellung / zentrale forschungsleitende Frage\n\nDefinieren Sie präzise, welches Problem Ihr Projekt untersucht und formulieren Sie eine klar fokussierte Fragestellung, die Ihr Forschungsziel beschreibt.\n\nZentrale unabhängige Variable(n)\n\nListen Sie die Schlüsselfaktoren oder Einflussgrößen auf, die Sie in Ihrem Projekt als unabhängige Variablen verwenden und die das Ergebnis (abhängige Variablen) beeinflussen sollen.\n\nZentrale abhängige Variable\n\nIdentifizieren Sie die Hauptvariable(n), die in Ihrem Projekt gemessen wird bzw. die Ergebnisse, die durch die unabhängigen Variablen beeinflusst werden.\n\n\nVorgehensweise: Besprechen Sie in Ihrer Gruppe, wie Sie das Feedback und die Denkanstöße in Ihre Problemstellung und Forschungsfragen einfließen lassen können. Falls notwendig, nehmen Sie Anpassungen oder Änderungen an Ihrem Projekt vor.\nBitte senden Sie Ihre Antwort (1x pro Gruppe) bis spätestens Dienstag, 19.11. um 12 Uhr mittags per E-Mail an den Dozenten."
+    "text": "Bitte nutzen Sie für alle Übungen dass Wissen, dass Sie sich aus dem Vorbereitungsskript für die heutige Sitzung angeeignet haben. Es ist nicht verboten, dieses zur Orientierung zu verwenden, Sie müssen nicht alle Funktionen auswendig kennen ;-)"
   },
   {
-    "objectID": "exercises/e04.html#arbeitsauftrag-reflexion-und-fortschritt-des-projekts",
-    "href": "exercises/e04.html#arbeitsauftrag-reflexion-und-fortschritt-des-projekts",
-    "title": "Aufgabe 04",
+    "objectID": "exercises/e06.html#laden-und-inspizieren-des-youtube-kommentare-datensatzes",
+    "href": "exercises/e06.html#laden-und-inspizieren-des-youtube-kommentare-datensatzes",
+    "title": "Aufgabe 06",
+    "section": "Laden und Inspizieren des YouTube-Kommentare Datensatzes",
+    "text": "Laden und Inspizieren des YouTube-Kommentare Datensatzes\nSie können den Datensatz ganz einfach einladen über den folgenden Befehl:\n\ncomments &lt;- read_parquet(\"http://data.felix-dietrich.de/comments.parquet.gzip\")\n\nSchauen Sie sich die Daten an und überlegen Sie sich 2-3 interessante deskriptive Werte, die wir uns zu diesen Daten anschauen könnten. Setzen Sie dies nach Möglichkeit in R um. Bauen Sie außerdem mindestens eine Grafik."
+  },
+  {
+    "objectID": "exercises/e06.html#laden-der-zugehörigen-videos-und-transkription",
+    "href": "exercises/e06.html#laden-der-zugehörigen-videos-und-transkription",
+    "title": "Aufgabe 06",
+    "section": "Laden der zugehörigen Videos und Transkription",
+    "text": "Laden der zugehörigen Videos und Transkription\nÜberlegen Sie sich, wie sie eine kleine Test-Stichprobe (bspw. n = 5) aus allen Videos ziehen können. Laden Sie diese Videos herunter und transkribieren sie nach Möglichkeit. Überlegen Sie sich, wie Sie ggf. auch zu den Inhalten des Videos eine erste grobe Analyse durchführen könnten."
+  },
+  {
+    "objectID": "exercises/term_paper.html",
+    "href": "exercises/term_paper.html",
+    "title": "Informationen zum Projektbericht",
     "section": "",
-    "text": "Ziel: Diskutieren Sie den aktuellen Fortschritt Ihres Projekts im Team und nutzen Sie dafür das Feedback, das Sie in der letzten Sitzung zu Ihrer Problemstellung erhalten haben. Gehen Sie ebenfalls noch einmal auf die Denkanstöße ein, die Ihnen bereits bekannt sind (diese sind unten noch einmal aufgeführt). Der Fokus liegt darauf, Ihr Projekt zu reflektieren und, wenn nötig, entsprechende Überarbeitungen vorzunehmen.\nBeachten Sie, dass die Einreichung noch ein “Work in Progress” ist und keine finale Ausarbeitung Ihres Projekts darstellt. In den kommenden Wochen werden wir das Projekt schrittweise weiterentwickeln. Ihre jetzigen Erkenntnisse und Änderungen sollten Sie in Bezug auf die folgenden Punkte zusammenfassen:\n\nExakte Formulierung der Problemstellung / zentrale forschungsleitende Frage\n\nDefinieren Sie präzise, welches Problem Ihr Projekt untersucht und formulieren Sie eine klar fokussierte Fragestellung, die Ihr Forschungsziel beschreibt.\n\nZentrale unabhängige Variable(n)\n\nListen Sie die Schlüsselfaktoren oder Einflussgrößen auf, die Sie in Ihrem Projekt als unabhängige Variablen verwenden und die das Ergebnis (abhängige Variablen) beeinflussen sollen.\n\nZentrale abhängige Variable\n\nIdentifizieren Sie die Hauptvariable(n), die in Ihrem Projekt gemessen wird bzw. die Ergebnisse, die durch die unabhängigen Variablen beeinflusst werden.\n\n\nVorgehensweise: Besprechen Sie in Ihrer Gruppe, wie Sie das Feedback und die Denkanstöße in Ihre Problemstellung und Forschungsfragen einfließen lassen können. Falls notwendig, nehmen Sie Anpassungen oder Änderungen an Ihrem Projekt vor.\nBitte senden Sie Ihre Antwort (1x pro Gruppe) bis spätestens Dienstag, 19.11. um 12 Uhr mittags per E-Mail an den Dozenten."
+    "text": "Der Projektbericht soll pro Gruppenmitglied maximal 10 Seiten umfassen, wobei insgesamt etwa 10.000 Wörter (ca. 40 Seiten) als Richtwert gelten. Die Seitenanzahl ist jedoch lediglich eine Orientierung; im Vordergrund steht die Qualität der Ausarbeitung. Entscheidend ist eine fundierte Bearbeitung des Themas, eine sorgfältige Analyse der Daten sowie eine sachgerechte Einordnung der Ergebnisse. Wichtige Grafiken und Tabellen sollen in den Text integriert werden, während ergänzende Analysen im Anhang Platz finden. Die Hausarbeit soll die folgenden Bestandteile enthalten: Einleitung, Theorie-/Literaturteil, Methoden, Ergebnisse und Diskussion. Zudem ist die Dokumentation der eigenen Arbeit unerlässlich, wobei Sie selbstverständlich die im Verlauf des Semester angefertigte Dokumentation weiterverwerten können. Wichtig ist, dass es nicht zwingend “signifikante” Ergebnisse geben muss – der Lernprozess steht im Vordergrund. Die Einhaltung der Formalien und Regeln wissenschaftlicher Arbeit ist notenrelevant. Viele Inhalte und Anforderungen werden bereits im Verlauf des Semester in den Kleingruppen besprochen — bei Bedarf können jedoch auch Sprechstundentermine vereinbart werden, um konkrete Fragen zu besprechen.\nWeitere Informationen zum konkreten Aufbau des Projekterichts erfolgen in der letzten Sitzung des Semesters. Außerdem finden Sie grundlegende Informationen auf den folgenden Seiten:\n\nhttps://www.studium.ifp.uni-mainz.de/studierende/seminararbeiten/\nhttps://www.studium.ifp.uni-mainz.de/studierende/seminararbeiten/formale-vorgaben/\n\nIm Speziellen gelten die folgenden Anforderungen an den Projektbericht:",
+    "crumbs": [
+      "Kursinformationen",
+      "Hausarbeit"
+    ]
   },
   {
-    "objectID": "exercises/e04.html#weitere-denkanstöße",
-    "href": "exercises/e04.html#weitere-denkanstöße",
-    "title": "Aufgabe 04",
-    "section": "Weitere Denkanstöße",
-    "text": "Weitere Denkanstöße\n\nInwiefern bilden sich die von Ihnen genannten Konstrukte in Medieninhalt ab (z.B. Nutzer:innenkommentare, bildlich oder textuell im Video)? Wie implizit oder explizit ist das Konstrukt in diesen Inhalten vorhanden?\n\nz.B. Übertragung normativer Fragen (Ethik) auf empirisch messbare Dimensionen\nz.B. Emotionales Empfinden → Ausdrucksformen\n\nInwiefern lassen sich diese Fragestellungen auch in anderen Nutzungskontexten untersuchen?\n\nz.B. Fernsehen (nur Inhalte, keine Nutzer:innenreaktionen)\nz.B. Podcasts\nsiehe auch zukünftige Sitzung zu Datenerhebung\n\nWelche Limitationen könnte ein inhaltsbasierter Ansatz haben, und wie können wir diese möglichst gering halten?"
-  },
-  {
-    "objectID": "exercises/e01.html",
-    "href": "exercises/e01.html",
-    "title": "Aufgabe 01",
+    "objectID": "exercises/term_paper.html#inhalt",
+    "href": "exercises/term_paper.html#inhalt",
+    "title": "Informationen zum Projektbericht",
     "section": "",
-    "text": "Bitte lesen Sie die Kurs-Website sorgfältig durch und sammeln Sie alle Fragen, die sich ergeben könnten, damit Sie sie in der nächsten Sitzung stellen können."
+    "text": "Der Projektbericht soll pro Gruppenmitglied maximal 10 Seiten umfassen, wobei insgesamt etwa 10.000 Wörter (ca. 40 Seiten) als Richtwert gelten. Die Seitenanzahl ist jedoch lediglich eine Orientierung; im Vordergrund steht die Qualität der Ausarbeitung. Entscheidend ist eine fundierte Bearbeitung des Themas, eine sorgfältige Analyse der Daten sowie eine sachgerechte Einordnung der Ergebnisse. Wichtige Grafiken und Tabellen sollen in den Text integriert werden, während ergänzende Analysen im Anhang Platz finden. Die Hausarbeit soll die folgenden Bestandteile enthalten: Einleitung, Theorie-/Literaturteil, Methoden, Ergebnisse und Diskussion. Zudem ist die Dokumentation der eigenen Arbeit unerlässlich, wobei Sie selbstverständlich die im Verlauf des Semester angefertigte Dokumentation weiterverwerten können. Wichtig ist, dass es nicht zwingend “signifikante” Ergebnisse geben muss – der Lernprozess steht im Vordergrund. Die Einhaltung der Formalien und Regeln wissenschaftlicher Arbeit ist notenrelevant. Viele Inhalte und Anforderungen werden bereits im Verlauf des Semester in den Kleingruppen besprochen — bei Bedarf können jedoch auch Sprechstundentermine vereinbart werden, um konkrete Fragen zu besprechen.\nWeitere Informationen zum konkreten Aufbau des Projekterichts erfolgen in der letzten Sitzung des Semesters. Außerdem finden Sie grundlegende Informationen auf den folgenden Seiten:\n\nhttps://www.studium.ifp.uni-mainz.de/studierende/seminararbeiten/\nhttps://www.studium.ifp.uni-mainz.de/studierende/seminararbeiten/formale-vorgaben/\n\nIm Speziellen gelten die folgenden Anforderungen an den Projektbericht:",
+    "crumbs": [
+      "Kursinformationen",
+      "Hausarbeit"
+    ]
   },
   {
-    "objectID": "exercises/e01.html#machen-sie-sich-mit-dem-kurs-vertraut",
-    "href": "exercises/e01.html#machen-sie-sich-mit-dem-kurs-vertraut",
-    "title": "Aufgabe 01",
-    "section": "",
-    "text": "Bitte lesen Sie die Kurs-Website sorgfältig durch und sammeln Sie alle Fragen, die sich ergeben könnten, damit Sie sie in der nächsten Sitzung stellen können."
+    "objectID": "exercises/term_paper.html#umfang",
+    "href": "exercises/term_paper.html#umfang",
+    "title": "Informationen zum Projektbericht",
+    "section": "Umfang",
+    "text": "Umfang\n\nmaximal (!) 40 Seiten Text (10 Seiten pro Person), exkl. Deckblatt, Inhaltsverzeichnis, Literaturverzeichnis etc.",
+    "crumbs": [
+      "Kursinformationen",
+      "Hausarbeit"
+    ]
   },
   {
-    "objectID": "exercises/e01.html#bildung-der-arbeitsgruppen",
-    "href": "exercises/e01.html#bildung-der-arbeitsgruppen",
-    "title": "Aufgabe 01",
-    "section": "Bildung der Arbeitsgruppen",
-    "text": "Bildung der Arbeitsgruppen\nBilden Sie eine Arbeitsgruppe mit maximal 5 Studierenden und melden Sie die Zusammensetzung im Anschluss an die erste Sitzung (spätestens Freitag, 25.10. 12:00 Uhr) via E-Mail an den Dozenten."
+    "objectID": "exercises/term_paper.html#formatierung",
+    "href": "exercises/term_paper.html#formatierung",
+    "title": "Informationen zum Projektbericht",
+    "section": "Formatierung",
+    "text": "Formatierung\n\nSchriftart: Times New Roman (Schriftgröße 12) oder Arial (Schriftgröße 11)\n1,5-facher Zeilenabstand\nBlocksatz, blocksatzbedingte Leerstellen innerhalb der Zeilen sind durch automatische Silbentrennung zu vermeiden\nSeitenränder: Abstand zum Seitenrand je 2,5 cm nach oben und unten, 3,5 cm nach links und 3 cm nach rechts\nZitation nach APA 7 (siehe APA Website\n\nDirekte und indirekte Zitate erfolgen ausschließlich als Kurzbelege nach APA (keine Fußnotenbelege)\nFür das Anlegen einer Literaturliste nach APA hilfreich: Literatursoftware Citavi oder Zotero (per ZDV-Apps dem eigenen Uni-Account zuweisen)\nFußnoten in Schriftgröße 10 am jeweiligen Seitenende können sparsam für Ergänzungen und Hintergrundinformationen eingesetzt werden",
+    "crumbs": [
+      "Kursinformationen",
+      "Hausarbeit"
+    ]
   },
   {
-    "objectID": "exercises/e01.html#arbeit-in-den-arbeitsgruppen",
-    "href": "exercises/e01.html#arbeit-in-den-arbeitsgruppen",
-    "title": "Aufgabe 01",
-    "section": "Arbeit in den Arbeitsgruppen",
-    "text": "Arbeit in den Arbeitsgruppen\nDie Gruppenarbeit im Seminar umfasst jeweils ca. fünf Studierende pro Gruppe, was in der Regel zu maximal fünf Arbeitsgruppen führt. Diese Zusammenarbeit basiert auf dem Prinzip “Learning by doing”, wobei die Studierenden direkt in ihren Arbeitsgruppen (AGs) praktische Erfahrungen sammeln. Dabei profitieren Sie nicht nur von der eigenen Gruppenarbeit, sondern auch vom Austausch mit anderen AGs: Sie können deren Methoden, Themen und Arbeitsweisen kennenlernen und so Ihren eigenen Arbeitsprozess bereichern. Ein wichtiger Bestandteil dieses Lernprozesses ist das Geben und Empfangen von Feedback – sowohl zur eigenen Arbeit als auch zur Arbeit der anderen AGs.\n\nStruktur der wöchentlichen Gruppensitzungen\nDie Gruppensitzungen finden wöchentlich im Rahmen des Seminartermins statt. Ein fester Bestandteil jeder Sitzung ist der 5-Minuten-Gruppenbericht, der von einem Gruppenmitglied präsentiert wird. Jedes Mitglied ist im Laufe des Seminars einmal für einen Bericht zuständig. Nach jedem Bericht gibt es eine Feedbackrunde, in der sowohl die Gruppe als auch der Rest des Seminars Rückmeldungen geben können. Falls in einer Sitzung keine Gruppenberichte anstehen, dient diese als offene Arbeitssitzung oder Sprechstunde, in der offene Fragen geklärt und individuelle Anliegen besprochen werden können.\nDarüber hinaus gibt es in vielen Sitzungen Refresher und Diskussionen zu methodischen Grundlagen sowie Besprechungen der nächsten Arbeitsschritte der einzelnen Gruppen. Diese Struktur hilft dabei, den Arbeitsprozess klar und fokussiert zu gestalten.\n\n\nAufgabenverteilung und Gruppenberichte\nUm eine klare Aufgabenverteilung sicherzustellen, ist jedes Gruppenmitglied einmal federführend für ein bestimmtes Sitzungsthema sowie den dazugehörigen Bericht in der jeweils nächsten Sitzung. Die Verantwortung umfasst:\n\nProtokollierung des Diskussionsprozesses in der Arbeitsgruppe,\nVorbereitung einer Kurzpräsentation (5 Minuten, 2-3 Folien), die den aktuellen Stand der Gruppenarbeit zusammenfasst,\nUpload der Präsentationsfolien bis spätestens Donnerstag, 8 Uhr, vor der nächsten Sitzung.\n\nDiese klare Aufgabenstruktur ermöglicht es, die Arbeitsschritte effizient zu organisieren und sicherzustellen, dass jedes Gruppenmitglied aktiv zur Arbeit der AG beiträgt.\n\n\nTipps für eine erfolgreiche Gruppenarbeit\n\nEffiziente Aufgabenverteilung: Verteilen Sie frühzeitig die Verantwortlichkeiten für die verschiedenen Arbeitsschritte und Berichte. Sorgen Sie dafür, dass alle Gruppenmitglieder gleichermaßen in die inhaltliche Arbeit einbezogen werden, auch wenn die Koordination einzelner Schritte von bestimmten Personen übernommen wird.\nKommunikation und Zusammenarbeit: Nutzen Sie regelmäßige Treffen und digitale Tools (Messenger, E-Mail, Videokonferenzen), um in Kontakt zu bleiben und sich über Fortschritte und Herausforderungen auszutauschen.\nFeedbackkultur und kontinuierliches Lernen: Sehen Sie Feedback als wertvolle Lernmöglichkeit. Die regelmäßigen Feedbackrunden helfen Ihnen, Ihre Arbeit zu verbessern und von anderen Gruppen zu lernen. Indem Sie die Arbeitsweisen anderer AGs beobachten und aktiv Rückmeldungen einholen, können Sie Ihre eigenen Methoden und Ergebnisse optimieren.\n\nDurch diese strukturierte und interaktive Arbeitsweise werden Sie nicht nur fachlich, sondern auch methodisch und im Bereich der Teamarbeit profitieren."
+    "objectID": "exercises/term_paper.html#plagiate",
+    "href": "exercises/term_paper.html#plagiate",
+    "title": "Informationen zum Projektbericht",
+    "section": "Plagiate",
+    "text": "Plagiate\n\nDer Hausarbeit muss am Ende eine unterschriebene eidesstattliche Erklärung über das eigenständige Anfertigen der Arbeit beiliegen. Andernfalls kann die Arbeit nicht als Prüfungsleistung anerkannt werden.\nUm Plagiate zu vermeiden, belegen Sie alle (prinzipiell überprüfbaren) Tatsachenbehauptungen mit wissenschaftlicher Literatur. Weiterführende Interpretationen, Theorietransfer und eigene Gedanken bedürfen keines Belegs. Sie können und sollten diese Eigenleistungen jedoch mit Literatur und empirischen Befunden untermauern, die den jeweiligen Gedankengang unterstützen.\nEinsatz von “KI”: In diesem Seminar ist der Einsatz von “KI”-Werkzeugen für unterstützende Aufgaben erlaubt, bspw. das Verstehen von Konzepten oder die Korrektur von Rechtschreibfehlern. Ebenso dürfen Sie sich bei der Arbeit mit Programmiersprachen wie R oder Python unterstützen lassen. Unzulässig ist jedoch die Nutzung von überwiegend “KI”-generiertem Text in Aufgaben ohne Quellenangabe oder die vollständige Bearbeitung von Arbeitsschritten durch “KI”. Falls “KI”-Werkzeuge verwendet werden, muss dies transparent angegeben werden. Für die Richtigkeit der Ergebnisse sind Sie selbst verantwortlich!",
+    "crumbs": [
+      "Kursinformationen",
+      "Hausarbeit"
+    ]
   },
   {
-    "objectID": "prep/p02.html",
-    "href": "prep/p02.html",
-    "title": "Wöchentliche Vorbereitung auf die Seminar-Sitzung",
-    "section": "",
-    "text": "Um sich auf die nächste Sitzung vorzubereiten, lesen Sie bitte die folgenden Paper (PDFs im LMS):\nVerpflichtende Lektüre:\n\nWalter, N., Andrews, E. A., & Tukachinsky Forster, R. (2023). Initiation and Evolution of PSRs. In R. Tukachinsky Forster (Hrsg.), The Oxford Handbook of Parasocial Experiences (1. Aufl., S. 125–146). Oxford University Press. https://doi.org/10.1093/oxfordhb/9780197650677.013.5\nLeith, A. P. (2021). Parasocial Cues: The Ubiquity of Parasocial Relationships on Twitch. Communication Monographs, 88(1), 111–129. https://doi.org/10.1080/03637751.2020.1868544\n\nMachen Sie sich während der Lektüre Notizen zu den folgenden Fragen. Sie sollten in der Lage sein, diese Fragen in der Sitzung soweit es geht zu beantworten und mit Ihren Kommiliton:innen darüber zu diskutieren. Aber: Die Texte sind nicht einfach zu verstehen. Es ist nicht schlimm, wenn Sie nicht alles direkt verstehen. Notieren Sie sich Fragen zu Aspekten, die Ihnen unklar geblieben sind.\n\nWie entstehen PSBs?\nWas sind potentielle Prädiktoren für die Intensität von PSBs?\nWas meint Leith mit “verbal immediacy”? Notieren Sie sich Fragen zu möglichen Unklarheiten\nWas sind potentielle Unterschiede bei PSI und PSB zu Social-Media-Persönlichkeiten im Vergleich zu TV-Personae (z.B. Charactere in einem Film oder Nachrichtensprecher:innen)\nÜberlegen Sie sich, inwiefern das alles auf das Anwendungsbeispiel der Family-Vlogs zutreffen kann\n\nErgänzende Literatur:\n\nBond, B. J. (2021). The Development and Influence of Parasocial Relationships with Television Characters: A Longitudinal Experimental Test of Prejudice Reduction through Parasocial Contact. Communication Research, 48(4), 573–593. https://doi.org/10.1177/0093650219900632\nFahr, A., & Früh, H. (2021). Entertainment Is a Journey, Not Just a Destination: Process Perspectives in Entertainment Theories. In P. Vorderer & C. Klimmt (Hrsg.), The Oxford Handbook of Entertainment Theory (S. 22–44). Oxford University Press. https://doi.org/10.1093/oxfordhb/9780190072216.013.2\nHartmann, T., & Goldhoorn, C. (2011). Horton and Wohl Revisited: Exploring Viewers’ Experience of Parasocial Interaction. Journal of Communication, 61(6), 1104–1121. https://doi.org/10.1111/j.1460-2466.2011.01595.x\nHorton, D., & Wohl, R. (1956). Mass Communication and Para-Social Interaction: Observations on Intimacy at a Distance. Psychiatry, 19(3), 215–229. https://doi.org/10.1080/00332747.1956.11023049\nKurtin, K. S., O’Brien, N., Roy, D., & Dam, L. (2018). The Development of Parasocial Interaction Relationships on YouTube. The Journal of Social Media in Society, 7(1, 1), 233–252. https://www.thejsms.org/index.php/JSMS/article/view/304\nRubin, A. M., Perse, E. M., & Powell, R. A. (1985). Loneliness, Parasocial Interaction, and Local Television News Viewing. Human Communication Research, 12(2), 155–180. https://doi.org/10.1111/j.1468-2958.1985.tb00071.x\nTukachinsky, R., & Stever, G. (2019). Theorizing Development of Parasocial Engagement. Communication Theory, 29(3), 297–318. https://doi.org/10.1093/ct/qty032"
-  },
-  {
-    "objectID": "prep/p02.html#leseaufgabe",
-    "href": "prep/p02.html#leseaufgabe",
-    "title": "Wöchentliche Vorbereitung auf die Seminar-Sitzung",
-    "section": "",
-    "text": "Um sich auf die nächste Sitzung vorzubereiten, lesen Sie bitte die folgenden Paper (PDFs im LMS):\nVerpflichtende Lektüre:\n\nWalter, N., Andrews, E. A., & Tukachinsky Forster, R. (2023). Initiation and Evolution of PSRs. In R. Tukachinsky Forster (Hrsg.), The Oxford Handbook of Parasocial Experiences (1. Aufl., S. 125–146). Oxford University Press. https://doi.org/10.1093/oxfordhb/9780197650677.013.5\nLeith, A. P. (2021). Parasocial Cues: The Ubiquity of Parasocial Relationships on Twitch. Communication Monographs, 88(1), 111–129. https://doi.org/10.1080/03637751.2020.1868544\n\nMachen Sie sich während der Lektüre Notizen zu den folgenden Fragen. Sie sollten in der Lage sein, diese Fragen in der Sitzung soweit es geht zu beantworten und mit Ihren Kommiliton:innen darüber zu diskutieren. Aber: Die Texte sind nicht einfach zu verstehen. Es ist nicht schlimm, wenn Sie nicht alles direkt verstehen. Notieren Sie sich Fragen zu Aspekten, die Ihnen unklar geblieben sind.\n\nWie entstehen PSBs?\nWas sind potentielle Prädiktoren für die Intensität von PSBs?\nWas meint Leith mit “verbal immediacy”? Notieren Sie sich Fragen zu möglichen Unklarheiten\nWas sind potentielle Unterschiede bei PSI und PSB zu Social-Media-Persönlichkeiten im Vergleich zu TV-Personae (z.B. Charactere in einem Film oder Nachrichtensprecher:innen)\nÜberlegen Sie sich, inwiefern das alles auf das Anwendungsbeispiel der Family-Vlogs zutreffen kann\n\nErgänzende Literatur:\n\nBond, B. J. (2021). The Development and Influence of Parasocial Relationships with Television Characters: A Longitudinal Experimental Test of Prejudice Reduction through Parasocial Contact. Communication Research, 48(4), 573–593. https://doi.org/10.1177/0093650219900632\nFahr, A., & Früh, H. (2021). Entertainment Is a Journey, Not Just a Destination: Process Perspectives in Entertainment Theories. In P. Vorderer & C. Klimmt (Hrsg.), The Oxford Handbook of Entertainment Theory (S. 22–44). Oxford University Press. https://doi.org/10.1093/oxfordhb/9780190072216.013.2\nHartmann, T., & Goldhoorn, C. (2011). Horton and Wohl Revisited: Exploring Viewers’ Experience of Parasocial Interaction. Journal of Communication, 61(6), 1104–1121. https://doi.org/10.1111/j.1460-2466.2011.01595.x\nHorton, D., & Wohl, R. (1956). Mass Communication and Para-Social Interaction: Observations on Intimacy at a Distance. Psychiatry, 19(3), 215–229. https://doi.org/10.1080/00332747.1956.11023049\nKurtin, K. S., O’Brien, N., Roy, D., & Dam, L. (2018). The Development of Parasocial Interaction Relationships on YouTube. The Journal of Social Media in Society, 7(1, 1), 233–252. https://www.thejsms.org/index.php/JSMS/article/view/304\nRubin, A. M., Perse, E. M., & Powell, R. A. (1985). Loneliness, Parasocial Interaction, and Local Television News Viewing. Human Communication Research, 12(2), 155–180. https://doi.org/10.1111/j.1468-2958.1985.tb00071.x\nTukachinsky, R., & Stever, G. (2019). Theorizing Development of Parasocial Engagement. Communication Theory, 29(3), 297–318. https://doi.org/10.1093/ct/qty032"
+    "objectID": "exercises/term_paper.html#abgabe-des-projektberichts",
+    "href": "exercises/term_paper.html#abgabe-des-projektberichts",
+    "title": "Informationen zum Projektbericht",
+    "section": "Abgabe des Projektberichts",
+    "text": "Abgabe des Projektberichts\n\nFrist: 17.03.2025, 12:00 Uhr (keine Verlängerung ohne Attest möglich)\nAbgabe einer elektronischen Version (PDF) über die Abgabefunktion im LMS (“Abgabe der Hausarbeit”) — es genügt eine Abgabe pro Gruppe\nErgänzende Materialien (Analyseskripte, Datensätze, etc.) als .zip-Datei verpacken und hochladen",
+    "crumbs": [
+      "Kursinformationen",
+      "Hausarbeit"
+    ]
   },
   {
     "objectID": "index.html",
@@ -338,70 +362,67 @@
     ]
   },
   {
-    "objectID": "exercises/term_paper.html",
-    "href": "exercises/term_paper.html",
-    "title": "Informationen zum Projektbericht",
+    "objectID": "prep/p02.html",
+    "href": "prep/p02.html",
+    "title": "Wöchentliche Vorbereitung auf die Seminar-Sitzung",
     "section": "",
-    "text": "Der Projektbericht soll pro Gruppenmitglied maximal 10 Seiten umfassen, wobei insgesamt etwa 10.000 Wörter (ca. 40 Seiten) als Richtwert gelten. Die Seitenanzahl ist jedoch lediglich eine Orientierung; im Vordergrund steht die Qualität der Ausarbeitung. Entscheidend ist eine fundierte Bearbeitung des Themas, eine sorgfältige Analyse der Daten sowie eine sachgerechte Einordnung der Ergebnisse. Wichtige Grafiken und Tabellen sollen in den Text integriert werden, während ergänzende Analysen im Anhang Platz finden. Die Hausarbeit soll die folgenden Bestandteile enthalten: Einleitung, Theorie-/Literaturteil, Methoden, Ergebnisse und Diskussion. Zudem ist die Dokumentation der eigenen Arbeit unerlässlich, wobei Sie selbstverständlich die im Verlauf des Semester angefertigte Dokumentation weiterverwerten können. Wichtig ist, dass es nicht zwingend “signifikante” Ergebnisse geben muss – der Lernprozess steht im Vordergrund. Die Einhaltung der Formalien und Regeln wissenschaftlicher Arbeit ist notenrelevant. Viele Inhalte und Anforderungen werden bereits im Verlauf des Semester in den Kleingruppen besprochen — bei Bedarf können jedoch auch Sprechstundentermine vereinbart werden, um konkrete Fragen zu besprechen.\nWeitere Informationen zum konkreten Aufbau des Projekterichts erfolgen in der letzten Sitzung des Semesters. Außerdem finden Sie grundlegende Informationen auf den folgenden Seiten:\n\nhttps://www.studium.ifp.uni-mainz.de/studierende/seminararbeiten/\nhttps://www.studium.ifp.uni-mainz.de/studierende/seminararbeiten/formale-vorgaben/\n\nIm Speziellen gelten die folgenden Anforderungen an den Projektbericht:",
-    "crumbs": [
-      "Kursinformationen",
-      "Hausarbeit"
-    ]
+    "text": "Um sich auf die nächste Sitzung vorzubereiten, lesen Sie bitte die folgenden Paper (PDFs im LMS):\nVerpflichtende Lektüre:\n\nWalter, N., Andrews, E. A., & Tukachinsky Forster, R. (2023). Initiation and Evolution of PSRs. In R. Tukachinsky Forster (Hrsg.), The Oxford Handbook of Parasocial Experiences (1. Aufl., S. 125–146). Oxford University Press. https://doi.org/10.1093/oxfordhb/9780197650677.013.5\nLeith, A. P. (2021). Parasocial Cues: The Ubiquity of Parasocial Relationships on Twitch. Communication Monographs, 88(1), 111–129. https://doi.org/10.1080/03637751.2020.1868544\n\nMachen Sie sich während der Lektüre Notizen zu den folgenden Fragen. Sie sollten in der Lage sein, diese Fragen in der Sitzung soweit es geht zu beantworten und mit Ihren Kommiliton:innen darüber zu diskutieren. Aber: Die Texte sind nicht einfach zu verstehen. Es ist nicht schlimm, wenn Sie nicht alles direkt verstehen. Notieren Sie sich Fragen zu Aspekten, die Ihnen unklar geblieben sind.\n\nWie entstehen PSBs?\nWas sind potentielle Prädiktoren für die Intensität von PSBs?\nWas meint Leith mit “verbal immediacy”? Notieren Sie sich Fragen zu möglichen Unklarheiten\nWas sind potentielle Unterschiede bei PSI und PSB zu Social-Media-Persönlichkeiten im Vergleich zu TV-Personae (z.B. Charactere in einem Film oder Nachrichtensprecher:innen)\nÜberlegen Sie sich, inwiefern das alles auf das Anwendungsbeispiel der Family-Vlogs zutreffen kann\n\nErgänzende Literatur:\n\nBond, B. J. (2021). The Development and Influence of Parasocial Relationships with Television Characters: A Longitudinal Experimental Test of Prejudice Reduction through Parasocial Contact. Communication Research, 48(4), 573–593. https://doi.org/10.1177/0093650219900632\nFahr, A., & Früh, H. (2021). Entertainment Is a Journey, Not Just a Destination: Process Perspectives in Entertainment Theories. In P. Vorderer & C. Klimmt (Hrsg.), The Oxford Handbook of Entertainment Theory (S. 22–44). Oxford University Press. https://doi.org/10.1093/oxfordhb/9780190072216.013.2\nHartmann, T., & Goldhoorn, C. (2011). Horton and Wohl Revisited: Exploring Viewers’ Experience of Parasocial Interaction. Journal of Communication, 61(6), 1104–1121. https://doi.org/10.1111/j.1460-2466.2011.01595.x\nHorton, D., & Wohl, R. (1956). Mass Communication and Para-Social Interaction: Observations on Intimacy at a Distance. Psychiatry, 19(3), 215–229. https://doi.org/10.1080/00332747.1956.11023049\nKurtin, K. S., O’Brien, N., Roy, D., & Dam, L. (2018). The Development of Parasocial Interaction Relationships on YouTube. The Journal of Social Media in Society, 7(1, 1), 233–252. https://www.thejsms.org/index.php/JSMS/article/view/304\nRubin, A. M., Perse, E. M., & Powell, R. A. (1985). Loneliness, Parasocial Interaction, and Local Television News Viewing. Human Communication Research, 12(2), 155–180. https://doi.org/10.1111/j.1468-2958.1985.tb00071.x\nTukachinsky, R., & Stever, G. (2019). Theorizing Development of Parasocial Engagement. Communication Theory, 29(3), 297–318. https://doi.org/10.1093/ct/qty032"
   },
   {
-    "objectID": "exercises/term_paper.html#inhalt",
-    "href": "exercises/term_paper.html#inhalt",
-    "title": "Informationen zum Projektbericht",
+    "objectID": "prep/p02.html#leseaufgabe",
+    "href": "prep/p02.html#leseaufgabe",
+    "title": "Wöchentliche Vorbereitung auf die Seminar-Sitzung",
     "section": "",
-    "text": "Der Projektbericht soll pro Gruppenmitglied maximal 10 Seiten umfassen, wobei insgesamt etwa 10.000 Wörter (ca. 40 Seiten) als Richtwert gelten. Die Seitenanzahl ist jedoch lediglich eine Orientierung; im Vordergrund steht die Qualität der Ausarbeitung. Entscheidend ist eine fundierte Bearbeitung des Themas, eine sorgfältige Analyse der Daten sowie eine sachgerechte Einordnung der Ergebnisse. Wichtige Grafiken und Tabellen sollen in den Text integriert werden, während ergänzende Analysen im Anhang Platz finden. Die Hausarbeit soll die folgenden Bestandteile enthalten: Einleitung, Theorie-/Literaturteil, Methoden, Ergebnisse und Diskussion. Zudem ist die Dokumentation der eigenen Arbeit unerlässlich, wobei Sie selbstverständlich die im Verlauf des Semester angefertigte Dokumentation weiterverwerten können. Wichtig ist, dass es nicht zwingend “signifikante” Ergebnisse geben muss – der Lernprozess steht im Vordergrund. Die Einhaltung der Formalien und Regeln wissenschaftlicher Arbeit ist notenrelevant. Viele Inhalte und Anforderungen werden bereits im Verlauf des Semester in den Kleingruppen besprochen — bei Bedarf können jedoch auch Sprechstundentermine vereinbart werden, um konkrete Fragen zu besprechen.\nWeitere Informationen zum konkreten Aufbau des Projekterichts erfolgen in der letzten Sitzung des Semesters. Außerdem finden Sie grundlegende Informationen auf den folgenden Seiten:\n\nhttps://www.studium.ifp.uni-mainz.de/studierende/seminararbeiten/\nhttps://www.studium.ifp.uni-mainz.de/studierende/seminararbeiten/formale-vorgaben/\n\nIm Speziellen gelten die folgenden Anforderungen an den Projektbericht:",
-    "crumbs": [
-      "Kursinformationen",
-      "Hausarbeit"
-    ]
+    "text": "Um sich auf die nächste Sitzung vorzubereiten, lesen Sie bitte die folgenden Paper (PDFs im LMS):\nVerpflichtende Lektüre:\n\nWalter, N., Andrews, E. A., & Tukachinsky Forster, R. (2023). Initiation and Evolution of PSRs. In R. Tukachinsky Forster (Hrsg.), The Oxford Handbook of Parasocial Experiences (1. Aufl., S. 125–146). Oxford University Press. https://doi.org/10.1093/oxfordhb/9780197650677.013.5\nLeith, A. P. (2021). Parasocial Cues: The Ubiquity of Parasocial Relationships on Twitch. Communication Monographs, 88(1), 111–129. https://doi.org/10.1080/03637751.2020.1868544\n\nMachen Sie sich während der Lektüre Notizen zu den folgenden Fragen. Sie sollten in der Lage sein, diese Fragen in der Sitzung soweit es geht zu beantworten und mit Ihren Kommiliton:innen darüber zu diskutieren. Aber: Die Texte sind nicht einfach zu verstehen. Es ist nicht schlimm, wenn Sie nicht alles direkt verstehen. Notieren Sie sich Fragen zu Aspekten, die Ihnen unklar geblieben sind.\n\nWie entstehen PSBs?\nWas sind potentielle Prädiktoren für die Intensität von PSBs?\nWas meint Leith mit “verbal immediacy”? Notieren Sie sich Fragen zu möglichen Unklarheiten\nWas sind potentielle Unterschiede bei PSI und PSB zu Social-Media-Persönlichkeiten im Vergleich zu TV-Personae (z.B. Charactere in einem Film oder Nachrichtensprecher:innen)\nÜberlegen Sie sich, inwiefern das alles auf das Anwendungsbeispiel der Family-Vlogs zutreffen kann\n\nErgänzende Literatur:\n\nBond, B. J. (2021). The Development and Influence of Parasocial Relationships with Television Characters: A Longitudinal Experimental Test of Prejudice Reduction through Parasocial Contact. Communication Research, 48(4), 573–593. https://doi.org/10.1177/0093650219900632\nFahr, A., & Früh, H. (2021). Entertainment Is a Journey, Not Just a Destination: Process Perspectives in Entertainment Theories. In P. Vorderer & C. Klimmt (Hrsg.), The Oxford Handbook of Entertainment Theory (S. 22–44). Oxford University Press. https://doi.org/10.1093/oxfordhb/9780190072216.013.2\nHartmann, T., & Goldhoorn, C. (2011). Horton and Wohl Revisited: Exploring Viewers’ Experience of Parasocial Interaction. Journal of Communication, 61(6), 1104–1121. https://doi.org/10.1111/j.1460-2466.2011.01595.x\nHorton, D., & Wohl, R. (1956). Mass Communication and Para-Social Interaction: Observations on Intimacy at a Distance. Psychiatry, 19(3), 215–229. https://doi.org/10.1080/00332747.1956.11023049\nKurtin, K. S., O’Brien, N., Roy, D., & Dam, L. (2018). The Development of Parasocial Interaction Relationships on YouTube. The Journal of Social Media in Society, 7(1, 1), 233–252. https://www.thejsms.org/index.php/JSMS/article/view/304\nRubin, A. M., Perse, E. M., & Powell, R. A. (1985). Loneliness, Parasocial Interaction, and Local Television News Viewing. Human Communication Research, 12(2), 155–180. https://doi.org/10.1111/j.1468-2958.1985.tb00071.x\nTukachinsky, R., & Stever, G. (2019). Theorizing Development of Parasocial Engagement. Communication Theory, 29(3), 297–318. https://doi.org/10.1093/ct/qty032"
   },
   {
-    "objectID": "exercises/term_paper.html#umfang",
-    "href": "exercises/term_paper.html#umfang",
-    "title": "Informationen zum Projektbericht",
-    "section": "Umfang",
-    "text": "Umfang\n\nmaximal (!) 40 Seiten Text (10 Seiten pro Person), exkl. Deckblatt, Inhaltsverzeichnis, Literaturverzeichnis etc.",
-    "crumbs": [
-      "Kursinformationen",
-      "Hausarbeit"
-    ]
+    "objectID": "exercises/e01.html",
+    "href": "exercises/e01.html",
+    "title": "Aufgabe 01",
+    "section": "",
+    "text": "Bitte lesen Sie die Kurs-Website sorgfältig durch und sammeln Sie alle Fragen, die sich ergeben könnten, damit Sie sie in der nächsten Sitzung stellen können."
   },
   {
-    "objectID": "exercises/term_paper.html#formatierung",
-    "href": "exercises/term_paper.html#formatierung",
-    "title": "Informationen zum Projektbericht",
-    "section": "Formatierung",
-    "text": "Formatierung\n\nSchriftart: Times New Roman (Schriftgröße 12) oder Arial (Schriftgröße 11)\n1,5-facher Zeilenabstand\nBlocksatz, blocksatzbedingte Leerstellen innerhalb der Zeilen sind durch automatische Silbentrennung zu vermeiden\nSeitenränder: Abstand zum Seitenrand je 2,5 cm nach oben und unten, 3,5 cm nach links und 3 cm nach rechts\nZitation nach APA 7 (siehe APA Website\n\nDirekte und indirekte Zitate erfolgen ausschließlich als Kurzbelege nach APA (keine Fußnotenbelege)\nFür das Anlegen einer Literaturliste nach APA hilfreich: Literatursoftware Citavi oder Zotero (per ZDV-Apps dem eigenen Uni-Account zuweisen)\nFußnoten in Schriftgröße 10 am jeweiligen Seitenende können sparsam für Ergänzungen und Hintergrundinformationen eingesetzt werden",
-    "crumbs": [
-      "Kursinformationen",
-      "Hausarbeit"
-    ]
+    "objectID": "exercises/e01.html#machen-sie-sich-mit-dem-kurs-vertraut",
+    "href": "exercises/e01.html#machen-sie-sich-mit-dem-kurs-vertraut",
+    "title": "Aufgabe 01",
+    "section": "",
+    "text": "Bitte lesen Sie die Kurs-Website sorgfältig durch und sammeln Sie alle Fragen, die sich ergeben könnten, damit Sie sie in der nächsten Sitzung stellen können."
   },
   {
-    "objectID": "exercises/term_paper.html#plagiate",
-    "href": "exercises/term_paper.html#plagiate",
-    "title": "Informationen zum Projektbericht",
-    "section": "Plagiate",
-    "text": "Plagiate\n\nDer Hausarbeit muss am Ende eine unterschriebene eidesstattliche Erklärung über das eigenständige Anfertigen der Arbeit beiliegen. Andernfalls kann die Arbeit nicht als Prüfungsleistung anerkannt werden.\nUm Plagiate zu vermeiden, belegen Sie alle (prinzipiell überprüfbaren) Tatsachenbehauptungen mit wissenschaftlicher Literatur. Weiterführende Interpretationen, Theorietransfer und eigene Gedanken bedürfen keines Belegs. Sie können und sollten diese Eigenleistungen jedoch mit Literatur und empirischen Befunden untermauern, die den jeweiligen Gedankengang unterstützen.\nEinsatz von “KI”: In diesem Seminar ist der Einsatz von “KI”-Werkzeugen für unterstützende Aufgaben erlaubt, bspw. das Verstehen von Konzepten oder die Korrektur von Rechtschreibfehlern. Ebenso dürfen Sie sich bei der Arbeit mit Programmiersprachen wie R oder Python unterstützen lassen. Unzulässig ist jedoch die Nutzung von überwiegend “KI”-generiertem Text in Aufgaben ohne Quellenangabe oder die vollständige Bearbeitung von Arbeitsschritten durch “KI”. Falls “KI”-Werkzeuge verwendet werden, muss dies transparent angegeben werden. Für die Richtigkeit der Ergebnisse sind Sie selbst verantwortlich!",
-    "crumbs": [
-      "Kursinformationen",
-      "Hausarbeit"
-    ]
+    "objectID": "exercises/e01.html#bildung-der-arbeitsgruppen",
+    "href": "exercises/e01.html#bildung-der-arbeitsgruppen",
+    "title": "Aufgabe 01",
+    "section": "Bildung der Arbeitsgruppen",
+    "text": "Bildung der Arbeitsgruppen\nBilden Sie eine Arbeitsgruppe mit maximal 5 Studierenden und melden Sie die Zusammensetzung im Anschluss an die erste Sitzung (spätestens Freitag, 25.10. 12:00 Uhr) via E-Mail an den Dozenten."
   },
   {
-    "objectID": "exercises/term_paper.html#abgabe-des-projektberichts",
-    "href": "exercises/term_paper.html#abgabe-des-projektberichts",
-    "title": "Informationen zum Projektbericht",
-    "section": "Abgabe des Projektberichts",
-    "text": "Abgabe des Projektberichts\n\nFrist: 17.03.2025, 12:00 Uhr (keine Verlängerung ohne Attest möglich)\nAbgabe einer elektronischen Version (PDF) über die Abgabefunktion im LMS (“Abgabe der Hausarbeit”) — es genügt eine Abgabe pro Gruppe\nErgänzende Materialien (Analyseskripte, Datensätze, etc.) als .zip-Datei verpacken und hochladen",
-    "crumbs": [
-      "Kursinformationen",
-      "Hausarbeit"
-    ]
+    "objectID": "exercises/e01.html#arbeit-in-den-arbeitsgruppen",
+    "href": "exercises/e01.html#arbeit-in-den-arbeitsgruppen",
+    "title": "Aufgabe 01",
+    "section": "Arbeit in den Arbeitsgruppen",
+    "text": "Arbeit in den Arbeitsgruppen\nDie Gruppenarbeit im Seminar umfasst jeweils ca. fünf Studierende pro Gruppe, was in der Regel zu maximal fünf Arbeitsgruppen führt. Diese Zusammenarbeit basiert auf dem Prinzip “Learning by doing”, wobei die Studierenden direkt in ihren Arbeitsgruppen (AGs) praktische Erfahrungen sammeln. Dabei profitieren Sie nicht nur von der eigenen Gruppenarbeit, sondern auch vom Austausch mit anderen AGs: Sie können deren Methoden, Themen und Arbeitsweisen kennenlernen und so Ihren eigenen Arbeitsprozess bereichern. Ein wichtiger Bestandteil dieses Lernprozesses ist das Geben und Empfangen von Feedback – sowohl zur eigenen Arbeit als auch zur Arbeit der anderen AGs.\n\nStruktur der wöchentlichen Gruppensitzungen\nDie Gruppensitzungen finden wöchentlich im Rahmen des Seminartermins statt. Ein fester Bestandteil jeder Sitzung ist der 5-Minuten-Gruppenbericht, der von einem Gruppenmitglied präsentiert wird. Jedes Mitglied ist im Laufe des Seminars einmal für einen Bericht zuständig. Nach jedem Bericht gibt es eine Feedbackrunde, in der sowohl die Gruppe als auch der Rest des Seminars Rückmeldungen geben können. Falls in einer Sitzung keine Gruppenberichte anstehen, dient diese als offene Arbeitssitzung oder Sprechstunde, in der offene Fragen geklärt und individuelle Anliegen besprochen werden können.\nDarüber hinaus gibt es in vielen Sitzungen Refresher und Diskussionen zu methodischen Grundlagen sowie Besprechungen der nächsten Arbeitsschritte der einzelnen Gruppen. Diese Struktur hilft dabei, den Arbeitsprozess klar und fokussiert zu gestalten.\n\n\nAufgabenverteilung und Gruppenberichte\nUm eine klare Aufgabenverteilung sicherzustellen, ist jedes Gruppenmitglied einmal federführend für ein bestimmtes Sitzungsthema sowie den dazugehörigen Bericht in der jeweils nächsten Sitzung. Die Verantwortung umfasst:\n\nProtokollierung des Diskussionsprozesses in der Arbeitsgruppe,\nVorbereitung einer Kurzpräsentation (5 Minuten, 2-3 Folien), die den aktuellen Stand der Gruppenarbeit zusammenfasst,\nUpload der Präsentationsfolien bis spätestens Donnerstag, 8 Uhr, vor der nächsten Sitzung.\n\nDiese klare Aufgabenstruktur ermöglicht es, die Arbeitsschritte effizient zu organisieren und sicherzustellen, dass jedes Gruppenmitglied aktiv zur Arbeit der AG beiträgt.\n\n\nTipps für eine erfolgreiche Gruppenarbeit\n\nEffiziente Aufgabenverteilung: Verteilen Sie frühzeitig die Verantwortlichkeiten für die verschiedenen Arbeitsschritte und Berichte. Sorgen Sie dafür, dass alle Gruppenmitglieder gleichermaßen in die inhaltliche Arbeit einbezogen werden, auch wenn die Koordination einzelner Schritte von bestimmten Personen übernommen wird.\nKommunikation und Zusammenarbeit: Nutzen Sie regelmäßige Treffen und digitale Tools (Messenger, E-Mail, Videokonferenzen), um in Kontakt zu bleiben und sich über Fortschritte und Herausforderungen auszutauschen.\nFeedbackkultur und kontinuierliches Lernen: Sehen Sie Feedback als wertvolle Lernmöglichkeit. Die regelmäßigen Feedbackrunden helfen Ihnen, Ihre Arbeit zu verbessern und von anderen Gruppen zu lernen. Indem Sie die Arbeitsweisen anderer AGs beobachten und aktiv Rückmeldungen einholen, können Sie Ihre eigenen Methoden und Ergebnisse optimieren.\n\nDurch diese strukturierte und interaktive Arbeitsweise werden Sie nicht nur fachlich, sondern auch methodisch und im Bereich der Teamarbeit profitieren."
+  },
+  {
+    "objectID": "exercises/e04.html",
+    "href": "exercises/e04.html",
+    "title": "Aufgabe 04",
+    "section": "",
+    "text": "Ziel: Diskutieren Sie den aktuellen Fortschritt Ihres Projekts im Team und nutzen Sie dafür das Feedback, das Sie in der letzten Sitzung zu Ihrer Problemstellung erhalten haben. Gehen Sie ebenfalls noch einmal auf die Denkanstöße ein, die Ihnen bereits bekannt sind (diese sind unten noch einmal aufgeführt). Der Fokus liegt darauf, Ihr Projekt zu reflektieren und, wenn nötig, entsprechende Überarbeitungen vorzunehmen.\nBeachten Sie, dass die Einreichung noch ein “Work in Progress” ist und keine finale Ausarbeitung Ihres Projekts darstellt. In den kommenden Wochen werden wir das Projekt schrittweise weiterentwickeln. Ihre jetzigen Erkenntnisse und Änderungen sollten Sie in Bezug auf die folgenden Punkte zusammenfassen:\n\nExakte Formulierung der Problemstellung / zentrale forschungsleitende Frage\n\nDefinieren Sie präzise, welches Problem Ihr Projekt untersucht und formulieren Sie eine klar fokussierte Fragestellung, die Ihr Forschungsziel beschreibt.\n\nZentrale unabhängige Variable(n)\n\nListen Sie die Schlüsselfaktoren oder Einflussgrößen auf, die Sie in Ihrem Projekt als unabhängige Variablen verwenden und die das Ergebnis (abhängige Variablen) beeinflussen sollen.\n\nZentrale abhängige Variable\n\nIdentifizieren Sie die Hauptvariable(n), die in Ihrem Projekt gemessen wird bzw. die Ergebnisse, die durch die unabhängigen Variablen beeinflusst werden.\n\n\nVorgehensweise: Besprechen Sie in Ihrer Gruppe, wie Sie das Feedback und die Denkanstöße in Ihre Problemstellung und Forschungsfragen einfließen lassen können. Falls notwendig, nehmen Sie Anpassungen oder Änderungen an Ihrem Projekt vor.\nBitte senden Sie Ihre Antwort (1x pro Gruppe) bis spätestens Dienstag, 19.11. um 12 Uhr mittags per E-Mail an den Dozenten."
+  },
+  {
+    "objectID": "exercises/e04.html#arbeitsauftrag-reflexion-und-fortschritt-des-projekts",
+    "href": "exercises/e04.html#arbeitsauftrag-reflexion-und-fortschritt-des-projekts",
+    "title": "Aufgabe 04",
+    "section": "",
+    "text": "Ziel: Diskutieren Sie den aktuellen Fortschritt Ihres Projekts im Team und nutzen Sie dafür das Feedback, das Sie in der letzten Sitzung zu Ihrer Problemstellung erhalten haben. Gehen Sie ebenfalls noch einmal auf die Denkanstöße ein, die Ihnen bereits bekannt sind (diese sind unten noch einmal aufgeführt). Der Fokus liegt darauf, Ihr Projekt zu reflektieren und, wenn nötig, entsprechende Überarbeitungen vorzunehmen.\nBeachten Sie, dass die Einreichung noch ein “Work in Progress” ist und keine finale Ausarbeitung Ihres Projekts darstellt. In den kommenden Wochen werden wir das Projekt schrittweise weiterentwickeln. Ihre jetzigen Erkenntnisse und Änderungen sollten Sie in Bezug auf die folgenden Punkte zusammenfassen:\n\nExakte Formulierung der Problemstellung / zentrale forschungsleitende Frage\n\nDefinieren Sie präzise, welches Problem Ihr Projekt untersucht und formulieren Sie eine klar fokussierte Fragestellung, die Ihr Forschungsziel beschreibt.\n\nZentrale unabhängige Variable(n)\n\nListen Sie die Schlüsselfaktoren oder Einflussgrößen auf, die Sie in Ihrem Projekt als unabhängige Variablen verwenden und die das Ergebnis (abhängige Variablen) beeinflussen sollen.\n\nZentrale abhängige Variable\n\nIdentifizieren Sie die Hauptvariable(n), die in Ihrem Projekt gemessen wird bzw. die Ergebnisse, die durch die unabhängigen Variablen beeinflusst werden.\n\n\nVorgehensweise: Besprechen Sie in Ihrer Gruppe, wie Sie das Feedback und die Denkanstöße in Ihre Problemstellung und Forschungsfragen einfließen lassen können. Falls notwendig, nehmen Sie Anpassungen oder Änderungen an Ihrem Projekt vor.\nBitte senden Sie Ihre Antwort (1x pro Gruppe) bis spätestens Dienstag, 19.11. um 12 Uhr mittags per E-Mail an den Dozenten."
+  },
+  {
+    "objectID": "exercises/e04.html#weitere-denkanstöße",
+    "href": "exercises/e04.html#weitere-denkanstöße",
+    "title": "Aufgabe 04",
+    "section": "Weitere Denkanstöße",
+    "text": "Weitere Denkanstöße\n\nInwiefern bilden sich die von Ihnen genannten Konstrukte in Medieninhalt ab (z.B. Nutzer:innenkommentare, bildlich oder textuell im Video)? Wie implizit oder explizit ist das Konstrukt in diesen Inhalten vorhanden?\n\nz.B. Übertragung normativer Fragen (Ethik) auf empirisch messbare Dimensionen\nz.B. Emotionales Empfinden → Ausdrucksformen\n\nInwiefern lassen sich diese Fragestellungen auch in anderen Nutzungskontexten untersuchen?\n\nz.B. Fernsehen (nur Inhalte, keine Nutzer:innenreaktionen)\nz.B. Podcasts\nsiehe auch zukünftige Sitzung zu Datenerhebung\n\nWelche Limitationen könnte ein inhaltsbasierter Ansatz haben, und wie können wir diese möglichst gering halten?"
   },
   {
     "objectID": "literature.html",
