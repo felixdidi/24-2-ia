@@ -1,0 +1,22 @@
+---
+title: "Aufgabe 06"
+---
+
+Bitte nutzen Sie für alle Übungen dass Wissen, dass Sie sich aus dem Vorbereitungsskript für die heutige Sitzung angeeignet haben. Es ist nicht verboten, dieses zur Orientierung zu verwenden, Sie müssen nicht alle Funktionen auswendig kennen ;-)
+
+## Laden und Inspizieren des YouTube-Kommentare Datensatzes
+
+Sie können den Datensatz ganz einfach einladen über den folgenden Befehl:
+
+```{r}
+#| label: load data
+#| eval: false
+
+comments <- read_parquet("http://data.felix-dietrich.de/comments.parquet.gzip")
+```
+
+Schauen Sie sich die Daten an und überlegen Sie sich 2-3 interessante deskriptive Werte, die wir uns zu diesen Daten anschauen könnten. Setzen Sie dies nach Möglichkeit in R um. Bauen Sie außerdem mindestens eine Grafik.
+
+## Laden der zugehörigen Videos und Transkription
+
+Überlegen Sie sich, wie sie eine kleine Test-Stichprobe (bspw. *n* = 5) aus allen Videos ziehen können. Laden Sie diese Videos herunter und transkribieren sie nach Möglichkeit. Überlegen Sie sich, wie Sie ggf. auch zu den Inhalten des Videos eine erste grobe Analyse durchführen könnten.
