@@ -1034,5 +1034,104 @@ basierend auf @jungherrEmpiricistsChallengeAsking2017
 Fragen?
 :::
 
+# Sitzung 06: Automatisierte Inhaltsanalyse 1<br>*Datenerhebung*
+
+<br>
+
+![](img/06/drill.jpeg){height=300px}
+
+<br>
+
+:::callout-warning
+## Ressourcen für diese Sitzung
+@posslerDataNewOil2019
+:::
+
+:::aside
+Bild generiert mit FLUX.1-schnell: "A person on a TV screen drilling the ground with a big drill as a black and white cartoon"
+:::
+
+## Agenda
+
+- Einrichtung von R & RStudio sowie ggf. Python
+- Besprechung des Skripts zu automatisierter Datenerhebung
+- Übungen
+- Überarbeitung Codebuch
+
+## Einrichtung & Tech Support
+
+## Besprechung: Datenerhebung
+
+## Übungen
+
+## Überarbeitung Codebuch
+
+**Bitte beachten:**
+
+- Keine Befragungsstudie, sondern **Inhaltsmerkmale**!
+- Die Frage im Codebuch ist keine Forschungsfrage, sondern instruiert die Codierer:in, Ausprägungen eines Konstrukts zu evaluieren (PSI/PSB). Kann daher alternativ auch als **Instruktion** formuliert werden
+
+**Beispiel "Sentiment-Analyse"**
+
+Die allgemeine Stimmung oder Tonalität des Textes soll erfasst werden. Dabei liegt der Fokus nicht auf einzelnen Aussagen oder Passagen, sondern auf der Gesamteinschätzung der Stimmung.
+
+Ausprägungen: 1 = negativ, 2 = neutral, 3 = positiv  
+
+**Empfohlener Ablauf:**
+
+1. Den gesamten Text lesen und eine intuitive Einschätzung der Gesamtstimmung vornehmen.  
+2. Den Text ein zweites Mal lesen, dabei gezielt nach positiven und negativen Elementen suchen.  
+
+Eigene Meinungen sollten zurückgestellt werden; die Bewertung sollte möglichst objektiv erfolgen und sich darauf konzentrieren, wie der Text insgesamt wirkt.
+
+## Überarbeitung Codebuch
+
+::::columns
+:::{.column width="66%"}
+
+**Arbeitsauftrag 1**
+
+- Mischen Sie sich in den Gruppen so, dass an jedem Tisch mindestens eine Expert:in aus jeder Gruppe ist
+- Tragen Sie Ihre Ideen und Vorschläge zusammen
+- Diskutieren Sie, was gut funktionieren könnte, was nicht (und warum)
+- Nutzen Sie evtl. den Kommentare-Datensatz für Tests
+:::
+
+:::{.column width="33%"}
+:::{.timer #rework-codebuch-1 seconds=1200 starton=interaction}
+:::
+:::
+::::
+
+## Überarbeitung Codebuch
+
+::::columns
+:::{.column width="66%"}
+
+**Arbeitsauftrag 2**
+
+- Finden Sie sich wieder in Ihrer Forschungsgruppe zusammen
+- Besprechen Sie, was Sie von den Kommiliton:innen gelernt haben
+- Überarbeiten Sie das Codebuch entsprechend
+:::
+
+:::{.column width="33%"}
+:::{.timer #rework-codebuch-2 seconds=1200 starton=interaction}
+:::
+:::
+::::
+
+**Hausaufgaben!**
+
+- Individuelle Abgabe einer `.R`-Datei mit Ihrem Code zur Lösung der Aufgaben 1-3 zu Datenerhebung (via LMS)
+- Gruppenabgabe überarbeitetes Codebuch (via Mail)
+- Beides bis Dienstag, 03.12., 12 Uhr mittags
+
+***
+
+:::big-text
+Fragen?
+:::
+
 # Literaturangaben
 
