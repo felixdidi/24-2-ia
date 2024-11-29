@@ -73,7 +73,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dab109951af4044d4f5cecaee3bfc100.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-f9337e09ac915bd319878c77824ceb1d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-1812d95e402eb4d3530f59ec310a8149.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -210,11 +210,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#laden-und-inspizieren-des-youtube-kommentare-datensatzes" id="toc-laden-und-inspizieren-des-youtube-kommentare-datensatzes" class="nav-link active" data-scroll-target="#laden-und-inspizieren-des-youtube-kommentare-datensatzes">Laden und Inspizieren des YouTube-Kommentare Datensatzes</a></li>
   <li><a href="#laden-der-zugehörigen-videos-und-transkription" id="toc-laden-der-zugehörigen-videos-und-transkription" class="nav-link" data-scroll-target="#laden-der-zugehörigen-videos-und-transkription">Laden der zugehörigen Videos und Transkription</a></li>
+  <li><a href="#muster-code" id="toc-muster-code" class="nav-link" data-scroll-target="#muster-code">Muster-Code</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -264,6 +265,207 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="laden-der-zugehörigen-videos-und-transkription" class="level2">
 <h2 class="anchored" data-anchor-id="laden-der-zugehörigen-videos-und-transkription">Laden der zugehörigen Videos und Transkription</h2>
 <p>Überlegen Sie sich, wie sie eine kleine Test-Stichprobe (bspw. <em>n</em> = 5) aus allen Videos ziehen können. Laden Sie diese Videos herunter und transkribieren sie nach Möglichkeit. Überlegen Sie sich, wie Sie ggf. auch zu den Inhalten des Videos eine erste grobe Analyse durchführen könnten.</p>
+</section>
+<section id="muster-code" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="muster-code">Muster-Code</h2>
+<p>Im folgenden die in der Sitzung besprochenen Code-Beispiele.</p>
+<p>Zunächst ist es für diverse Schritte in diesem Workflow wichtig, dass Ihr Arbeitsverzeichnis richtig gesetzt ist. Daher empfehle ich, dass Sie ein R-Projekt anlegen und dieses in RStudio öffnen. Alle weiteren Schritte können Sie dann innerhalb dieses Projekts ausführen.</p>
+<p>Zum Einlesen der Kommentare ist zunächst das <code>arrow</code>-Paket notwendig.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">library</span>(arrow)</span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">theme_set</span>(<span class="fu">theme_minimal</span>())</span>
+<span id="cb2-4"><a href="#cb2-4"></a></span>
+<span id="cb2-5"><a href="#cb2-5"></a>comments <span class="ot">&lt;-</span> <span class="fu">read_parquet</span>(<span class="st">"http://data.felix-dietrich.de/comments.parquet.gzip"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Wir können uns dann z.B. erstmal den Datensatz an sich ansehen…</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>comments</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 280,427 × 14
+    index comment_id  published_at comment author_channel_id video_id channel_id
+    &lt;int&gt; &lt;chr&gt;       &lt;chr&gt;        &lt;chr&gt;   &lt;chr&gt;             &lt;chr&gt;    &lt;chr&gt;     
+ 1 145155 UgyJP-6d-f… 2019-03-11T… "I lov… UCjDkmRxO5uROl0f… LfGOtE2… UCOIGee5h…
+ 2 145143 UgzhMxly_w… 2019-03-11T… "Happy… UCHoSMv9ifkTtZz1… LfGOtE2… UCOIGee5h…
+ 3 144845 UgwK80w_07… 2019-03-11T… "I lov… UCmhVWRUcmpsk4qZ… LfGOtE2… UCOIGee5h…
+ 4 144734 UgwTrNQ-8C… 2019-03-11T… "Love … UCAJOUj7M9PSPB0l… LfGOtE2… UCOIGee5h…
+ 5 144456 Ugwi7wGKDL… 2019-03-11T… "LITER… UCggmCt5WdqV3ZRa… LfGOtE2… UCOIGee5h…
+ 6 144416 UgzqjG7MYk… 2019-03-11T… "Awwwe… UC1ckC8itaxzwVkh… LfGOtE2… UCOIGee5h…
+ 7 144076 Ugy17coYF2… 2019-03-11T… "Happy… UCTVpywQBD9HXXZM… LfGOtE2… UCOIGee5h…
+ 8 144024 Ugz5EHA4LL… 2019-03-11T… "I can… UCdUT9NO7KvR3X4J… LfGOtE2… UCOIGee5h…
+ 9 143986 UgyLGznLHC… 2019-03-11T… "Happy… UCGEQx1oICXRd28u… LfGOtE2… UCOIGee5h…
+10 143779 UgxKv4x2gT… 2019-03-11T… "I mis… UCQJRL3fSEpsIs9A… LfGOtE2… UCOIGee5h…
+# ℹ 280,417 more rows
+# ℹ 7 more variables: view_count &lt;chr&gt;, like_count &lt;chr&gt;,
+#   dislike_count &lt;arrw_bnr&gt;, favorite_count &lt;chr&gt;, video_published_at &lt;dttm&gt;,
+#   video_date &lt;date&gt;, video_comment_count &lt;chr&gt;</code></pre>
+</div>
+</div>
+<p>…oder uns ausgeben lassen, welche Variablen (d.h. Spalten) im Datensatz enthalten sind.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">names</span>(comments)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "index"               "comment_id"          "published_at"       
+ [4] "comment"             "author_channel_id"   "video_id"           
+ [7] "channel_id"          "view_count"          "like_count"         
+[10] "dislike_count"       "favorite_count"      "video_published_at" 
+[13] "video_date"          "video_comment_count"</code></pre>
+</div>
+</div>
+<p>Wir können uns auch eine kleine Zufallsstichprobe an Kommentaren ausgeben lassen.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb7-2"><a href="#cb7-2"></a>comments <span class="sc">|&gt;</span> </span>
+<span id="cb7-3"><a href="#cb7-3"></a>  <span class="fu">slice_sample</span>(<span class="at">n =</span> <span class="dv">10</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb7-4"><a href="#cb7-4"></a>  <span class="fu">pull</span>(comment)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "Just had an argument with my dude about cleaning our room a little. Housekeepers get rooms ready for the next not clean up behind filthy ninjas. That’s for a MAID 😅"          
+ [2] "Ugh he's always flexing Dilo said how u gone hold the door open and CJ says I'm trying to make sure nobody following US. They following ME NOT YALL LOL 🤣🤣🤣 BOY WHO ARE YOU?"
+ [3] "Txunamy I hope you have fun at prom your dad is so overworked active next time tell him not to go with you next time you should tell your mom to go with you"                   
+ [4] "The hospital needs to be giving you iv antibiotics!\nI was admitted to the hospital and got iv antibiotics when I got stabbed."                                                 
+ [5] "How it feel getting played? Be more humble my guy"                                                                                                                              
+ [6] "I love seeing you traveling and enjoying family and friends many blessings 🙏🏽🙌🏽💕\n\nSincerely,\n\nMisty.O💕"                                                               
+ [7] "Wow!! I'm honestly so shocked they did all of this work in like 1 hour!"                                                                                                        
+ [8] "All you can do is do what you can. When those kids grow up, they will know the truth. But no parent should you their child as a pawn."                                          
+ [9] "Oh I laughed and had so much fun with you all tonight! Thank you and I enjoyed another fun time with the Crosby’s! Have great weekend"                                          
+[10] "Her room is beautiful , she's adorable god bless her ❤❤"                                                                                                                        </code></pre>
+</div>
+</div>
+<p>Nun zählen wir aus, wie viele Kommentare pro Kanal vorhanden sind…</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>comments <span class="sc">|&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">group_by</span>(channel_id) <span class="sc">|&gt;</span> </span>
+<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">count</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb9-4"><a href="#cb9-4"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 14 × 2
+# Groups:   channel_id [14]
+   channel_id                   n
+   &lt;chr&gt;                    &lt;int&gt;
+ 1 UCfrREf-q6PbTxNgsB5XAp6A 67266
+ 2 UCVyM1Zknz3u2hGLAN2NVtZg 66980
+ 3 UCSmUMOEPlAfAzbXIVuXso2w 54226
+ 4 UCVNYw6ZGvK1_OhF8OG1OrKA 22385
+ 5 UCOIGee5h5-_8cfY4wFwPX_w 19927
+ 6 UC5ZOSZ-Bpass2ZkJY9q9ISg 17359
+ 7 UCfAEEhKikW1676DCa_0OWLA 17249
+ 8 UCfFsZu7Ed20xKDOmzdpF3EQ  7686
+ 9 UCHOMvu3axPhTG5zLqrHynig  4399
+10 UCyPz82J9A8xU5L6lHyLVHpw  1878
+11 &lt;NA&gt;                       547
+12 UChbKYCOnUtou3RPtFXeT73w   340
+13 UC2VERcmMqi3vdtoQQ0ZP2sA   152
+14 UC4-CH0epzZpD_ARhxCx6LaQ    33</code></pre>
+</div>
+</div>
+<p>…und entfernen Kanäle mit sehr wenigen Kommentaren.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>comments_cleaned <span class="ot">&lt;-</span> </span>
+<span id="cb11-2"><a href="#cb11-2"></a>  comments <span class="sc">|&gt;</span></span>
+<span id="cb11-3"><a href="#cb11-3"></a>  <span class="fu">group_by</span>(channel_id) <span class="sc">|&gt;</span> </span>
+<span id="cb11-4"><a href="#cb11-4"></a>  <span class="fu">filter</span>(<span class="fu">n</span>() <span class="sc">&gt;</span> <span class="dv">1000</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb11-5"><a href="#cb11-5"></a>  <span class="fu">ungroup</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Wir können außerdem den Code aus dem Vorbereitungsskript anpassen und uns bspw. ansehen, in wie viel Prozent der Kommentare je Kanal Herzchen-Emojis verwendet wurden und dies über den Zeitverlauf abbilden.</p>
+<div class="cell page-columns page-full">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>comments_cleaned <span class="sc">|&gt;</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb12-3"><a href="#cb12-3"></a>    <span class="at">hearts =</span> <span class="fu">str_detect</span>(comment, <span class="st">"❤️"</span>),</span>
+<span id="cb12-4"><a href="#cb12-4"></a>    <span class="at">week =</span> <span class="fu">floor_date</span>(<span class="fu">as.Date</span>(published_at), <span class="st">"month"</span>)</span>
+<span id="cb12-5"><a href="#cb12-5"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb12-6"><a href="#cb12-6"></a>  <span class="fu">group_by</span>(week, channel_id) <span class="sc">|&gt;</span></span>
+<span id="cb12-7"><a href="#cb12-7"></a>  <span class="fu">summarise</span>(<span class="at">share_of_hearts =</span> <span class="fu">sum</span>(hearts) <span class="sc">/</span> <span class="fu">n</span>(), <span class="at">n =</span> <span class="fu">n</span>()) <span class="sc">|&gt;</span></span>
+<span id="cb12-8"><a href="#cb12-8"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> week, <span class="at">y =</span> share_of_hearts)) <span class="sc">+</span></span>
+<span id="cb12-9"><a href="#cb12-9"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb12-10"><a href="#cb12-10"></a>  <span class="fu">scale_x_date</span>(</span>
+<span id="cb12-11"><a href="#cb12-11"></a>    <span class="at">date_breaks =</span> <span class="st">"1 year"</span>,</span>
+<span id="cb12-12"><a href="#cb12-12"></a>    <span class="at">date_labels =</span> <span class="st">"%Y"</span></span>
+<span id="cb12-13"><a href="#cb12-13"></a>  ) <span class="sc">+</span></span>
+<span id="cb12-14"><a href="#cb12-14"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> channel_id) <span class="sc">+</span></span>
+<span id="cb12-15"><a href="#cb12-15"></a>  <span class="fu">labs</span>(</span>
+<span id="cb12-16"><a href="#cb12-16"></a>    <span class="at">x =</span> <span class="st">""</span>, <span class="at">y =</span> <span class="st">"Prozentualer Anteil der Kommentare mit Herzchen pro Monat"</span>,</span>
+<span id="cb12-17"><a href="#cb12-17"></a>    <span class="at">title =</span> <span class="st">"Zuneigung zu Family-Voggern"</span></span>
+<span id="cb12-18"><a href="#cb12-18"></a>  )</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display page-columns page-full">
+<div class="page-columns page-full">
+<figure class="figure page-columns page-full">
+<p class="page-columns page-full"><img src="e06_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img column-page" width="1440"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Wenn wir nicht nur die Inhalte der Kommentare, sondern auch die Inhalte der zugehörigen Videos analysieren wollen, können wir diese bspw. herunterladen und transkribieren. Zunächst benötigen wir eine <code>.txt</code> Datei mit den URLs aller Videos, die wir herunterladen wollen. Diese können wir aus dem Kommentardatensatz auf Basis der Spalte <code>video_id</code> erstellen. Beispielhaft erstellen wir hier ein zufälliges Sample von 5 Videos, die wir herunterladen wollen. In einem Forschungsprojekt würden wir an dieser Stelle anstelle einer Zufallsauswahl vermutlich eher diejenigen <code>video_id</code>s extrahieren, die für uns inhaltlich relevant sind.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>comments <span class="sc">|&gt;</span> </span>
+<span id="cb13-2"><a href="#cb13-2"></a>  <span class="fu">select</span>(channel_id, video_id) <span class="sc">|&gt;</span> </span>
+<span id="cb13-3"><a href="#cb13-3"></a>  <span class="fu">distinct</span>() <span class="sc">|&gt;</span> <span class="co"># hiermit entfernen wir Duplikate, da video_id und channel_id im Datensatz mehrfach vorkommen (pro Kommentar)</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a>  <span class="fu">slice_sample</span>(<span class="at">n =</span> <span class="dv">5</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb13-5"><a href="#cb13-5"></a>  <span class="fu">mutate</span>(<span class="at">url =</span> <span class="fu">str_c</span>(<span class="st">"https://www.youtube.com/watch?v="</span>, video_id)) <span class="sc">|&gt;</span> <span class="co"># hier erstellen wir die URL aus der video_id</span></span>
+<span id="cb13-6"><a href="#cb13-6"></a>  <span class="fu">pull</span>(url) <span class="sc">|&gt;</span> <span class="co"># in den letzten drei Schritten ziehen wir die URLs heraus...</span></span>
+<span id="cb13-7"><a href="#cb13-7"></a>  <span class="fu">str_flatten</span>(<span class="at">collapse =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>) <span class="sc">|&gt;</span> <span class="co">#...fügen sie zusammen</span></span>
+<span id="cb13-8"><a href="#cb13-8"></a>  <span class="fu">write_file</span>(<span class="st">"test_urls.txt"</span>) <span class="co"># und speichern sie in der Datei test_urls.txt</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Auf Basis der erstellten Datei <code>test_urls.txt</code> können wir im nächsten Schritt die Videos mit dem Programm <code>yt-dlp</code> herunterladen und in einem neuen Unterordner namens <code>videos</code> abspeichern. Dazu müssen Sie zunächst sicherstellen, dass Python korrekt auf ihrem Computer installiert ist. Öffnen Sie hierzu in RStudio den Tab “Terminal” (zu finden direkt neben der “Console”, in der Sie normalerweise R-Code ausführen). Diese “Kommandozeile” Ihres Computers funktioniert im Grunde sehr ähnlich wie auch die R-Kommandozeile, die Sie bereits kennen. Um zu testen, ob Python funktioniert, geben Sie <code>python3</code> ein und bestätigen Sie mit Enter. Es sollte sich nun eine Python-Umgebung mit einigen Informationen über die installierte Version öffnen. In dieser wollen wir nun jedoch gar nicht arbeiten, und schließen sie daher über den Befehl <code>quit()</code> direkt wieder. Stattdessen richten wir in der Kommandozeile des Computers in ihrem Projektordner eine neues Python-Environment ein. Sofern Sie in RStudio wie oben empfohlen ein Projekt erstellt und geöffnet haben, sollte sich die Kommandozeile automatisch im richtigen Ordner befinden. Sie können dies überprüfen, indem Sie in die Kommandozeile den Befehl <code>ls</code> eingeben und mit Enter bestätigen. Es sollten nun die Dateien und Ordner, die sich in Ihrem aktuellen Projektordner befinden, aufgelistet werden. Wenn dies der Fall ist, können wir im folgenden nun das Environment einrichten. Dafür führen wir die folgenden beiden Befehle nacheinander in der Kommandozeile aus.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1"></a><span class="ex">python3</span> <span class="at">-m</span> venv env</span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="co"># und dann</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="bu">source</span> env/bin/activate</span>
+<span id="cb14-4"><a href="#cb14-4"></a><span class="co"># dieser zweite Befehl muss jedes Mal neu ausgeführt werden, wenn Sie</span></span>
+<span id="cb14-5"><a href="#cb14-5"></a><span class="co"># die Kommandozeile neu starten (so wie wir in R jedes Mal die Pakete neu laden müssen)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Sofern das geklappt hat, sollen Sie in Ihrem Projektordner nun einen Unterordner mit dem Namen <code>env</code> sehen, in den wir gleich die benötigten Pakete installieren werden. Dies tun wir mit dem Befehl <code>pip install</code>, welcher ähnlich zu <code>install.packages()</code> in R ist. Wir installieren direkt die beiden Programme <code>yt-dlp</code> (für den Videodownload) und <code>whisper-ctranslate2</code> für die Transkription. Auch diese Befehle führen wir wieder in der Konsole des Computers (nicht in der R-Konsole) aus.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1"></a><span class="ex">pip</span> install yt-dlp</span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="co"># und dann</span></span>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="ex">pip</span> install whisper-ctranslate2</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Wenn die Installation erfolgreich war, können wir nun mit dem Download der Videos beginnen. Dazu nutzen wir einfach den folgenden Befehl. Wenn alle Schritte oben korrekt befolgt wurden, sollte dieser Befehl alle Videos, die in der Datei <code>test_urls.txt</code> gespeichert sind, herunterladen.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1"></a><span class="ex">yt-dlp</span> <span class="at">-w</span> <span class="at">--write-info-json</span> <span class="at">--write-thumbnail</span> <span class="at">--no-write-playlist-metafiles</span>  <span class="at">-c</span> <span class="at">-o</span> <span class="st">"%(id)s.%(ext)s"</span> <span class="at">-P</span> videos <span class="at">-a</span> test_urls.txt</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Wenn Sie den Befehl modifizieren möchten, können Sie die Bedeutung der einzelnen Parameter in der <a href="https://github.com/yt-dlp/yt-dlp">Dokumentation des Pakets nachlesen</a>.</p>
+<p>Neben den Videos lädt das Programm auch einige Metadaten herunter, diese können wir anschließend wieder in R einlesen.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>yt_metadata <span class="ot">&lt;-</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a>  <span class="fu">list.files</span>(<span class="st">"videos"</span>, <span class="at">pattern =</span> <span class="st">"*.json"</span>, <span class="at">full.names =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb17-3"><a href="#cb17-3"></a>  <span class="fu">map</span>(jsonlite<span class="sc">::</span>fromJSON) <span class="sc">|&gt;</span></span>
+<span id="cb17-4"><a href="#cb17-4"></a>  <span class="fu">map_df</span>(unlist) <span class="sc">|&gt;</span></span>
+<span id="cb17-5"><a href="#cb17-5"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">starts_with</span>(<span class="fu">c</span>(<span class="st">"formats"</span>, <span class="st">"http_headers"</span>))) <span class="sc">|&gt;</span> </span>
+<span id="cb17-6"><a href="#cb17-6"></a>  <span class="fu">select</span>(title, duration, <span class="fu">ends_with</span>(<span class="st">"count"</span>))</span>
+<span id="cb17-7"><a href="#cb17-7"></a></span>
+<span id="cb17-8"><a href="#cb17-8"></a>yt_metadata</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 6
+  title      duration view_count comment_count like_count channel_follower_count
+  &lt;chr&gt;         &lt;dbl&gt;      &lt;dbl&gt;         &lt;dbl&gt;      &lt;dbl&gt;                  &lt;dbl&gt;
+1 'Better T…     1092     114780          1000       6731                2180000
+2 YOU WON'T…      912    2477732          8000     122526                2250000
+3 BUYING Ev…     1276    7261283          3500     220656               10600000
+4 NEW YEAR'…      650    2107860          1500      17421                7900000
+5 Saying Go…      894     142649           234       3723                2180000</code></pre>
+</div>
+</div>
+<p>Abschließend wollen wir nun die Videos transkribieren, damit wir ihren Inhalt später analysieren können. Dies funktioniert erneut über einen Befehl in der Kommandozeile Ihres Computers (nachdem Sie oben schon <code>whisper-ctranslate2</code> installiert haben). Beispielhaft transkribieren wir hier nur eines der heruntergeladenen Videos, indem wir es im Befehl über den entsprechenden Pfad (Unterordner <code>videos</code>) und Dateinamen auswählen. Alternativ können wir auch alle Videos auf einmal transkribieren, indem wir im Befehl einen Platzhalter (<code>videos/*.mp4</code>) verwenden.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1"></a><span class="ex">whisper-ctranslate2</span>  <span class="at">--model</span> medium <span class="at">--output_format</span> tsv videos/MDMoo3wkMQs.mp4</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Auch die erstellten Transkripe können wir (ähnlich wie oben die Metadaten) alle auf einmal einlesen, indem Sie den entsprechenden Befehl von oben modifizieren. Da wir testweise nur ein Video transkribiert haben, laden wir dieses einfach ein mit</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>transcript <span class="ot">&lt;-</span> <span class="fu">read_tsv</span>(<span class="st">"MDMoo3wkMQs.tsv"</span>)</span>
+<span id="cb20-2"><a href="#cb20-2"></a>transcript</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 161 × 3
+   start   end text                                   
+   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;                                  
+ 1     0  2000 Today is New Year's gift opening day.  
+ 2  2000  4160 This is mine, and this is Rachel's.    
+ 3  4160  4660 Boo!                                   
+ 4  8660 10060 Don't worry, these gifts were cool.    
+ 5 10060 11680 Comment down below if you have an idea.
+ 6 11680 12480 Who goes first?                        
+ 7 12480 12980 Me!                                    
+ 8 12980 13480 Me!                                    
+ 9 13480 14480 Okay, rock, paper, scissors.           
+10 14480 15480 Rock, paper, scissors!                 
+# ℹ 151 more rows</code></pre>
+</div>
+</div>
 
 
 </section>
