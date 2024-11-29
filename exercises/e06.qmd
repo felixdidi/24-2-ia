@@ -1,5 +1,7 @@
 ---
 title: "Aufgabe 06"
+message: false
+warning: false
 ---
 
 Bitte nutzen Sie für alle Übungen dass Wissen, dass Sie sich aus dem Vorbereitungsskript für die heutige Sitzung angeeignet haben. Es ist nicht verboten, dieses zur Orientierung zu verwenden, Sie müssen nicht alle Funktionen auswendig kennen ;-)
@@ -20,3 +22,169 @@ Schauen Sie sich die Daten an und überlegen Sie sich 2-3 interessante deskripti
 ## Laden der zugehörigen Videos und Transkription
 
 Überlegen Sie sich, wie sie eine kleine Test-Stichprobe (bspw. *n* = 5) aus allen Videos ziehen können. Laden Sie diese Videos herunter und transkribieren sie nach Möglichkeit. Überlegen Sie sich, wie Sie ggf. auch zu den Inhalten des Videos eine erste grobe Analyse durchführen könnten.
+
+
+## Muster-Code
+
+Im folgenden die in der Sitzung besprochenen Code-Beispiele.
+
+Zunächst ist es für diverse Schritte in diesem Workflow wichtig, dass Ihr Arbeitsverzeichnis richtig gesetzt ist. Daher empfehle ich, dass Sie ein R-Projekt anlegen und dieses in RStudio öffnen. Alle weiteren Schritte können Sie dann innerhalb dieses Projekts ausführen.
+
+Zum Einlesen der Kommentare ist zunächst das `arrow`-Paket notwendig.
+
+```{r}
+library(tidyverse)
+library(arrow)
+theme_set(theme_minimal())
+
+comments <- read_parquet("http://data.felix-dietrich.de/comments.parquet.gzip")
+```
+
+Wir können uns dann z.B. erstmal den Datensatz an sich ansehen...
+
+```{r}
+comments
+```
+
+...oder uns ausgeben lassen, welche Variablen (d.h. Spalten) im Datensatz enthalten sind.
+
+```{r}
+names(comments)
+```
+
+Wir können uns auch eine kleine Zufallsstichprobe an Kommentaren ausgeben lassen.
+
+```{r}
+set.seed(42)
+comments |> 
+  slice_sample(n = 10) |> 
+  pull(comment)
+```
+
+Nun zählen wir aus, wie viele Kommentare pro Kanal vorhanden sind...
+
+```{r}
+comments |>
+  group_by(channel_id) |> 
+  count() |> 
+  arrange(desc(n))
+```
+
+...und entfernen Kanäle mit sehr wenigen Kommentaren.
+
+```{r}
+comments_cleaned <- 
+  comments |>
+  group_by(channel_id) |> 
+  filter(n() > 1000) |> 
+  ungroup()
+```
+
+Wir können außerdem den Code aus dem Vorbereitungsskript anpassen und uns bspw. ansehen, in wie viel Prozent der Kommentare je Kanal Herzchen-Emojis verwendet wurden und dies über den Zeitverlauf abbilden.
+
+```{r}
+#| column: page
+#| fig-width: 15
+
+comments_cleaned |>
+  mutate(
+    hearts = str_detect(comment, "❤️"),
+    week = floor_date(as.Date(published_at), "month")
+  ) |>
+  group_by(week, channel_id) |>
+  summarise(share_of_hearts = sum(hearts) / n(), n = n()) |>
+  ggplot(aes(x = week, y = share_of_hearts)) +
+  geom_line() +
+  scale_x_date(
+    date_breaks = "1 year",
+    date_labels = "%Y"
+  ) +
+  facet_wrap(~ channel_id) +
+  labs(
+    x = "", y = "Prozentualer Anteil der Kommentare mit Herzchen pro Monat",
+    title = "Zuneigung zu Family-Voggern"
+  )
+```
+
+Wenn wir nicht nur die Inhalte der Kommentare, sondern auch die Inhalte der zugehörigen Videos analysieren wollen, können wir diese bspw. herunterladen und transkribieren. Zunächst benötigen wir eine `.txt` Datei mit den URLs aller Videos, die wir herunterladen wollen. Diese können wir aus dem Kommentardatensatz auf Basis der Spalte `video_id` erstellen. Beispielhaft erstellen wir hier ein zufälliges Sample von 5 Videos, die wir herunterladen wollen. In einem Forschungsprojekt würden wir an dieser Stelle anstelle einer Zufallsauswahl vermutlich eher diejenigen `video_id`s extrahieren, die für uns inhaltlich relevant sind.
+
+```{r}
+#| eval: false
+
+comments |> 
+  select(channel_id, video_id) |> 
+  distinct() |> # hiermit entfernen wir Duplikate, da video_id und channel_id im Datensatz mehrfach vorkommen (pro Kommentar)
+  slice_sample(n = 5) |> 
+  mutate(url = str_c("https://www.youtube.com/watch?v=", video_id)) |> # hier erstellen wir die URL aus der video_id
+  pull(url) |> # in den letzten drei Schritten ziehen wir die URLs heraus...
+  str_flatten(collapse = "\n") |> #...fügen sie zusammen
+  write_file("test_urls.txt") # und speichern sie in der Datei test_urls.txt
+```
+
+Auf Basis der erstellten Datei `test_urls.txt` können wir im nächsten Schritt die Videos mit dem Programm `yt-dlp` herunterladen und in einem neuen Unterordner namens `videos` abspeichern. Dazu müssen Sie zunächst sicherstellen, dass Python korrekt auf ihrem Computer installiert ist. Öffnen Sie hierzu in RStudio den Tab "Terminal" (zu finden direkt neben der "Console", in der Sie normalerweise R-Code ausführen). Diese "Kommandozeile" Ihres Computers funktioniert im Grunde sehr ähnlich wie auch die R-Kommandozeile, die Sie bereits kennen. Um zu testen, ob Python funktioniert, geben Sie `python3` ein und bestätigen Sie mit Enter. Es sollte sich nun eine Python-Umgebung mit einigen Informationen über die installierte Version öffnen. In dieser wollen wir nun jedoch gar nicht arbeiten, und schließen sie daher über den Befehl `quit()` direkt wieder. Stattdessen richten wir in der Kommandozeile des Computers in ihrem Projektordner eine neues Python-Environment ein. Sofern Sie in RStudio wie oben empfohlen ein Projekt erstellt und geöffnet haben, sollte sich die Kommandozeile automatisch im richtigen Ordner befinden. Sie können dies überprüfen, indem Sie in die Kommandozeile den Befehl `ls` eingeben und mit Enter bestätigen. Es sollten nun die Dateien und Ordner, die sich in Ihrem aktuellen Projektordner befinden, aufgelistet werden. Wenn dies der Fall ist, können wir im folgenden nun das Environment einrichten. Dafür führen wir die folgenden beiden Befehle nacheinander in der Kommandozeile aus.
+
+```bash
+python3 -m venv env
+# und dann
+source env/bin/activate
+# dieser zweite Befehl muss jedes Mal neu ausgeführt werden, wenn Sie
+# die Kommandozeile neu starten (so wie wir in R jedes Mal die Pakete neu laden müssen)
+```
+Sofern das geklappt hat, sollen Sie in Ihrem Projektordner nun einen Unterordner mit dem Namen `env` sehen, in den wir gleich die benötigten Pakete installieren werden. Dies tun wir mit dem Befehl `pip install`, welcher ähnlich zu `install.packages()` in R ist. Wir installieren direkt die beiden Programme `yt-dlp` (für den Videodownload) und `whisper-ctranslate2` für die Transkription. Auch diese Befehle führen wir wieder in der Konsole des Computers (nicht in der R-Konsole) aus. 
+
+```bash
+pip install yt-dlp
+# und dann
+pip install whisper-ctranslate2
+```
+
+Wenn die Installation erfolgreich war, können wir nun mit dem Download der Videos beginnen. Dazu nutzen wir einfach den folgenden Befehl. Wenn alle Schritte oben korrekt befolgt wurden, sollte dieser Befehl alle Videos, die in der Datei `test_urls.txt` gespeichert sind, herunterladen. 
+
+```bash
+yt-dlp -w --write-info-json --write-thumbnail --no-write-playlist-metafiles  -c -o "%(id)s.%(ext)s" -P videos -a test_urls.txt
+```
+
+Wenn Sie den Befehl modifizieren möchten, können Sie die Bedeutung der einzelnen Parameter in der [Dokumentation des Pakets nachlesen](https://github.com/yt-dlp/yt-dlp).
+
+Neben den Videos lädt das Programm auch einige Metadaten herunter, diese können wir anschließend wieder in R einlesen. 
+
+```{r}
+#| eval: false
+
+yt_metadata <-
+  list.files("videos", pattern = "*.json", full.names = TRUE) |>
+  map(jsonlite::fromJSON) |>
+  map_df(unlist) |>
+  select(-starts_with(c("formats", "http_headers"))) |> 
+  select(title, duration, ends_with("count"))
+
+yt_metadata
+```
+
+```{r}
+#| echo: false
+
+yt_metadata <- read_csv("data/yt_metadata.csv")
+yt_metadata
+```
+
+Abschließend wollen wir nun die Videos transkribieren, damit wir ihren Inhalt später analysieren können. Dies funktioniert erneut über einen Befehl in der Kommandozeile Ihres Computers (nachdem Sie oben schon `whisper-ctranslate2` installiert haben). Beispielhaft transkribieren wir hier nur eines der heruntergeladenen Videos, indem wir es im Befehl über den entsprechenden Pfad (Unterordner `videos`) und Dateinamen auswählen. Alternativ können wir auch alle Videos auf einmal transkribieren, indem wir im Befehl einen Platzhalter (`videos/*.mp4`) verwenden.
+
+```bash
+whisper-ctranslate2  --model medium --output_format tsv videos/MDMoo3wkMQs.mp4
+```
+Auch die erstellten Transkripe können wir (ähnlich wie oben die Metadaten) alle auf einmal einlesen, indem Sie den entsprechenden Befehl von oben modifizieren. Da wir testweise nur ein Video transkribiert haben, laden wir dieses einfach ein mit
+
+```{r}
+#| eval: false
+
+transcript <- read_tsv("MDMoo3wkMQs.tsv")
+transcript
+```
+
+```{r}
+#| echo: false
+
+transcript <- read_tsv("data/MDMoo3wkMQs.tsv")
+transcript
+```

@@ -45,11 +45,6 @@ p, .abstract {
   border-left: 1px solid var(--bs-body-color) !important;
 }
 
-/*hide unwanted output*/
-.cell-output.cell-output-stdout {
-  display: none;
-}
-
 /*style tables*/
 .gt_table {
   font-family: inherit !important;
