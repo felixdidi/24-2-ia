@@ -30,6 +30,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #3c3836;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #3c3836; } /* Normal */
+    code span.al { color: #282828; background-color: #cc241d; font-weight: bold; } /* Alert */
+    code span.an { color: #98971a; } /* Annotation */
+    code span.at { color: #d79921; } /* Attribute */
+    code span.bn { color: #f67400; } /* BaseN */
+    code span.bu { color: #d65d0e; } /* BuiltIn */
+    code span.cf { color: #cc241d; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #b16286; } /* Char */
+    code span.cn { color: #b16286; font-weight: bold; } /* Constant */
+    code span.co { color: #928374; } /* Comment */
+    code span.cv { color: #928374; } /* CommentVar */
+    code span.do { color: #98971a; } /* Documentation */
+    code span.dt { color: #d79921; } /* DataType */
+    code span.dv { color: #f67400; } /* DecVal */
+    code span.er { color: #cc241d; text-decoration: underline; } /* Error */
+    code span.ex { color: #689d6a; font-weight: bold; } /* Extension */
+    code span.fl { color: #f67400; } /* Float */
+    code span.fu { color: #689d6a; } /* Function */
+    code span.im { color: #689d6a; } /* Import */
+    code span.in { color: #282828; background-color: #83a598; } /* Information */
+    code span.kw { color: #3c3836; font-weight: bold; } /* Keyword */
+    code span.op { color: #3c3836; } /* Operator */
+    code span.ot { color: #689d6a; } /* Other */
+    code span.pp { color: #d65d0e; } /* Preprocessor */
+    code span.re { color: #928374; background-color: #f9f5d7; } /* RegionMarker */
+    code span.sc { color: #b16286; } /* SpecialChar */
+    code span.ss { color: #98971a; } /* SpecialString */
+    code span.st { color: #98971a; } /* String */
+    code span.va { color: #458588; } /* Variable */
+    code span.vs { color: #98971a; } /* VerbatimString */
+    code span.wa { color: #282828; background-color: #fabd2f; } /* Warning */
     /* CSS for citations */
     div.csl-bib-body { }
     div.csl-entry {
@@ -1419,6 +1484,278 @@ Eudaimonia
 <p>Fragen?</p>
 </div>
 </section></section>
+<section>
+<section id="sitzung-07-automatisierte-inhaltsanalyse-1-zero-shot-klassifikation" class="title-slide slide level1 center">
+<h1>Sitzung 07: Automatisierte Inhaltsanalyse 1<br><em>Zero-Shot Klassifikation</em></h1>
+<p><br></p>
+<p><img data-src="img/07/zero_shot.jpeg" height="300"></p>
+<p><br></p>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Ressourcen für diese Sitzung</strong></p>
+</div>
+<div class="callout-content">
+<p><span class="citation" data-cites="tornbergHowUseLLMs2023">Törnberg (<a href="#/literaturangaben" role="doc-biblioref" onclick="">2023</a>)</span>; <span class="citation" data-cites="tornbergBestPracticesText2024">Törnberg (<a href="#/literaturangaben" role="doc-biblioref" onclick="">2024</a>)</span></p>
+</div>
+</div>
+</div>
+
+<aside><div>
+<p>Bild generiert mit FLUX.1-schnell: “A person on a TV screen shooting a revolver as a black and white cartoon”</p>
+</div></aside></section>
+<section id="agenda-1" class="slide level2 center">
+<h2>Agenda</h2>
+<ul>
+<li>Feedback zu Übung 1</li>
+<li>Knappe theoretische Einführung<br><em>Transformerbasierte Sprachmodelle und Zero-Shot-Klassifikation</em></li>
+<li>Kurze praktische Übung</li>
+<li>Überarbeitung Codebuch</li>
+</ul>
+</section>
+<section id="feedback-zu-übung-1" class="slide level2 center">
+<h2>Feedback zu Übung 1</h2>
+<ul>
+<li>Dateiendung <code>.R</code> bei der Abgabe</li>
+<li>Installation von Python (nach Bedarf)
+<ul>
+<li>Wichtig: Immer Environment aktivieren und Pakate darin installieren</li>
+</ul></li>
+<li>Berechnung von deskriptiven Statistiken zum Datensatz (<code>summarise</code>)<br>vs.&nbsp;Anlegen neuer Variablen (<code>mutate</code>) auf Zeilenbasis</li>
+</ul>
+<div class="columns">
+<div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>yt_metadata <span class="sc">|&gt;</span></span>
+<span id="cb1-2"><a></a>  <span class="fu">summarise</span>(</span>
+<span id="cb1-3"><a></a>    <span class="at">mean_kommentare =</span> <span class="fu">mean</span>(comment_count, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb1-4"><a></a>    <span class="at">mean_aufrufe =</span> <span class="fu">mean</span>(view_count, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb1-5"><a></a>    <span class="at">mean_likes =</span> <span class="fu">mean</span>(like_count, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-6"><a></a>  )</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre><code># A tibble: 1 × 3
+  mean_kommentare mean_aufrufe mean_likes
+            &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt;
+1           2847.     2420861.     74211.</code></pre>
+</div><div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>yt_metadata <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb3-3"><a></a>    <span class="at">interaction_count =</span> comment_count <span class="sc">+</span> like_count</span>
+<span id="cb3-4"><a></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb3-5"><a></a>  <span class="fu">select</span>(comment_count, like_count, interaction_count)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre><code># A tibble: 5 × 3
+  comment_count like_count interaction_count
+          &lt;dbl&gt;      &lt;dbl&gt;             &lt;dbl&gt;
+1          1000       6731              7731
+2          8000     122526            130526
+3          3500     220656            224156
+4          1500      17421             18921
+5           234       3723              3957</code></pre>
+</div></div>
+</section>
+<section class="slide level2 center">
+
+<div class="big-text">
+<p>Fragen?</p>
+</div>
+</section>
+<section id="automatisierte-inhaltsanalyse" class="slide level2 center">
+<h2>Automatisierte Inhaltsanalyse</h2>
+<ul>
+<li><strong>Verfügbarkeit großer Textmengen</strong></li>
+<li>Dadurch <strong>Interesse an automatisierten Methoden</strong> stark angestiegen</li>
+<li>Problem: Wie kann ein <strong>Computer</strong> natürliche Sprache <strong>“verstehen”</strong>?</li>
+</ul>
+<div class="fragment">
+<p><strong>Anwendungsbeispiel:</strong></p>
+<p>Self-Transcendent Emotions (Awe - Gratitude - Elevation - Admiration - Hope) als Beispiel einer eudaimonischen Unterhaltungserfahrung</p>
+<p>Wie könnten wir das in Nutzer:innenkommentaren messen?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>comments <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb5-2"><a></a>  <span class="st">"Watching this, I feel so small yet so deeply connected to something infinitely greater. The beauty of this sunrise reminds me that we are all part of this vast, intricate universe, and it fills me with gratitude and awe."</span>,</span>
+<span id="cb5-3"><a></a>  <span class="st">"This video includes footage of a sunrise over a mountain range. The scenes are edited together to show the progression of light and color changes in the sky."</span></span>
+<span id="cb5-4"><a></a>  )</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="diktionärbasierte-ansätze" class="slide level2 center">
+<h2>Diktionärbasierte Ansätze</h2>
+<p>Wörterbuch von <span class="citation" data-cites="jiDevelopingValidatingSelftranscendent2020">Ji &amp; Raney (<a href="#/literaturangaben" role="doc-biblioref" onclick="">2020</a>)</span></p>
+<p><strong>Probleme</strong>: “Bag of Words”-Annahme; viel Preprocessing notwendig; kein Transfer</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">library</span>(quanteda)</span>
+<span id="cb6-2"><a></a>sted <span class="ot">&lt;-</span> <span class="fu">dictionary</span>(<span class="at">file =</span> <span class="st">"sted.dic"</span>, </span>
+<span id="cb6-3"><a></a>                   <span class="at">format =</span> <span class="st">"LIWC"</span>)</span>
+<span id="cb6-4"><a></a>sted</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Dictionary object with 6 key entries.
+- [general]:
+  - accomplish*, better, broaden*, brought to tears, care, caring, challenging, charisma*, compelling, constructive, craftsmanship, creativ*, cultivate, determinat*, elat*, electrifying, empower*, emulat*, energ*, enkindle* [ ... and 57 more ]
+- [awe]:
+  - admir*, aesthetic, amazed, amazing, astonish*, awake*, awe*, beaut*, breathtak*, brilliant, captivat*, christ*, courage*, curiosity, delight*, devot*, divin*, enchant*, engag*, enlight* [ ... and 39 more ]
+- [gratitude]:
+  - acknowledg*, admir*, affection, almighty, appreciat*, belove*, benevolen*, bestow*, bless*, charit*, christ*, compassion*, content*, credit, dedicat*, delight*, devot*, donat*, earn*, esteem* [ ... and 41 more ]
+- [elevation]:
+  - advanc*, amplify, ascen*, bliss*, compassion*, conscious*, content*, creation, delight*, digni*, divin*, elat*, elevat*, encourag*, engag*, enhanc*, enrapture, exalt*, excit*, exhilarat* [ ... and 28 more ]
+- [admiration]:
+  - acclaim*, achiev*, admir*, ador*, adulat*, affection, amazed, amazing, ambition, applau*, appreciat*, approbation, approv*, artist*, awe*, beaut*, belove*, bravery, charm*, cherish [ ... and 83 more ]
+- [hope]:
+  - achiev*, ambition, anticipat*, aspir*, assum*, assur*, at ease, auspicious, await, belie*, bright, buoyan*, cheer*, cherish, comfort*, compassion*, confiden*, congratulat*, contemplat*, content* [ ... and 77 more ]</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>comments <span class="sc">|&gt;</span> </span>
+<span id="cb8-2"><a></a>  <span class="fu">str_count</span>(<span class="fu">str_c</span>(sted<span class="sc">$</span>awe, <span class="at">collapse =</span> <span class="st">"|"</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4 1</code></pre>
+</div>
+</div>
+
+<aside><div>
+<p>Ji, Q., &amp; Raney, A. A. (2020). Developing and Validating the Self-Transcendent Emotion Dictionary for Text Analysis. <em>PLOS ONE, 15</em>(9), e0239050. https://doi.org/10.1371/journal.pone.0239050</p>
+</div></aside></section>
+<section id="weiterentwicklungen-von-embeddings-zum-transformer" class="slide level2 center">
+<h2>Weiterentwicklungen: Von Embeddings zum Transformer</h2>
+<p>Abbildung basierend auf <span class="citation" data-cites="dietrichOpenSourceTransformer2024">Dietrich et al. (<a href="#/literaturangaben" role="doc-biblioref" onclick="">2024</a>)</span></p>
+<p><img data-src="img/07/transformers.jpeg" height="500"></p>
+
+<aside><div>
+<p>Dietrich, F., Possler, D., Lammers, A., &amp; Scheper, J. (2024, März 13–15). Open Source Transformer Modelle: Ein Einfaches Werkzeug Zur Automatisierten Inhaltsanalyse Für Die (Deutschsprachige) Kommunikationswissenschaft [Conference Presentation]. Annual Conference of the German Communication Association (DGPuK), Erfurt, Germany.</p>
+</div></aside></section>
+<section id="zero-shot-klassifikation-text" class="slide level2 center">
+<h2>Zero-Shot Klassifikation (Text)</h2>
+<p>Funktioniert nur im VPN der Uni Mainz (bitte Server nicht überlasten!)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">library</span>(tidyllm)</span>
+<span id="cb10-2"><a></a></span>
+<span id="cb10-3"><a></a>classify_text <span class="ot">&lt;-</span> <span class="cf">function</span>(text, task) {</span>
+<span id="cb10-4"><a></a>  prompt <span class="ot">&lt;-</span> <span class="fu">paste</span>(task, text, <span class="at">sep =</span> <span class="st">"</span><span class="sc">\n\n</span><span class="st">"</span>)</span>
+<span id="cb10-5"><a></a>  tidyllm<span class="sc">::</span><span class="fu">llm_message</span>(prompt) <span class="sc">|&gt;</span></span>
+<span id="cb10-6"><a></a>    tidyllm<span class="sc">::</span><span class="fu">ollama</span>(</span>
+<span id="cb10-7"><a></a>      <span class="at">.ollama_server =</span> <span class="st">"https://llm.ifp.uni-mainz.de"</span>,</span>
+<span id="cb10-8"><a></a>      <span class="at">.model =</span> <span class="st">"gemma2"</span>,</span>
+<span id="cb10-9"><a></a>      <span class="at">.temperature =</span> <span class="dv">0</span></span>
+<span id="cb10-10"><a></a>    ) <span class="sc">|&gt;</span></span>
+<span id="cb10-11"><a></a>    tidyllm<span class="sc">::</span><span class="fu">last_reply</span>() <span class="sc">|&gt;</span></span>
+<span id="cb10-12"><a></a>    <span class="fu">str_squish</span>()</span>
+<span id="cb10-13"><a></a>}</span>
+<span id="cb10-14"><a></a></span>
+<span id="cb10-15"><a></a><span class="fu">map_chr</span>(</span>
+<span id="cb10-16"><a></a>  <span class="fu">as.list</span>(comments),</span>
+<span id="cb10-17"><a></a>    classify_text,</span>
+<span id="cb10-18"><a></a>    <span class="at">task =</span> <span class="st">"Does this text express awe? Answer only with the words TRUE or FALSE."</span></span>
+<span id="cb10-19"><a></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb10-20"><a></a>  <span class="fu">parse_logical</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre><code>[1]  TRUE FALSE</code></pre>
+</section>
+<section id="zero-shot-klassifikation-bild" class="slide level2 center">
+<h2>Zero-Shot Klassifikation (Bild)</h2>
+<p>Funktioniert nur im VPN der Uni Mainz (bitte Server nicht überlasten!)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">library</span>(tidyllm)</span>
+<span id="cb12-2"><a></a></span>
+<span id="cb12-3"><a></a>classify_image <span class="ot">&lt;-</span> <span class="cf">function</span>(image, task) {</span>
+<span id="cb12-4"><a></a>  tidyllm<span class="sc">::</span><span class="fu">llm_message</span>(task, <span class="at">.imagefile =</span> image) <span class="sc">|&gt;</span></span>
+<span id="cb12-5"><a></a>    tidyllm<span class="sc">::</span><span class="fu">ollama</span>(</span>
+<span id="cb12-6"><a></a>      <span class="at">.ollama_server =</span> <span class="st">"https://llm.ifp.uni-mainz.de"</span>,</span>
+<span id="cb12-7"><a></a>      <span class="at">.model =</span> <span class="st">"llava:34b"</span>,</span>
+<span id="cb12-8"><a></a>      <span class="at">.temperature =</span> <span class="dv">0</span></span>
+<span id="cb12-9"><a></a>    ) <span class="sc">|&gt;</span></span>
+<span id="cb12-10"><a></a>    tidyllm<span class="sc">::</span><span class="fu">last_reply</span>() <span class="sc">|&gt;</span></span>
+<span id="cb12-11"><a></a>    <span class="fu">str_squish</span>()</span>
+<span id="cb12-12"><a></a>}</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="columns">
+<div class="column">
+<p><img data-src="img/07/screenshot_1.jpg" height="150"></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">classify_image</span>(<span class="st">"slides/img/07/screenshot_1.jpg"</span>,</span>
+<span id="cb13-2"><a></a>  <span class="at">task =</span> <span class="st">"Does this image show a person looking directly into the camera?"</span></span>
+<span id="cb13-3"><a></a>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre><code>[1] "No, the image shows a person walking away from the camera. They are not looking directly into it."</code></pre>
+</div><div class="column">
+<p><img data-src="img/07/screenshot_2.jpg" height="150"></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">classify_image</span>(<span class="st">"slides/img/07/screenshot_2.jpg"</span>,</span>
+<span id="cb15-2"><a></a>  <span class="at">task =</span> <span class="st">"Does this image show a person looking directly into the camera?"</span></span>
+<span id="cb15-3"><a></a>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre><code>[1] "Yes, in the image there is a person who appears to be looking directly into the camera. The individual seems to be holding up an item for display or attention."</code></pre>
+</div></div>
+</section>
+<section id="offene-probleme" class="slide level2 center">
+<h2>Offene Probleme</h2>
+<ul>
+<li><strong>Instruction Following / Structured Output</strong> (Mögliche Lösung: Bessere Modelle)</li>
+<li><strong>Verzerrungen</strong> (Mögliche Lösung: Bessere Trainingsdaten)</li>
+<li><strong>Mehrsprachigkeit</strong> (Mögliche Lösung: Bessere Modelle)</li>
+<li><strong>Rechenlast</strong> (Mögliche Lösung: Finetunded Zero-Shot-Classifier anstatt Prompt-Tuning)</li>
+<li><strong>Offenheit</strong> (Mögliche Lösung: Open Source-Modelle)</li>
+<li><strong>Reproduzierbarkeit</strong> (Mögliche Lösung: Open Source-Modelle &amp; Temperature)</li>
+<li><strong>Validität</strong> (Mögliche Lösung: “Validate, Validate, Validate!”)</li>
+</ul>
+</section>
+<section id="kurze-praktische-übung" class="slide level2 center">
+<h2>Kurze praktische Übung</h2>
+</section>
+<section id="überarbeitung-codebuch-3" class="slide level2 center">
+<h2>Überarbeitung Codebuch</h2>
+<div class="columns">
+<div class="column" style="width:66%;">
+<p><strong>Arbeitsauftrag 1</strong></p>
+<ul>
+<li>Mischen Sie sich in den Gruppen so, dass an jedem Tisch mindestens eine Expert:in aus jeder Gruppe ist</li>
+<li>Tragen Sie Ihre Ideen und Vorschläge zusammen</li>
+<li>Diskutieren Sie, was gut funktionieren könnte, was nicht (und warum)</li>
+<li>Nutzen Sie evtl. den Kommentare-Datensatz für Tests</li>
+</ul>
+</div><div class="column" style="width:33%;">
+                    <div id="rework-codebuch-3"></div>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            initializeTimer("rework-codebuch-3", 1200, "interaction");
+                        });
+                    </script>
+                
+</div></div>
+</section>
+<section id="überarbeitung-codebuch-4" class="slide level2 center">
+<h2>Überarbeitung Codebuch</h2>
+<div class="columns">
+<div class="column" style="width:66%;">
+<p><strong>Arbeitsauftrag 2</strong></p>
+<ul>
+<li>Finden Sie sich wieder in Ihrer Forschungsgruppe zusammen</li>
+<li>Besprechen Sie, was Sie von den Kommiliton:innen gelernt haben</li>
+<li>Überarbeiten Sie das Codebuch entsprechend</li>
+</ul>
+</div><div class="column" style="width:33%;">
+                    <div id="rework-codebuch-4"></div>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            initializeTimer("rework-codebuch-4", 1200, "interaction");
+                        });
+                    </script>
+                
+</div></div>
+<p><strong>Hausaufgaben!</strong></p>
+<ul>
+<li>Individuelle Abgabe einer <code>.R</code>-Datei mit Ihrem Code zur Lösung der Aufgaben 1-3 zu Zero-Shot Klassifikation (via LMS)</li>
+<li>Gruppenabgabe überarbeitetes Codebuch (via Mail)</li>
+<li>Beides bis Dienstag, 10.12., 12 Uhr mittags</li>
+</ul>
+</section>
+<section class="slide level2 center">
+
+<div class="big-text">
+<p>Fragen?</p>
+</div>
+</section></section>
 <section id="literaturangaben" class="title-slide slide level1 smaller scrollable">
 <h1>Literaturangaben</h1>
 
@@ -1430,6 +1767,9 @@ Berelson, B. R. (1952). <em>Content Analysis in Communication Research</em>. Fre
 <div id="ref-bosshartMediaEntertainment1998" class="csl-entry" role="listitem">
 Bosshart, L., &amp; Macconi, I. (1998). Media Entertainment. <em>Communication Research Trends</em>, <em>18</em>(3), 3–8.
 </div>
+<div id="ref-dietrichOpenSourceTransformer2024" class="csl-entry" role="listitem">
+Dietrich, F., Possler, D., Lammers, A., &amp; Scheper, J. (2024, März 13–15). <em>Open <span>Source Transformer Modelle</span>: <span>Ein</span> Einfaches <span>Werkzeug</span> Zur Automatisierten <span>Inhaltsanalyse</span> Für Die (Deutschsprachige) <span>Kommunikationswissenschaft</span> [<span>Open Source Transformer Models</span>: <span>A</span> Simple Tool for Automated Content Analysis for (<span>German-speaking</span>) Communication Science]</em> [Conference Presentation]. Annual <span>Conference</span> of the <span>German Communication Association</span> (<span>DGPuK</span>), Erfurt, Germany.
+</div>
 <div id="ref-doeringForschungsmethodenUndEvaluation2022" class="csl-entry" role="listitem">
 Döring, N. (2022). <em>Forschungsmethoden und Evaluation in den Sozial- und Humanwissenschaften</em>. Springer Berlin Heidelberg. <a href="https://doi.org/10.1007/978-3-662-64762-2">https://doi.org/10.1007/978-3-662-64762-2</a>
 </div>
@@ -1438,6 +1778,9 @@ Hartmann, T., &amp; Goldhoorn, C. (2011). Horton and Wohl Revisited: Exploring V
 </div>
 <div id="ref-hortonMassCommunicationParasocial1956" class="csl-entry" role="listitem">
 Horton, D., &amp; Wohl, R. (1956). Mass Communication and Para-Social Interaction: Observations on Intimacy at a Distance. <em>Psychiatry</em>, <em>19</em>(3), 215–229. <a href="https://doi.org/10.1080/00332747.1956.11023049">https://doi.org/10.1080/00332747.1956.11023049</a>
+</div>
+<div id="ref-jiDevelopingValidatingSelftranscendent2020" class="csl-entry" role="listitem">
+Ji, Q., &amp; Raney, A. A. (2020). Developing and Validating the Self-Transcendent Emotion Dictionary for Text Analysis. <em>PLOS ONE</em>, <em>15</em>(9), e0239050. <a href="https://doi.org/10.1371/journal.pone.0239050">https://doi.org/10.1371/journal.pone.0239050</a>
 </div>
 <div id="ref-jungherrEmpiricistsChallengeAsking2017" class="csl-entry" role="listitem">
 Jungherr, A., &amp; Theocharis, Y. (2017). The Empiricist’s Challenge: <span>Asking</span> Meaningful Questions in Political Science in the Age of Big Data. <em>Journal of Information Technology &amp; Politics</em>, <em>14</em>(2), 97–109. <a href="https://doi.org/10.1080/19331681.2017.1312187">https://doi.org/10.1080/19331681.2017.1312187</a>
@@ -1488,7 +1831,13 @@ Schmitt, J., Winkler, J., Lutz, S., Dietrich, F., &amp; Rieger, D. (2018, Mai 24
 Smith, C. P. (2000). Content Analysis and Narrative Analysis. In H. T. Reis &amp; C. M. Judd (Hrsg.), <em>Handbook of Research Methods in Social and Personality Psychology</em> (S. 313–335). Cambridge University Press.
 </div>
 <div id="ref-tamboriniMediaEnjoymentNeed2011" class="csl-entry" role="listitem">
-Tamborini, R., Grizzard, M., Bowman, N. D., Reinecke, L., Lewis, R. J., &amp; Eden, A. (2011). Media Enjoyment as Need Satisfaction: The Contribution of Hedonic and Nonhedonic Needs. <em>Journal of Communication</em>, <em>61</em>(6), 1025–1042. <a href="https://doi.org/10.1111/j.1460-2466.2011.01593.x">https://doi.org/10.1111/j.1460-2466.2011.01593.x</a>
+Tamborini, R., Grizzard, M., Bowman, N. D., Reinecke, L., Lewis, R. J., &amp; Eden, A. (2011). Media Enjoyment as Need Satisfaction: The Contribution of Hedonic and Nonhedonic Needs. <em>Journal of Communication</em>, <em>61</em>(6), 1025–1042. <a href="https://doi.org/10/dm34xj">https://doi.org/10/dm34xj</a>
+</div>
+<div id="ref-tornbergHowUseLLMs2023" class="csl-entry" role="listitem">
+Törnberg, P. (2023, Juli 24). <em>How to Use <span>LLMs</span> for Text Analysis</em>. <a href="https://doi.org/10.48550/arXiv.2307.13106">https://doi.org/10.48550/arXiv.2307.13106</a>
+</div>
+<div id="ref-tornbergBestPracticesText2024" class="csl-entry" role="listitem">
+Törnberg, P. (2024, Februar 5). <em>Best Practices for Text Annotation with Large Language Models</em>. <a href="https://doi.org/10.48550/arXiv.2402.05129">https://doi.org/10.48550/arXiv.2402.05129</a>
 </div>
 <div id="ref-tukachinskyTheorizingDevelopmentParasocial2019" class="csl-entry" role="listitem">
 Tukachinsky, R., &amp; Stever, G. (2019). Theorizing Development of Parasocial Engagement. <em>Communication Theory</em>, <em>29</em>(3), 297–318. <a href="https://doi.org/10.1093/ct/qty032">https://doi.org/10.1093/ct/qty032</a>
