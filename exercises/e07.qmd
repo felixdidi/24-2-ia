@@ -1,0 +1,142 @@
+---
+title: "Aufgabe 07"
+message: false
+warning: false
+---
+
+## Beispiel: Zero-Shot Klassifikation
+
+Wir laden zunächst wieder den Kommentaredatensatz...
+
+```{r}
+#| label: load data
+#| eval: false
+
+library(tidyverse)
+library(arrow)
+
+comments <- read_parquet("http://data.felix-dietrich.de/comments.parquet.gzip")
+```
+
+und erstellen ein Subsample von 10 Kommentaren. Bitte verwenden Sie alle den Code anbei und führen Sie ihn mit dem gleichen Seed aus, damit wir alle das gleiche Test-Sample erhalten. Führen Sie beide Befehle (zunächst `set.seed()` und dann dann die Erstellung des Subsamples) direkt hintereinander aus!)
+
+```{r}
+#| eval: false
+
+set.seed(05122024)
+
+subsample <- 
+  comments |> 
+  slice_sample(n = 10)
+```
+
+Nun legen wir (wie im Vorbereitungsskipt dokumentiert) eine Funktion an, die alle Schritte der Zero-Shot-Klassifikation in einem Schritt vereint...
+
+```{r}
+#| eval: false
+
+library(tidyllm)
+
+classify_text <- function(text, task) {
+  prompt <- paste(task, text, sep = "\n\n")
+  tidyllm::llm_message(prompt) |>
+    tidyllm::ollama(
+      .ollama_server = "https://llm.ifp.uni-mainz.de",
+      .model = "gemma2",
+      .temperature = 0
+    ) |>
+    tidyllm::last_reply() |>
+    str_squish()
+}
+```
+
+...und erstellen anschließend über die `mutate()`-Funktion eine neue Spalte in unserem Datensatz, in welcher das jeweilige Ergebnis der Klassifikation eingetragen wird.
+
+::: {.callout-warning}
+**Wichtig**: Bitte wenden Sie diesen Befehl nicht bedenkenlos auf eine sehr große Menge Daten an (wie z.B. den gesamten Kommentar-Datensatz). Dies würde sehr lange dauern und könnte im schlimmsten Fall sogar den Server überlasten. Wenn Sie größere Datenmengen klassifizieren wollen, stimmen Sie dies zuvor mit mir ab. Außerdem wir die Ausführung des Befehls dann sehr lange dauern. Es wäre sehr ärgerlich, wenn bei der Klassifikation von 200.000 Kommentaren nach 100.000 Kommentaren ein Fehler auftritt und alle 99.999 zuvor bereits erfolgten Klassifikationen verloren wären. In einem solchen Fall sollten wir uns also zusätzlich eine Strategie zur Aufteilung der Klassifikation in kleinere Arbeitspakete, die einzeln gespeichert werden, überlegen.
+:::
+
+```{r}
+#| eval: false
+#| echo: false
+
+task <- "Does this YouTube comment directly address a person in the video"
+
+classified_sample <- 
+  subsample |> 
+  rowwise() |> 
+  mutate(
+    direct_address = classify_text(text = comment, task = task)
+  ) |> 
+  ungroup()
+
+classified_sample |> 
+  write_rds("exercises/data/classified_sample.rds")
+```
+
+```{r}
+#| eval: false
+
+task <- "Does this YouTube comment directly address a person in the video"
+
+classified_sample <- 
+  subsample |> 
+  rowwise() |> 
+  mutate(
+    direct_address = classify_text(text = comment, task = task)
+  ) |> 
+  ungroup()
+
+classified_sample |> 
+  select(comment, direct_address)
+```
+
+```{r}
+#| echo: false
+#| message: false
+
+library(tidyverse)
+
+read_rds("data/classified_sample.rds") |> 
+  select(comment, direct_address)
+```
+
+```{r}
+#| eval: false
+
+classified_sample |> 
+  select(comment, direct_address) |> 
+  slice_head(n = 1) |> 
+  pull(comment)
+```
+
+```{r}
+#| echo: false
+
+read_rds("data/classified_sample.rds") |> 
+  select(comment, direct_address) |> 
+  slice_head(n = 1) |> 
+  pull(comment)
+```
+
+```{r}
+#| eval: false
+
+classified_sample |> 
+  select(comment, direct_address) |> 
+  slice_head(n = 1) |> 
+  pull(direct_address)
+```
+
+```{r}
+#| echo: false
+
+read_rds("data/classified_sample.rds") |> 
+  select(comment, direct_address) |> 
+  slice_head(n = 1) |> 
+  pull(direct_address)
+```
+
+## Übung
+
+Überlegen Sie sich, wie Sie eine der Kategorien aus Ihrem Codebuch in einen Task übertragen können, der von einem LLM gelöst werden kann. Testen Sie dies mit dem Testsample von 10 Kommentaren und verbessern Sie Ihren Ansatz iterativ.

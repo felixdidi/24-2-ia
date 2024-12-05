@@ -1133,5 +1133,302 @@ Eigene Meinungen sollten zurückgestellt werden; die Bewertung sollte möglichst
 Fragen?
 :::
 
+# Sitzung 07: Automatisierte Inhaltsanalyse 1<br>*Zero-Shot Klassifikation*
+
+<br>
+
+![](img/07/zero_shot.jpeg){height=300px}
+
+<br>
+
+:::callout-warning
+## Ressourcen für diese Sitzung
+@tornbergHowUseLLMs2023; @tornbergBestPracticesText2024
+:::
+
+:::aside
+Bild generiert mit FLUX.1-schnell: "A person on a TV screen shooting a revolver as a black and white cartoon"
+:::
+
+
+## Agenda
+
+- Feedback zu Übung 1
+- Knappe theoretische Einführung<br>*Transformerbasierte Sprachmodelle und Zero-Shot-Klassifikation*
+- Kurze praktische Übung
+- Überarbeitung Codebuch
+
+## Feedback zu Übung 1
+
+- Dateiendung `.R` bei der Abgabe
+- Installation von Python (nach Bedarf)
+  - Wichtig: Immer Environment aktivieren und Pakate darin installieren
+- Berechnung von deskriptiven Statistiken zum Datensatz (`summarise`)<br>vs. Anlegen neuer Variablen (`mutate`) auf Zeilenbasis
+
+::::columns
+:::column
+
+```{r}
+#| eval: false
+#| echo: true
+
+yt_metadata |>
+  summarise(
+    mean_kommentare = mean(comment_count, na.rm = TRUE),
+    mean_aufrufe = mean(view_count, na.rm = TRUE),
+    mean_likes = mean(like_count, na.rm = TRUE)
+  )
+```
+
+```
+# A tibble: 1 × 3
+  mean_kommentare mean_aufrufe mean_likes
+            <dbl>        <dbl>      <dbl>
+1           2847.     2420861.     74211.
+```
+:::
+
+:::column
+```{r}
+#| eval: false
+#| echo: true
+
+yt_metadata |>
+  mutate(
+    interaction_count = comment_count + like_count
+  ) |> 
+  select(comment_count, like_count, interaction_count)
+```
+
+```
+# A tibble: 5 × 3
+  comment_count like_count interaction_count
+          <dbl>      <dbl>             <dbl>
+1          1000       6731              7731
+2          8000     122526            130526
+3          3500     220656            224156
+4          1500      17421             18921
+5           234       3723              3957
+```
+:::
+::::
+
+***
+
+:::big-text
+Fragen?
+:::
+
+
+## Automatisierte Inhaltsanalyse
+
+- **Verfügbarkeit großer Textmengen**
+- Dadurch **Interesse an automatisierten Methoden** stark angestiegen
+- Problem: Wie kann ein **Computer** natürliche Sprache **"verstehen"**?
+
+
+:::fragment
+**Anwendungsbeispiel:**
+
+Self-Transcendent Emotions (Awe - Gratitude - Elevation - Admiration - Hope) als Beispiel einer eudaimonischen Unterhaltungserfahrung
+
+Wie könnten wir das in Nutzer:innenkommentaren messen?
+
+```{r}
+#| echo: true
+comments <- c(
+  "Watching this, I feel so small yet so deeply connected to something infinitely greater. The beauty of this sunrise reminds me that we are all part of this vast, intricate universe, and it fills me with gratitude and awe.",
+  "This video includes footage of a sunrise over a mountain range. The scenes are edited together to show the progression of light and color changes in the sky."
+  )
+```
+
+:::
+
+## Diktionärbasierte Ansätze
+
+Wörterbuch von @jiDevelopingValidatingSelftranscendent2020
+
+**Probleme**: "Bag of Words"-Annahme; viel Preprocessing notwendig; kein Transfer
+
+```{r}
+#| echo: true
+#| message: false
+library(quanteda)
+sted <- dictionary(file = "sted.dic", 
+                   format = "LIWC")
+sted
+
+comments |> 
+  str_count(str_c(sted$awe, collapse = "|"))
+```
+
+:::aside
+Ji, Q., & Raney, A. A. (2020). Developing and Validating the Self-Transcendent Emotion Dictionary for Text Analysis. *PLOS ONE, 15*(9), e0239050. https://doi.org/10.1371/journal.pone.0239050
+:::
+
+## Weiterentwicklungen: Von Embeddings zum Transformer
+
+Abbildung basierend auf @dietrichOpenSourceTransformer2024
+
+![](img/07/transformers.jpeg){height="500px"}
+
+:::aside
+Dietrich, F., Possler, D., Lammers, A., & Scheper, J. (2024, März 13–15). Open Source Transformer Modelle: Ein Einfaches Werkzeug Zur Automatisierten Inhaltsanalyse Für Die (Deutschsprachige) Kommunikationswissenschaft [Conference Presentation]. Annual Conference of the German Communication Association (DGPuK), Erfurt, Germany.
+:::
+
+## Zero-Shot Klassifikation (Text)
+
+Funktioniert nur im VPN der Uni Mainz (bitte Server nicht überlasten!)
+
+```{r}
+#| eval: false
+#| echo: true
+library(tidyllm)
+
+classify_text <- function(text, task) {
+  prompt <- paste(task, text, sep = "\n\n")
+  tidyllm::llm_message(prompt) |>
+    tidyllm::ollama(
+      .ollama_server = "https://llm.ifp.uni-mainz.de",
+      .model = "gemma2",
+      .temperature = 0
+    ) |>
+    tidyllm::last_reply() |>
+    str_squish()
+}
+
+map_chr(
+  as.list(comments),
+    classify_text,
+    task = "Does this text express awe? Answer only with the words TRUE or FALSE."
+  ) |> 
+  parse_logical()
+```
+
+```
+[1]  TRUE FALSE
+```
+
+## Zero-Shot Klassifikation (Bild)
+
+Funktioniert nur im VPN der Uni Mainz (bitte Server nicht überlasten!)
+
+```{r}
+#| eval: false
+#| echo: true
+library(tidyllm)
+
+classify_image <- function(image, task) {
+  tidyllm::llm_message(task, .imagefile = image) |>
+    tidyllm::ollama(
+      .ollama_server = "https://llm.ifp.uni-mainz.de",
+      .model = "llava:34b",
+      .temperature = 0
+    ) |>
+    tidyllm::last_reply() |>
+    str_squish()
+}
+```
+
+::::columns
+:::column
+![](img/07/screenshot_1.jpg){height="150px"}
+
+```{r}
+#| eval: false
+#| echo: true
+
+classify_image("slides/img/07/screenshot_1.jpg",
+  task = "Does this image show a person looking directly into the camera?"
+)
+```
+
+
+```
+[1] "No, the image shows a person walking away from the camera. They are not looking directly into it."
+```
+:::
+
+:::column
+![](img/07/screenshot_2.jpg){height="150px"}
+
+```{r}
+#| eval: false
+#| echo: true
+
+classify_image("slides/img/07/screenshot_2.jpg",
+  task = "Does this image show a person looking directly into the camera?"
+)
+```
+
+
+```
+[1] "Yes, in the image there is a person who appears to be looking directly into the camera. The individual seems to be holding up an item for display or attention."
+```
+:::
+::::
+
+
+## Offene Probleme
+
+- **Instruction Following / Structured Output** (Mögliche Lösung: Bessere Modelle)
+- **Verzerrungen** (Mögliche Lösung: Bessere Trainingsdaten)
+- **Mehrsprachigkeit** (Mögliche Lösung: Bessere Modelle)
+- **Rechenlast** (Mögliche Lösung: Finetunded Zero-Shot-Classifier anstatt Prompt-Tuning)
+- **Offenheit** (Mögliche Lösung: Open Source-Modelle)
+- **Reproduzierbarkeit** (Mögliche Lösung: Open Source-Modelle & Temperature)
+- **Validität** (Mögliche Lösung: "Validate, Validate, Validate!")
+
+## Kurze praktische Übung
+
+## Überarbeitung Codebuch
+
+::::columns
+:::{.column width="66%"}
+
+**Arbeitsauftrag 1**
+
+- Mischen Sie sich in den Gruppen so, dass an jedem Tisch mindestens eine Expert:in aus jeder Gruppe ist
+- Tragen Sie Ihre Ideen und Vorschläge zusammen
+- Diskutieren Sie, was gut funktionieren könnte, was nicht (und warum)
+- Nutzen Sie evtl. den Kommentare-Datensatz für Tests
+:::
+
+:::{.column width="33%"}
+:::{.timer #rework-codebuch-3 seconds=1200 starton=interaction}
+:::
+:::
+::::
+
+## Überarbeitung Codebuch
+
+::::columns
+:::{.column width="66%"}
+
+**Arbeitsauftrag 2**
+
+- Finden Sie sich wieder in Ihrer Forschungsgruppe zusammen
+- Besprechen Sie, was Sie von den Kommiliton:innen gelernt haben
+- Überarbeiten Sie das Codebuch entsprechend
+:::
+
+:::{.column width="33%"}
+:::{.timer #rework-codebuch-4 seconds=1200 starton=interaction}
+:::
+:::
+::::
+
+**Hausaufgaben!**
+
+- Individuelle Abgabe einer `.R`-Datei mit Ihrem Code zur Lösung der Aufgaben 1-3 zu Zero-Shot Klassifikation (via LMS)
+- Gruppenabgabe überarbeitetes Codebuch (via Mail)
+- Beides bis Dienstag, 10.12., 12 Uhr mittags
+
+***
+
+:::big-text
+Fragen?
+:::
+
 # Literaturangaben
 
