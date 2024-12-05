@@ -1422,7 +1422,7 @@ classify_image("slides/img/07/screenshot_2.jpg",
 
 - Individuelle Abgabe einer `.R`-Datei mit Ihrem Code zur Lösung der Aufgaben 1-3 zu Zero-Shot Klassifikation (via LMS)
 - Gruppenabgabe überarbeitetes Codebuch (via Mail)
-- Beides bis Dienstag, 10.12., 12 Uhr mittags
+- Beides bis Mittwoch, 11.12., 08 Uhr morgens
 
 ***
 
