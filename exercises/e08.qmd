@@ -1,0 +1,37 @@
+---
+title: "Aufgabe 08"
+csl: https://www.zotero.org/styles/apa-cv
+bibliography: "../bib/24-2-ia.bib"
+suppress-bibliography: true
+link-citations: false
+---
+
+## Überarbeitung des Codebuchs
+
+Lesen Sie sich die folgende Dokumentation der "PSI-Process-Scale" aufmerksam durch:
+
+<https://www.researchgate.net/publication/330635483_German_and_English_version_of_PSI_Process_Scales_Short_Documentation_and_Instructions_for_Application>
+
+Diese basiert auf dem folgenden Paper, in welchem Sie weitere Informationen finden:
+
+@schrammPSIprocessScalesNew2008
+
+**Diskutieren Sie anschließend in der Gruppe, inwiefern die beschriebenen Dimensionen mit Kategorien in Ihrem Codebuch übereinstimmen**. 
+
+- Welche Kategorien könnte man evtl. noch ergänzen?
+- Welche Kategorien kann man evtl. präzisieren?
+- Welche Kategorien sind evtl. unpassend?
+- Überlegen Sie sich fiktionale Kommentare, die als Beispiel für die Kategorien dienen können. Nutzen Sie ggf. generative "KI", um Beispielkommentare zu generieren.
+
+**Diskutieren Sie weiterhin, inwiefern die folgenden, aus der Literatur abgeleiteten Merkmale auf Basis der Videos codiert werden könnten:**
+
+- Merkmale der Medienfigur:
+  - Attraktivität: Ist die Medienfigur physisch attraktiv? Wird sie als sozial attraktiv dargestellt (z. B. beliebt, erfolgreich, einflussreich)?
+  - Ähnlichkeit zum Rezipienten: Gibt es Ähnlichkeiten in Bezug auf demografische Merkmale (Alter, Geschlecht, Ethnizität, Beruf), Werte, Einstellungen, Interessen oder Lebenserfahrungen?
+  - Authentizität: Wirkt die Medienfigur authentisch und glaubwürdig? Teilt sie persönliche Informationen und zeigt sie Verletzlichkeit?
+  - Rollenverhalten: Spielt die Medienfigur eine Rolle, mit der sich der Rezipient identifizieren kann oder die er/sie im realen Leben gerne einnehmen würde?
+  - Häufigkeit und Konsistenz des Auftretens: Taucht die Medienfigur regelmäßig und über einen längeren Zeitraum hinweg auf?
+- Kommunikationsverhalten der Medienfigur:
+  - Direkte Ansprache: Spricht die Medienfigur die Rezipienten direkt an, z. B. durch Blickkontakt in die Kamera oder die Verwendung von "Du" oder "Ihr"?
+  - Konversationsstil: Verwendet die Medienfigur einen informellen, dialogorientierten Kommunikationsstil?
+  - Selbstoffenbarung: Teilt die Medienfigur persönliche Informationen, Gedanken und Gefühle mit den Rezipienten?

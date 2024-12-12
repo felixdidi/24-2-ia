@@ -1430,5 +1430,41 @@ classify_image("slides/img/07/screenshot_2.jpg",
 Fragen?
 :::
 
+# Sitzung 08: Codebuch & Goldstandard
+
+<br>
+
+![](img/08/gold.jpeg){height=300px}
+
+<br>
+
+:::callout-warning
+## Ressourcen für diese Sitzung
+@schrammPSIprocessScalesNew2008
+:::
+
+:::aside
+Bild generiert mit FLUX.1-schnell: "A person on a TV screen hoarding gold coins as a black and white cartoon"
+:::
+
+
+## Agenda
+
+- Feedback zu Übung 2
+- Überarbeitung des Codebuchs
+
+
+## Feedback zu Übung 2
+
+- Verwendung von OpenAI API: Kostenpflichtiger Zugang, verwenden wir nicht im Kurs
+  - Bei Fragen können Sie sich jedoch gerne an mich wenden
+  - API-Key am besten nicht in Abgaben / geteilten Dokumenten angeben 😉
+- Viel Kraut und Rüben: Wenn Sie etwas nicht verstanden haben, fragen Sie bitte nach!
+- Debugging-Tipp: Komplexe Funktionen oder "Pipes" schrittweise auseinandernehmen
+- Verbesserung von `tidyllm` mit Structured Output besprechen wir später im Semester
+
+## Überarbeitung des Codebuchs
+
+
 # Literaturangaben
 
