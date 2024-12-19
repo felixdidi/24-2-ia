@@ -1,0 +1,1966 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de-DE" xml:lang="de-DE"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Felix Dietrich">
+
+<title>Aufgabe 09</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dab109951af4044d4f5cecaee3bfc100.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-f36f7c0b50d56288992b67f8b1375710.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Aufgabe 09</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Suchen"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Kursinformationen</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Übersicht</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://lms.uni-mainz.de" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Moodle</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://www.mediapsychology.ifp.uni-mainz.de/felix-dietrich/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Kontakt</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/term_paper.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hausarbeit</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Materialien</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Folien</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../literature.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Literatur</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Auf dieser Seite</h2>
+   
+  <ul>
+  <li><a href="#testdaten" id="toc-testdaten" class="nav-link active" data-scroll-target="#testdaten">Testdaten</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Aufgabe 09</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">BA Inhaltsanalyse: Inhalte öffentlicher Kommunikation KF G</div>
+    <div class="quarto-category">Wintersemester 2024/2025</div>
+  </div>
+  </div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Dozent</div>
+  <div class="quarto-title-meta-heading">Raum</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Felix Dietrich </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            01 501
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="testdaten" class="level2">
+<h2 class="anchored" data-anchor-id="testdaten">Testdaten</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(arrow)</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(gt)</span>
+<span id="cb1-4"><a href="#cb1-4"></a></span>
+<span id="cb1-5"><a href="#cb1-5"></a>comments <span class="ot">&lt;-</span> <span class="fu">read_parquet</span>(<span class="st">"http://data.felix-dietrich.de/comments.parquet.gzip"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb1-8"><a href="#cb1-8"></a>comments <span class="sc">|&gt;</span> </span>
+<span id="cb1-9"><a href="#cb1-9"></a>  <span class="fu">select</span>(comment_id, comment) <span class="sc">|&gt;</span> </span>
+<span id="cb1-10"><a href="#cb1-10"></a>  <span class="fu">slice_sample</span>(<span class="at">n =</span> <span class="dv">200</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb1-11"><a href="#cb1-11"></a>  <span class="fu">gt</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="mrouakhmnb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mrouakhmnb table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#mrouakhmnb thead, #mrouakhmnb tbody, #mrouakhmnb tfoot, #mrouakhmnb tr, #mrouakhmnb td, #mrouakhmnb th {
+  border-style: none;
+}
+
+#mrouakhmnb p {
+  margin: 0;
+  padding: 0;
+}
+
+#mrouakhmnb .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#mrouakhmnb .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#mrouakhmnb .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#mrouakhmnb .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#mrouakhmnb .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#mrouakhmnb .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mrouakhmnb .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#mrouakhmnb .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#mrouakhmnb .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#mrouakhmnb .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#mrouakhmnb .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#mrouakhmnb .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#mrouakhmnb .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#mrouakhmnb .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#mrouakhmnb .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#mrouakhmnb .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#mrouakhmnb .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#mrouakhmnb .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#mrouakhmnb .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mrouakhmnb .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#mrouakhmnb .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#mrouakhmnb .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#mrouakhmnb .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mrouakhmnb .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#mrouakhmnb .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#mrouakhmnb .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mrouakhmnb .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mrouakhmnb .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#mrouakhmnb .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mrouakhmnb .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#mrouakhmnb .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mrouakhmnb .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#mrouakhmnb .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mrouakhmnb .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#mrouakhmnb .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mrouakhmnb .gt_left {
+  text-align: left;
+}
+
+#mrouakhmnb .gt_center {
+  text-align: center;
+}
+
+#mrouakhmnb .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#mrouakhmnb .gt_font_normal {
+  font-weight: normal;
+}
+
+#mrouakhmnb .gt_font_bold {
+  font-weight: bold;
+}
+
+#mrouakhmnb .gt_font_italic {
+  font-style: italic;
+}
+
+#mrouakhmnb .gt_super {
+  font-size: 65%;
+}
+
+#mrouakhmnb .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#mrouakhmnb .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#mrouakhmnb .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#mrouakhmnb .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#mrouakhmnb .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#mrouakhmnb .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#mrouakhmnb .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#mrouakhmnb .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#mrouakhmnb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="comment_id" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">comment_id</th>
+<th id="comment" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">comment</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgzkfyJsG8R0PCbtmmd4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Just had an argument with my dude about cleaning our room a little. Housekeepers get rooms ready for the next not clean up behind filthy ninjas. That’s for a MAID 😅</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugy96jCuSqpgOkKgORx4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Ugh he's always flexing Dilo said how u gone hold the door open and CJ says I'm trying to make sure nobody following US. They following ME NOT YALL LOL 🤣🤣🤣 BOY WHO ARE YOU?</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgzXGGexHY-f_Emu0bN4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Txunamy I hope you have fun at prom your dad is so overworked active next time tell him not to go with you next time you should tell your mom to go with you</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgyAHhlqLeIkgq3nWQF4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">The hospital needs to be giving you iv antibiotics! I was admitted to the hospital and got iv antibiotics when I got stabbed.</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgybNUSY9S4UH-OWOk54AaABAg</td>
+<td class="gt_row gt_left" headers="comment">How it feel getting played? Be more humble my guy</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgyogGLwjYONjL7Sjct4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I love seeing you traveling and enjoying family and friends many blessings 🙏🏽🙌🏽💕 Sincerely, Misty.O💕</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgzOJq6l5_5s7fNXVpB4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Wow!! I'm honestly so shocked they did all of this work in like 1 hour!</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgzggRXANGblqgnD8DV4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">All you can do is do what you can. When those kids grow up, they will know the truth. But no parent should you their child as a pawn.</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgxW-7inQ52_qIz_IBh4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Oh I laughed and had so much fun with you all tonight! Thank you and I enjoyed another fun time with the Crosby’s! Have great weekend</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgxnvWUNNlS9Eng3vdl4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Her room is beautiful , she's adorable god bless her ❤❤</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgwMwzxIE-x32JSINvd4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Just saying,some couple in Indonesia named their newborn "Google".No seriously they really did that.You can 'google' it if you get what I'm saying.HAHAHA. The idea is already out there so don't be afraid of weird names.</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugw_1D16bMJ5Zz-z3Il4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Happy Birthday Carson, thank all of you for sharing your birthdays with us, you clearly remind us of what’s good in the world.</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgwFX7YlhLmjm2BaSBh4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">The sound was bad:/ Bramty looks like a señora. But I still like to watch and give it a thumbs up : )</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgyZ-v8-fEMJ_oVWV8B4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">A much needed moment of peace and beauty from the voice of an Angel. We will all get through this, our heavenly Father is in control, and many hearts are turning back to Christ during this pandemic. "Fear not!"</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgwWOAMo7fDgieHFQa54AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Aww that was cute cant wait to see baby girl xxxxx love you guys Done</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugy8UM4HKusu23bJkH14AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Hii Jordan I love you! If you liked this it would make my day!</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgxNqWAznIEntHEfKWJ4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">ITS NOT JUST CATHERINE HOUSE, ITS AUSTIN &amp; CATHERINE’S HOUSE</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugxk9ccYtoKiqC0UvVN4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">The new name is perfect ❤️❤️❤️ and Leslie your Mom is awesome so brave🥰</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugwe7x-hkYrisGzyywl4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">High five for keeping videos light and fun and not serious and just enjoying the journey :) You guys are fantastic</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgzuRpRFTinFdd-Eia54AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I love this video 💖 Txunamy I love your pranks ♥️ You should do more pranks 💞 Maybe ignoring every one for 24 hour's</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugye_Tid5BBPm-wjET14AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I loved the video. But Leslie, do you breast feed? 💕</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugw2r7GWReOMEucwf2Z4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">First Congratulations 🍾🎉🎊🎈 💯 For The New Vlog Video Log Log Video YouTube YouTube Video Fr For Real Fr 💯</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgwtKWWeVhe9tmmnFN14AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Writing this as watching your vlog 😊 Wish I lived near by to you still (recently moved from Cambridge to Somerset) I would of come to the baby group too! I currently go to a baby sensory which took me 6 months to get the courage to go too. Soon he will be too old, and I’ve got to get the courage to find another one! Aaahhhh!!!! Anywho. Back to your vlog 😊</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgzlowguomAfkHh4pCN4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I HOPE YOU GUYS SEE THIS!! I LOVE YOU GUYS ! 💞</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugj1S_FSG15IW3gCoAEC</td>
+<td class="gt_row gt_left" headers="comment">no wonder Kyra's friend is so worried they're taking so long nap and their side conversation she's probably thinking that he's dying</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgwNBolft91UBIN_vN54AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Hey Jordie I also wet it before and after when I brush my teeth lol</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UggG-1-7iSnyqHgCoAEC</td>
+<td class="gt_row gt_left" headers="comment">kaelin is toooo savage,I would have called the whole thing off after I seen 1 tear.</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugxsb8rZ3J6m0w-cUtR4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I love watching you guys every Friday!!! I will be checking for when you post like every 5 minutes! I love showing your videos to all my friends and family! You guys are so sweet! Subscribed and notifications on!</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugxi_r-zvhkhAjwxOPJ4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I miss ryan and Austin and tre filming together 😭</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgxJXbVoazV8hZM9l-F4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Really Cj, smh you DTM as usual, and you will be right back on here tomorrow apologizing and giving sob story about how you was in your feelings.. Also, Lexi girl, you should stay out of this one because your New New boo</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgyyuwCzgcPQcROGKwh4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">OMG!!! I SAW DAT $HIT LOL! , SHE TRYING TOO EAT AN SO ARE THE SO CALLED "VLOGS" AKA AS MY VIEWS ARE DRASTICALLY FALLIN OFF AN THAT THOTTHOT AKA TATA THEF!!!!! SO LET'S WAKE UP SOME $HIT AN GET ROYALTY PISSED AN FU*K UP THE HOUSEHOLD AN GET SOME VIEWS . CLAIM DOWN (ROYALTY). WE WIT YA CJ AN FAMILY . MUCH LOV</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgxDK_tvM0WhMSPIJsJ4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Ryan you’re messing with the baby of a Latina! Are you out of your mind my dude🤦🏾‍♀️</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugzh0O3bX22R8m-hY7l4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Omg I'm dying I love when Austin &amp; Ryan make videos like this or together</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgyiMDTT2H5U4U_eSKB4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">That is my doggy I lost him two days ago</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgwsEolT7E3fwlSZxcJ4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Happy Birthday Claire!! Great job with the Vlog too XOXOXOXOXOXO</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgwusD_B07lVyi8QOgx4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">There is a saying that builders and carpenters have. "Measure twice, cut once". It means before you decide to do something that will have a large effect, take all precaution to make sure it is right. I feel the same way about marriage. To find the right person you need to take all precaution to make sure they are the right one for you. Don't rush. Go slow. And when you are absolutely sure then you get married. If you do all that then it will last a lifetime and you will never have any regrets. It may not always be easy but you will never have any regret about getting married. And the life you will build together will be solid and unbreakable. The love you share will stand up against hurricane force winds. The home you make together will be beautiful.</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgyOLvilafhcvKbbAfR4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">How awesome is this! Have a wonderful time with your dad! Priceless memories to be made!! Never waste a minute of it! Blessings to you!</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugya92x8TGQ_B2bFsgF4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">im so happy for u c.j. u are my favorite youtuber❤</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugyj5B7Rue3PanhM0Px4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">CJ QUESTION IS DO YOU WANT YOUR OLD FAMILY BACK?</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgzLUfPGmni9KXYaU_94AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Awesome family.credit goes to the parent how the children are growing with good value, and the way u teach the children. Hats off. Thank u.</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgzrzlrEHg7qgTzEiZR4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I don’t want to tell a joke because mostly there are dad jokes 😂😂😂😂😂</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugx_33KhBxNQrtbg4_h4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Ok but imagine June 19th being the grand opening 🙊🙊🙊🙊🙊🙊</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugz_GGO1mnM4uslw1494AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I'm happy for you all hope it works out for everyone But the clout real God bless you all money talks</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugx0m0i6ohLjv1_BGkZ4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Absolutely the most beautiful share! Dave you are such a sweet, sweet, sweet man and Ashley you are just so amazingly strong! Carson's hugs and Claire's kisses for him were so so precious....such a miracle made most special by how you all welcome June so lovingly! You make sure you create the most beautiful life for yourselves - your family spirit is such a joy to know! Love surrounds your family because you each radiate it! ❤❤❤❤❤</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgxJK4E72DVMvk52AmV4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I wish I could remember the candy that had me 🤮..it's a Japanese candy..the chocolate oreos bang to me</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgyoVDc5qPF1T2E4-ZJ4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">24:59 Who remembers crackr kid vine “ YA YAAAAH” CJ JR sounded like him there 🤣🤣🤣🤣🤣</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugx2Tl7W1pT2Yj7O5Pp4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Its sad cause i enjoyed them and you it was good to see you happy and enjoying your self people are crazy these days</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugz2PLrfBBfZU6P2L-p4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I have a question Why haven’t you guys get to do a cross over with the fishfam like before when Penelope and Oakley and Tatum when they where baby?</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugx6fO8MmP7heCFWVSZ4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Why he feel so comfortable walking in the little girls rooms……</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgzCUq28X2sUkIont2F4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Tea time is my favorite but watching your family it beautiful! I went to the zoo last month and it was hot! Love you guys ❤️❤️ $doreenbetanzos</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugw-IjB993fL--E6EG54AaABAg</td>
+<td class="gt_row gt_left" headers="comment">That's thee most beautiful name I've ever heard so unique!!!</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgxTMNnlEOIK8b_tJGJ4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Wow, that birthday day cake is FIRE, I WONDER DOES SHE SHIP HER CAKES OUT OF STATE , HAPPY BIRTHDAY CJ.</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgyrfUo7CWoea2bXYKt4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I died when you pointed the camera to P and she said “balsgshkshd” 🤣🤣</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugy9Z98OhXpumDrAuyt4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">What better way to start a Sunday morning.. over an hour long vlog☺️ yay!! Happy Sunday!! Xx</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgwFZ8_sLTdCTYRG4yl4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">You know you got here fast when it’s only 8 people that liked</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgyNTF-XZBleIgIS52h4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I love that Idea!! Since I live in Germany it will be a bit hard for me to text you but I absolutely love that opportunity you give all of your fans!! Since that might be on of the hardest situations people have been through in life this opportunity helps us to handle our fears right now and all stick together!! That was an idea that will warm everyone's heart💗 Thank u a lot! I hope u all stay safe🙏🙏💗 Nice greetings from Germany!</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugz3ddSzKDVcKktGKON4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Do you ever get dizzy from walking around in a circle in the kitchen lol cause I do</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgwEPnuDZ5tiBqiQB0l4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I could remember the slap bracelets and the bloom bands</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgzWF1l1so-yZ-QUd-N4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">This was So nostalgic and lovely! Made me miss rainy days when I was little xx</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugz34-mvENXjCGLuy4Z4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Hahaa omg so much was happening during this video !! 💖🔮</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgxZs05G9kPtuTyRZ1x4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Bramty &amp; Luis (especially beautiful kids) Hope amazing Christmas! I remember I subscribed you does YouTube for 5 years wow that's crazy I love when your kids singing so beautiful 🎄</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugx8kbVSZCQJe4Xnrbx4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I was totally silent the whole time..... Except my favorite songs that pop up. 😁 You guys are so true. Love y'all!! 😘😇</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgyZewnquPH5Afa0CWp4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Bramty goes all beyond for her kids birthdays as she should! She’s done all the hard work to get this far ❤ I’ve been watching since her box swaps videos😭 their growth has been a journey ❤️</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgwSxzs-s3Xvdu_W15t4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Happy birthday Claire , GOD BLESS YOU , from miami fl</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgxBtP_0gbFzuQZf0TF4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">This was nice too your kids together wish other was there too</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgySn0r8eaIhOZPQ5jd4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Wishing you many many birthdates to come Milly happy birthday!!!</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgzkzpTMngPn0Bzmp6N4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">The reason I want tthe iPhone 13 is that me and my familia are far apart and only see them once a year</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgzcEQ9L13UgooD1bDd4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">What bout royalty video let's clear it ...was she high when she made it</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgxlQU1pvWInd7OUf3F4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">the story of dron Is good Dave Crosby genial fall dead</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugyl7PLH09DyNMOlN2V4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Awwwwhhh omg i really thought it was gona be a prank But it's not omg congratulations❤❤</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugg7RpfWTBM6-XgCoAEC</td>
+<td class="gt_row gt_left" headers="comment">Lmfaoooo kaelin was looking fresh in his eyes when he was younger 😂😂</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugx1zReTo5s1p7p9Jcp4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I like this you keep up the good job. You are a better father this way.</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgzSICjO0mshJ-RrqpV4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I love the soda you are drinking even though you don't like soda like that but it's my favorite soda right there</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgxjYi9d94dqj7AG5TB4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Ahhh I love Levy’s lil leg riding the scooter. 😂😂 $aldreyy 💓💓💓🙏</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgxRO4-pxBqE0-uEvVN4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Anyone can go anywhere and still be there for their kids. I have 2 kids and it doesn't matter what I do or my baby mommas do because we all love our kids.</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgzwYkjW9_-bsB1iePh4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">23:24 she definitely did all this for views she said in her video she couldn’t afford to do what she wanted for her birthday so cj not Lyin she did all this for money SN: bro went up 300,000 subs since they left so much for that he needed them for views and subs argument</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UggIeZc4zJz_yngCoAEC</td>
+<td class="gt_row gt_left" headers="comment">I'm in shock. I would've eaten any of those!!! Eventually...</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgxOd0ULxr1XcDIWmEZ4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">OMG, u r oN 7th clouds! Hoping for the best</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgwMMJa6vTM7fqXGmxF4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Glad that you’re healing and recovering well! Keep grinding and doing your thing!</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgxFfPbBzzswB4zh9Mx4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Today i found out i did not make thr basketball team🥲oh well but at least i can see this vid</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgxqewX9GBvIFPOUFvx4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Claire is so sweet and smart! Love you guys so much. Your family is so sweet!❤️ Millie is adorable.</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ughh0yUhXC7KKngCoAEC</td>
+<td class="gt_row gt_left" headers="comment">Just watched the intro and I am on #TEAMKYRAH but Kaelin got her good</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgyscYMamURbwU2KUGJ4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I don’t know if it’s just me but do y’all just binge watch all of the bramfams content? Like I could do a hole bramfam marathon</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgwocxNKQ3rbYRSyhpd4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Yall need to race all the hellcats on a drag race</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugzh7khSYp7ufilj_AB4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">You should get the twins there own table. Happy thanksgiving and YOULL ARE DOING A GREAT JOB WITH THE KIDS AND GETTING ALONE WITH EACH OTHER</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgzMsgD1UzMaeydLOEF4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">it's nice to take the kids shopping but sometimes it would be nice to see the kids going shopping in some basic shops teaching them humbling value by not putting a high value on what name brand you ware</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugjx_PsyxUVPjngCoAEC</td>
+<td class="gt_row gt_left" headers="comment">O my gosh.....I'm at a loss for words Claire you are an angel from Heaven baby girl!!!</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgzXYpkZnOVFgQWlLVd4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">wow. Wow! WOW!!!!!!!!!! Saw a clip of this a few videos ago and said, "That looks cool, can't wait" And now that I get to see it, I am BLOWN AWAY! Well done Crosbys. WELL done!</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgxuDxqWUkdeRvPApxh4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Why don’t u try to get nation and her brother and sister</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgwbeMYy36dVU3IxMmx4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Cj put the camera down and take care of ur kids royalty has them 24 7 give her a break on top of that she have to be making sure that ur kids keep ur house clean smh</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugx2aayOtsHTEcblGV94AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Yay I'm so happy for you, finally Claire gets her little sister!💖 I have an older brother and I waited almost 11 years for my little sister so I know Claire must be so excited!!😊</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgyWzrBzS_Wqxp9AhIx4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Love you guys so much can I pls get pinned and</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugzhm6NrIR74Rm2x2zl4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">this is my first time in this channel i love your youtube channel i subscribed</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgyUpP0ZbXcIXrfWBWh4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">❤❤❤ this video was 🔥🔥 my husband was just in a t bone accident this past Friday. And mannnnnnn you're such and inspiration!!! Loving the content!! Keep up with the vids!! Steady watching you grow and it's only growth from here on out!❤❤</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugy4ZSyHnoJjVFz-pS14AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I live in South Carolina and thankfully the school bus drivers are handing out bagged breakfast and lunches to the kids on their routes during the week! Such a blessing! ❤️</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgxItS9BOfggQCp7sOR4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Good job Leslie on that prank you did on Ryan. It was soo good! It’s soo cute when he got excited becuz it seemed like he reallly wanted another baby😍 Happy New Years to ya’all!!🎇🎊</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugyfb9f2dIr3p2Alz7N4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Royalty is real definition of a housewife. A keeper for sure💯</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgzTrD3HlWfKIhK9_Mh4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I loved this video! Thank you so much. Also I love my cardigans 🙈</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugysbf_mfEkP3AuN8PB4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I am glad camari is there take care of your daughter ccj</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugyu2Ixk56r9gNl2XT14AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Loved this vlog sooo much, glad you guys got to see Lecrae!! definitely want to go to one of his concerts someday</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgycBLb6EBo8IdFqKF94AaABAg</td>
+<td class="gt_row gt_left" headers="comment">It’s so sad because Ranger He got a brain freeze</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgxxYMtAhCN2MxO5dfd4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Like and comment if you want us to post another video soon ❤️💎</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgzB3LnG5gIgN0id1x14AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I can definitely tell that u are much happier with them being around with u...all love</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgzkWbwzySy-2iJpWUZ4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Wow Crosby family - crazy busy times with life. Take it easy and enjoy those darlings who are very talented along with the two of you.</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugz7yciI0wtppYw4UaB4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">All these colors are so fab! You have such a wonderfully stylish eye, L! 🤍</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgzBTc9E4T2ybEQ1yj54AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Bramcy is not dealing with no dome issues she's all about respect and getting along and doing better with her life and making life better for her family.God bless you and your beautiful family. I hope you're having a blessed evening with the family. 🎅🤶🧑‍🎄⛄️🌲🎁❤️</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgwpflFp0p1KlstYLIN4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I thought since Claire had so much fun spraying silly string it was appropriate she also got sprayed with it. Great vlog Dave and Family!</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgwwNJrGoNn9npvKzLV4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I can tell she has a beautiful soul 😭💕🥺 so happy for her!!</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgyvGiOd0jo-Br4plf14AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I wish i had family like thiss!!! this family is super super happy</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugwoq0TsKMEVIH_visZ4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Happy C-Day In Advance My Brotha!! Enjoy it to the fullest !!!!</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgyGRtoDtzA9GfB6bkd4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I really thought Bellamy was all Ryan until I seen Leslie’s baby photo! She definitely has Ryan’s eyes though. 🥰</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugzrf1xObdS8iqUpjQt4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Of course you have One Million.. you all are awesome. June is so beautiful, Claire is the sweetest little girl ever and Carson is so full of joy!! They are so blessed to have such amazing parents!! Hugs from Florida!!</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgxiJl32hSDpp26bLip4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">The track hawk symbol on the back window would’ve looked better to me then the Batman</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgwY8Qa9eGwhc4-JZMl4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I. Really wanna win because I never one and you guys are cool</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugy3XSZuU8Ul_af8kwx4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">How about Colt if it's a boy! 👦 instead of Holk lol</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgylQyDnALltufRcm114AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Congratulations. What a wonderful surprise for your Wife and kids.</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugxb7whVBayMkdfwaA54AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Kyrah looks like the happiest in the world, it’s so cute!!</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgxT065HcgjNjMRyYIR4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I hope I have a relationship with my in laws like Ryan &amp; Austin have! Loved this video and haven’t even watched it fully yet.</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugw6Zl465gRUZr5BKJd4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">This vid reveals that the S in Sdiezzel stands for Senior so Diezel was named after his Papi!</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugwzh8eAf2eIed0_uFR4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I love this even more, now that I've just watched the "behind-the-scenes" video. Good job! 😁❤👍</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UggRachiOHiXWngCoAEC</td>
+<td class="gt_row gt_left" headers="comment">Awwh I wanted to cry with her 😩so adorable 😍</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgznQcILFcgXEoerfYd4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">The title almost made me have a heart attack! Are you trying to kill off your subs? Even though I figured it wasnt the actual baby, this one is going too far.</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugx5k1FBIFfUZiywjpJ4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Rana Omg your having a little girl. I'm so happy for you.</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugz8liw3nwr5Zix4BzV4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Ruco I think how you spell it in Spanish it means you’re old like an older guy</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgxG4HvvOxuq--cRuKV4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Catherine is your older sister?????? What? I never knew that omg! I thought your Austin brother!!</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugx3wUj3FQITEsViwHV4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">You guys are super awesome and amazing and I love you guys the spy ninja so much and I love watch your guys YouTube videos and I’m subscribe to your guys YouTube channel and post notifications bell are on and can I get a shout outs to my YouTube channel is awesome sauce henry</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgwCxkYTO7PBCDmE1Y54AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I love this channel so much and this video was really fun + great concept. It’s never anyone’s place to comment on your family structure, but I do hope Leslie is held in high regards and we are viewing this incorrectly. This video made me really, really sad to see as a regular viewer. As the mother of 2 children, Leslie needs upheld; not put backstage or stifled. Catherine is honored no matter what, but Leslie isn’t just “Leslie”... she’s as beautiful and important.</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgwyEcW6pFkD_HzpAel4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I played basketball all the way to 7 months so you can't say what a person can't be</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgyMKr0_1NjdLOBWIRR4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">June want waffles that was cute. Love your family! 😊</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgyAA_djgBTsDwR_hxx4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Ok what the hell leslie looks sooo radiant and glowing in the morning</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugy-t785cYIuWn9yIMZ4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I’m not going to lie, I like you cj but man learn how to accept gifts without complaining man. SMH</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgywYGlLa6gN9BLtgaJ4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I can relate when you said I'm naturally a sloth ...me too ! lol oh and the 'flowers' in the vase are called pussy willow, I have been looking everywhere for some as I have a large vase now I know Morrisons ! ty 😊</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgxPE6IH9H3qLjw0qm54AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I BET Claire was SAD when she lost her Drone.. I would too the're REALLY expensive..</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugx9W7mPh81E1SNVdDp4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I hope you guys are OK please get well soon I hope you guys will get well soon</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugxw60BYH11MLMWK3W94AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Riley is a beautiful name and beautiful pictures on Hawaii and I wish I went to Hawaii and beautiful couple and lesile is so beautiful and congratulations</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgzTFqSmfwOkbbTNAKt4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Where the heck is Delo...Sure miss him lottss...Hope he's all good</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgiVZsjFUjPU8ngCoAEC</td>
+<td class="gt_row gt_left" headers="comment">I member he said that when he put the spider on that girl</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugx_9C5mntpeFMTMIkB4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I'm not a big fan of cheese but blue cheese is the absolute Worst Out of All of them😩😨😭😩</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgxkKp_TmgSMYqhW7a14AaABAg</td>
+<td class="gt_row gt_left" headers="comment">We do hate u, we are disappointed. Nothings funny y’all suck</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugw85jwuYVz7TvoRJ_V4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I am sure you are loving parents, but don't you think it would be nice to enjoy little but wonderful things such as building a snowman or playing in the snow just outside your door? Will your children learn to be happy by entertainment such as legoland, plane flights, going to zoos and sea shows and driving for hours in the car? Also, they entertained themselves for hours with various digital devices, playing games or watching TV. If you just cancelled the trip when things didn't work, your whole family would have been able to spend more valuable qualitative time together for free...and way better for the environment, too.</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgyYbvQX-gNVUY0U65h4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Love rose are red flowers are blue the bramfam is the best youtuber</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgzpPS-R6z-Yfe4FnNh4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Dan and Phil and Louise! Epic trio and omg you all look amazing 😍🥰</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgznjK_bqLYVpY6aozB4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Wow, this is beyond AMAZING !! You will all have a fun year, planning &amp; building your new home. So EXCITING</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugw6V7ApTfP8RMA2AfV4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">You’re just so lovely. I wish there were more people in the world with your kind of heart.</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgxUjukkeovJbtRSShR4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">if you have his number track him down hope you find him</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ughew5IX2_PV8XgCoAEC</td>
+<td class="gt_row gt_left" headers="comment">I have been here since 195k subscribers back when Kyrah had her little Victoria's Secret pants and Kaelin had his Aeropostale jeans and seeing them now with 1 million subscribers makes me feel so proud 😘💖💖💖</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgxFAGCfh564hll1vsR4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Congrats Txu on the new room makover. It looks really good!!! You guys are such nice parents.</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgxCSGGG0TKII--H4SZ4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">She’s so adorable I hope you both will last forever~~ 🙏🏼</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgzJN0EbRxE2HfXeKYp4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Feel better mom i pray for your family everyday keep strong and I love you</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgzjGiduTb53FdIBpu54AaABAg</td>
+<td class="gt_row gt_left" headers="comment">CJ thank God You never married Royalty, Lexi is a keeper….</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgwgIsioAPY_IZJ-QZp4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Your videos make me smile from start to finish! Happy Birthday, Carson!! 🎂❤️</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgykHYomescgc1_Zh_d4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">i don't know why but when i'm nameing things or even animals, i go for old names. like grandpa/grandma style. so since the camera gives off boy vibes, what about Carl. or a Harold.</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugw7kuc44YieM784L8x4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">How to a kid no so much about zodiac signs. she hit the nail on the head. God Bless yoy getting better</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgxkUWDEb0D7Xug8EVV4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Such an exciting day! I love how both kids are so excited and so appreciative. I'm looking forward to the Disney video!😁💖</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgwbYPAuVUE4w_KgRCF4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">❤❤❤This video was vibes. You are so good to your supporters. We loved you here in El Paso too.</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgwcDbGO-D1_Y_6vqH14AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Glad to see my boy Diiloooo. Missed you my guy. Jaaliyahs hair is so healthy and thick. Ok girl</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugyi1OqlRygKlK4D_SR4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Congrats on the shoe again. I wish that I could get a pair. Maybe sometime down the line. Keep up the good</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugxj-EhlzInffXIL_QJ4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Tu parle super bien français Ryan !!! I swear 🤤😍😂😭❤️❤️❤️</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgwUJXksqAHbRxLtxpd4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">When are you going to spend sometime with you Grandma ,brother and his family that still live there ?</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugx-tXk8zB_BZYQWCO94AaABAg</td>
+<td class="gt_row gt_left" headers="comment">When you hire people to clean have them sign a form that you can hold them accountable or that they can’t do those kind of things</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgzX3PuUuNpowLT2EHV4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Nooo the BTS fanchant meme tune in the tiktok at 7:35 😂</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgwIPk341A49y0YSEq54AaABAg</td>
+<td class="gt_row gt_left" headers="comment">On behalf of our 7 year old son, Logan, he says he loves all of your videos and loves your video!</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgzZm094_5KBRO_nLV94AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Haneen Awad yes cat carThe ter This snuck into 16.</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgyDpBgZEs8aQn6Z6I94AaABAg</td>
+<td class="gt_row gt_left" headers="comment">🙏🏾🙏🏾🙏🏾🙏🏾🙏🏾I wouldn’t stay in that house for sure… This is horrible 😕</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugx1SDPkmfgkmEAkGjd4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">No more karma por favor!!! We are trying to clear the planet! Leslie has a good whisper voice for ASMR. lol Ryan turn those antennas up! She did all that to you when you were asleep! Loca! How about a shout to me hermano! 😹😇😍</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgyrGNU7O4F_sklYnMx4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">“ur bowser from mario cart so you’ll weigh down the cart” YOOO BRAMTY IS OD LMFAOOOOOOOOOO</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgyB5-SzQ0P2L7xKDDV4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">HEY DJ SO COOL. DO YOU LIKE OLDER WOMEN? JUST ASKING.</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgwP0_lihQopWx5gAjF4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I don't blame Carson all those germs in one place 😳😟😱🤯</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugx__ynyXomDTcEXzut4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">You keep dropping them bangers that we so love and njoy CJ ❤</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgjrExkNwNu4m3gCoAEC</td>
+<td class="gt_row gt_left" headers="comment">Kaelin: oh no I rebute this in the name of Jesus Me: *im dead 😂😂😂</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgxuHo1dTBDU0rnzBO94AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Ryannnn ten cuidado con tu dirección después tienes niñas locas para tu casa los quiero mucho!! Bendiciones</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgwnlD6HJlfInyU78Bh4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">The hospital should of gave her stool softener :( those were god sent</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgwERl3hHI7c8gJfL9h4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">The end was my favorite part. Loved it. I'm so glad the bro is back. He's still looking mighty fine hehe</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugzis_BZR35L-3StGXN4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">You should look at her screen time to see what apps she uses most, her recently deleted photos and hidden photos (if she has any), and also her DM’s!</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgzIBxR3-WiONdTaDDt4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I bet Lexi is somewhere in the background rolling her eyes like shut up please 🤣😅😅😆😂</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugy7oBHbGWWjfLlRTg94AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Penelope! Wow 4 years young how time flies! May god bless you always &amp; May all your wishes come true! The Bram Fam Loves you 💜 Sooo Sooo Much 💜</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgzYukK28s5lMnMpA-54AaABAg</td>
+<td class="gt_row gt_left" headers="comment">It's the first time I heard Jordan called David "Daddy" so cute😍</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugxe0wmi7G3ajUdTvkx4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Team Girl! 💗 also, i love that ryan and austin are so close and that leslie &amp; catherine met!</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgyoGamJtabsAenNb694AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I wanna see all three of them together camari and the twins🔥that’ll be lit</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgwCCXTU5jwkzYKTCX94AaABAg</td>
+<td class="gt_row gt_left" headers="comment">So exciting to add another member to your family. I have a 6 yr old Granddaughter I'm sure hoping for more. Sharon from orange county ca</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgxWSLdvSe8gasNWzUJ4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Carlson es el ser más bueno, dulce y cariñoso. Feliz cumpleaños querido Carlson!!!!!!! 💝🎶🎵🎼😘🤗 Te enviamos muchos cariños desde Córdoba en Argentina</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgicwgwSjrHWR3gCoAEC</td>
+<td class="gt_row gt_left" headers="comment">this is so precious! She's such a sweetheart and I am so glad you are bringing your kids up right!</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgwIDS3MYh0LO8Nqq6Z4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">These video made me think about school and Its sad because in school no one whats to be my group or talk to me, I just talk with my friends some of my friends are in 117 or 116. I wish I can be friends with txu because she is so nice to others. Its okay if you cry in videos. I am a big fan, I wish I can have a real friend, I do have a bff but she don't go to my school. Ily your videos I am a big I be follow u in tik tok and youtube I even follow jancy family. God bless u all. Ty for reading these and even some girls talk bad about me in school but it will let me down, I am still going to study to get good grades.</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgxgC4s17DefAP05SaR4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Can we still get the video of royalty and Camar mama to sit down and talk . I’m so happy camari back too❤️❤️</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgxObekJ3xPfpmXiLOV4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I want to see how catherine and austin reacts 😭😩♥️</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugwvv7bnOpAl4yo_TNx4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">LMAO, I watched that show last summer. Was so bored with my life.</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugy66-8uKaK60AHz7794AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Your videos are the best cj hope u keep grinding</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugz_nmo1ZoqQwxqlxtF4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Lmaoo I love you guys♥️.. little did they know Catherine was finding out she was pregnant</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgwnNGSwPXakyzr_zxl4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Clara this is so beautiful. Brought tears to my eyes.listen to you sing is a blessing</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugx6NMuu8QYnwwEmXLl4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">So exciting! Love you guys. Good luck on the birth ❤️</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugw5q17LRA03VUXmqDp4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">I'm so eager for your videos to be uploaded, I always thumbs up before you count for five seconds, I hope you notice</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgwYbAeZcfXZQDstHlJ4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">My son will be 5 in September. He loves watching your videos with your kiddos. From having to try POG juice, to wanting a pair of Heelys. He's all about Tydus. Thank you for having videos that my kiddo can watch without profanity! ☺️</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">Ugy4MSqB3pdcML-x-vJ4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Morning all, and thank you Louise. Pearl is growing up so fast. She looked adorable in the ‘hand me down’ coat. And listening to her chatter is great. I feel your frustration about tidying. Turn around and someone has undone your good work in just a few seconds. Have a good week. Sounds like you’ll be having some fun!! X</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugz5gIG5eemdNjnLX0R4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Love the new it's so much I'm happy you want Lexi y'all Good MCH God bless y'all I'm blessed y'all I'm big fan of your video love y'all So so much team Leix Carmen make a mess</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgxlR6I6xxsA8L6mAmd4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Nanny: Maybe it will be TWINS Leslie: or TRIPLETS Ryan: no no no no no Me:😂😂😂 my sisters and I are triplets</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgzvceLzjk7PR6m8Pn54AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Buenas tardes muy buenos buenos videos los disfruto mucho estos de retos</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgzJUJNBZ4_fN72owcB4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Cj I think you and alexis would make a good couple🍺</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">Ugyt27YYK1Zg3OcQRvd4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Hi guys so could u guys start looking,talking and putting more flyers for March cause I'm pretty sure alot of your fans want u guys to aswell and plz give us an update about March aswell Sorry if this hurts your feelings txunamy but I really want an update so thx.😄😊</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="comment_id">UgywdMHcHV-368hxpRt4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Aye the boy that did it said Lexi sot you up</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="comment_id">UgzN_amL_Ah7E_QlUWZ4AaABAg</td>
+<td class="gt_row gt_left" headers="comment">Ive been watching you guys for so many years now, and i just love you two. You guys inspire me to do big things in life, keep being the smart, inspiring people that you are. I cant tell you guys enough on many times youve made me happy watching your videos. Thank you guys.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Kopiert");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Kopiert");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/felixdidi\.github\.io");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
