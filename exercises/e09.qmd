@@ -1,0 +1,25 @@
+---
+title: "Aufgabe 09"
+message: false
+warning: false
+---
+
+## Testdaten
+
+```{r}
+#| label: load data
+#| echo: true
+
+library(tidyverse)
+library(arrow)
+library(gt)
+
+comments <- read_parquet("http://data.felix-dietrich.de/comments.parquet.gzip")
+
+set.seed(42)
+comments |> 
+  select(comment_id, comment) |> 
+  slice_sample(n = 200) |> 
+  gt()
+```
+
