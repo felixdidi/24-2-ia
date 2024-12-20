@@ -1,0 +1,279 @@
+---
+title: "Kommentar Validierung: Goldstandard"
+message: false
+warning: false
+---
+
+## Coder 1
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+library(arrow)
+library(gt)
+
+read_csv("validation_sets/coder_1.csv") |> 
+  gt()
+```
+
+## Coder 2
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+library(arrow)
+library(gt)
+
+read_csv("validation_sets/coder_2.csv") |> 
+  gt()
+```
+
+## Coder 3
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+library(arrow)
+library(gt)
+
+read_csv("validation_sets/coder_3.csv") |> 
+  gt()
+```
+
+## Coder 4
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+library(arrow)
+library(gt)
+
+read_csv("validation_sets/coder_4.csv") |> 
+  gt()
+```
+
+## Coder 5
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+library(arrow)
+library(gt)
+
+read_csv("validation_sets/coder_5.csv") |> 
+  gt()
+```
+
+## Coder 6
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+library(arrow)
+library(gt)
+
+read_csv("validation_sets/coder_6.csv") |> 
+  gt()
+```
+
+## Coder 7
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+library(arrow)
+library(gt)
+
+read_csv("validation_sets/coder_7.csv") |> 
+  gt()
+```
+
+## Coder 8
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+library(arrow)
+library(gt)
+
+read_csv("validation_sets/coder_8.csv") |> 
+  gt()
+```
+
+## Coder 9
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+library(arrow)
+library(gt)
+
+read_csv("validation_sets/coder_9.csv") |> 
+  gt()
+```
+
+## Coder 10
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+library(arrow)
+library(gt)
+
+read_csv("validation_sets/coder_10.csv") |> 
+  gt()
+```
+
+## Coder 11
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+library(arrow)
+library(gt)
+
+read_csv("validation_sets/coder_11.csv") |> 
+  gt()
+```
+
+## Coder 12
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+library(arrow)
+library(gt)
+
+read_csv("validation_sets/coder_12.csv") |> 
+  gt()
+```
+
+## Coder 13
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+library(arrow)
+library(gt)
+
+read_csv("validation_sets/coder_13.csv") |> 
+  gt()
+```
+
+## Coder 14
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+library(arrow)
+library(gt)
+
+read_csv("validation_sets/coder_14.csv") |> 
+  gt()
+```
+
+## Coder 15
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+library(arrow)
+library(gt)
+
+read_csv("validation_sets/coder_15.csv") |> 
+  gt()
+```
+
+## Coder 16
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+library(arrow)
+library(gt)
+
+read_csv("validation_sets/coder_16.csv") |> 
+  gt()
+```
+
+## Coder 17
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+library(arrow)
+library(gt)
+
+read_csv("validation_sets/coder_17.csv") |> 
+  gt()
+```
+
+## Coder 18
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+library(arrow)
+library(gt)
+
+read_csv("validation_sets/coder_18.csv") |> 
+  gt()
+```
+
+## Coder 19
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+library(arrow)
+library(gt)
+
+read_csv("validation_sets/coder_19.csv") |> 
+  gt()
+```
+
+## Coder 20
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+library(arrow)
+library(gt)
+
+read_csv("validation_sets/coder_20.csv") |> 
+  gt()
+```
+
+## Coder 21
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+library(arrow)
+library(gt)
+
+read_csv("validation_sets/coder_21.csv") |> 
+  gt()
+```
+
