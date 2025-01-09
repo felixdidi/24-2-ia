@@ -1,0 +1,26 @@
+---
+title: "Aufgabe 10"
+message: false
+warning: false
+---
+
+## Planung Ihrer Analyse
+
+**Hypothesen und Forschungsfragen**:  
+
+Finalisieren Sie die konkreten Hypothesen oder Forschungsfragen Ihrer Gruppe. Erstellen Sie mindestens drei präzise Hypothesen oder Forschungsfragen, die als Grundlage für Ihre Analyse dienen.
+
+**Planung der Datenerhebung**:  
+
+Überlegen Sie, ob zusätzliche Schritte zur Datenerhebung erforderlich sind. Prüfen Sie beispielsweise, ob Sie weitere Nutzer:innenkommentare, Social-Media-Videos oder andere Datenquellen benötigen. Beachten Sie dabei die Hinweise aus **Sitzung 6** zur Umsetzbarkeit der Datenerhebung.
+
+**Planung der Inhaltsanalyse**:  
+
+Reflektieren Sie, ob weitere Schritte der Inhaltsanalyse notwendig sind. Dazu können gehören:  
+
+- Die Entwicklung zusätzlicher Kategorien für Ihre Analyse.  
+- Erste Experimente mit automatisierten Verfahren, um deren Umsetzbarkeit zu prüfen (siehe auch **Sitzung 7**).  
+
+**Einreichung**:  
+
+Reichen Sie Ihre Ergebnisse als Gruppe per E-Mail an den Dozenten ein. Deadline: **Mittwoch, 15.01., 12:00 Uhr mittags**. 
