@@ -1466,5 +1466,143 @@ Bild generiert mit FLUX.1-schnell: "A person on a TV screen hoarding gold coins 
 ## Überarbeitung des Codebuchs
 
 
+# Sitzung 11: Hypothesentests
+
+<br>
+
+![](img/11/data-analysis.jpeg){height=300px}
+
+<br>
+
+:::callout-warning
+## Ressourcen für diese Sitzung
+https://stats.ifp.uni-mainz.de/ba-datenanalyse/
+:::
+
+:::aside
+Bild generiert mit FLUX.1-schnell: "A woman on a TV screen doing data analysis as a black and white cartoon"
+:::
+
+
+## Agenda
+
+- Prototypisches Vorgehen
+- Auswertung / Hyothesentests
+- Gruppenfeedback
+
+## Prototypisches Vorgehen
+
+- Sie haben zur Verfügung:
+  - Kommentare klassifiziert auf die PSI-Kategorien
+  - Video-Segmente (je 1 Min) klassifiziert auf die Prädiktoren
+  - Reli-Test-Beispiel (mithilfe des Goldstandards)
+  - Validierungs-Beispiel (mithilfe des Goldstandards)
+- Sie müssen noch tun:
+  - ENTWEDER: Entwicklung weiterer Kategorien, dann...
+    - Entwicklung von Codebuch
+    - manuelle Codierung von Validierungsdatensatz (mind. 200 Kommentare / Segmente)
+    - Entwicklung von automatisierter Klassifikation (z.B.: <https://aistudio.google.com>)
+    - Umsetzung über Gemini APi oder IfP-Server
+    - Reli- und Vali-Test
+    - Hypothesentests
+  - ODER: Weitere Datenerhebung (z.B. Instagram, andere YouTube-Channels), dann...
+    - Methode zur Datenerhebung entwickeln
+    - Vorhandene Kategorien automatisiert klassifizieren
+    
+## Prototypisches Vorgehen
+
+Ggf. Präselektion von Kommentaren / Segmenten
+
+```{r}
+#| eval: false
+#| echo: true
+
+comments <- read_parquet("http://data.felix-dietrich.de/comments.parquet.gzip")
+
+comments_cleaned <- 
+  comments |>
+  group_by(channel_id) |> 
+  filter(n() > 1000) |> 
+  ungroup()
+
+comments_cleaned |> 
+  filter(str_detect("SUCHKRITERIUM")) |> 
+  pull(comment)
+
+# oder zufällig
+comments_cleaned |> 
+  slice_sample(n = 10) |> 
+  pull(comment)
+```
+
+## Prototypisches Vorgehen
+
+Finaler Datensatz sähe dann z.B. so aus:
+
+```
+  comment_id                 comment                                              cat_1 cat_2 cat_3
+   <chr>                      <chr>                                                <dbl> <dbl> <dbl>
+ 1 UgyJP-6d-f-Tp8FWqC14AaABAg "I love Penelope happy birthday princess!! Snatch\n…     1     0     0
+ 2 UgzhMxly_wACoAWU6394AaABAg "Happy birthday pea we all love you sucks to sucks"      0     0     0
+ 3 UgwK80w_07qlLUwnyo14AaABAg "I love you guys sooo much 😍😍😍 happy birthday P\…     0     1     0
+ 4 UgwTrNQ-8C_MjGIi22B4AaABAg "Love yaaaaa !!!!!!! Happy Birthday Penelope ❤️❤️❤️❤️❤️ …     0     0     0
+ 5 Ugwi7wGKDLmBrahMrQR4AaABAg "LITERALLY BEEN WAITING FOR YALL TO UPLOAD, I MISSE…     0     1     1
+ 6 UgzqjG7MYkeGo8KHqtl4AaABAg "Awwwe Happy 4th Birthday Penelope 🧁🍰🎂🎉🎁omg th…     1     1     1
+ 7 Ugy17coYF2kOgNmPnix4AaABAg "Happy birthday P!!! Can't believe she's 4 already.…     1     1     1
+ 8 Ugz5EHA4LLA5mjnok514AaABAg "I cannot believe how big she is getting omggg😫 ha…     1     1     0
+ 9 UgyLGznLHC85yYsaYlV4AaABAg "Happy birthday Penelope 😭 I can’t believe your 4!…     1     1     1
+10 UgxKv4x2gTxwp0tZrah4AaABAg "I missed seeing yafit!!!  Happy birthday P !!! Ble…     1     0     1
+```
+
+Aktuell schon vorhanden:
+
+```
+[1] "comment_id"          "published_at"        "comment"             "author_channel_id"  
+ [5] "video_id"            "channel_id"          "view_count"          "like_count"         
+ [9] "dislike_count"       "favorite_count"      "video_published_at"  "video_date"         
+[13] "video_comment_count"
+````
+
+## Auswertung: Deskriptivstatistik
+
+Machen Sie ein paar "Sanity-Checks" anhand der folgenden Deskriptivmaße
+
+- Maße der zentralen Tendenz (Mittelwert, Median, Minimum, Maximum)
+- Dispersionsmaße (Standardabweichung, Range)
+
+siehe: <https://stats.ifp.uni-mainz.de/ba-datenanalyse/deskriptive-statistik.html>
+
+## Auswertung: Hypothesentests / Inferenzstatistik
+
+Wir testen alle Hypothesen mit linearen Regressionsmodellen:
+
+- Wenn Vergleich von zwei Gruppen: UV = 0 oder 1 (wenn Sie mehr Gruppen haben, bitte melden)
+- Wenn Zusammenhangshypothese: Zwei metrisch skalierte Variablen (z.B. Intensität von Self-Disclosure & Intensität von PSI)
+
+```{r}
+#| eval: false
+#| echo: true
+
+lm(sympathy ~ self_disclosure, data = your_data) |>
+  report_table()
+```
+
+siehe: <https://stats.ifp.uni-mainz.de/ba-datenanalyse/korr-regression.html>
+
+## Gruppenfeedback
+
+- Hypothesen & Forschungsfragen sollten kohärent sein / einen "roten Faden" erkennbar machen
+- Dafür hilfreich: zentrale Problemstellung
+- Nochmal kritisch prüfen: Können wir die benötigten Informationen aus den Daten gewinnen?
+- Überlegungen: Operationalisierung von PSB
+- Codierung von Kinder vs. Eltern: 2 Gruppen, ggf. zusammenschließen
+- Gruppenspezifisches Feedback: jetzt
+
+***
+
+:::big-text
+Soweit Fragen?
+:::
+
 # Literaturangaben
 
