@@ -1802,6 +1802,148 @@ Eudaimonia
 <section id="überarbeitung-des-codebuchs" class="slide level2 center">
 <h2>Überarbeitung des Codebuchs</h2>
 </section></section>
+<section>
+<section id="sitzung-11-hypothesentests" class="title-slide slide level1 center">
+<h1>Sitzung 11: Hypothesentests</h1>
+<p><br></p>
+<p><img data-src="img/11/data-analysis.jpeg" height="300"></p>
+<p><br></p>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Ressourcen für diese Sitzung</strong></p>
+</div>
+<div class="callout-content">
+<p>https://stats.ifp.uni-mainz.de/ba-datenanalyse/</p>
+</div>
+</div>
+</div>
+
+<aside><div>
+<p>Bild generiert mit FLUX.1-schnell: “A woman on a TV screen doing data analysis as a black and white cartoon”</p>
+</div></aside></section>
+<section id="agenda-3" class="slide level2 center">
+<h2>Agenda</h2>
+<ul>
+<li>Prototypisches Vorgehen</li>
+<li>Auswertung / Hyothesentests</li>
+<li>Gruppenfeedback</li>
+</ul>
+</section>
+<section id="prototypisches-vorgehen" class="slide level2 center">
+<h2>Prototypisches Vorgehen</h2>
+<ul>
+<li>Sie haben zur Verfügung:
+<ul>
+<li>Kommentare klassifiziert auf die PSI-Kategorien</li>
+<li>Video-Segmente (je 1 Min) klassifiziert auf die Prädiktoren</li>
+<li>Reli-Test-Beispiel (mithilfe des Goldstandards)</li>
+<li>Validierungs-Beispiel (mithilfe des Goldstandards)</li>
+</ul></li>
+<li>Sie müssen noch tun:
+<ul>
+<li>ENTWEDER: Entwicklung weiterer Kategorien, dann…
+<ul>
+<li>Entwicklung von Codebuch</li>
+<li>manuelle Codierung von Validierungsdatensatz (mind. 200 Kommentare / Segmente)</li>
+<li>Entwicklung von automatisierter Klassifikation (z.B.: <a href="https://aistudio.google.com" class="uri">https://aistudio.google.com</a>)</li>
+<li>Umsetzung über Gemini APi oder IfP-Server</li>
+<li>Reli- und Vali-Test</li>
+<li>Hypothesentests</li>
+</ul></li>
+<li>ODER: Weitere Datenerhebung (z.B. Instagram, andere YouTube-Channels), dann…
+<ul>
+<li>Methode zur Datenerhebung entwickeln</li>
+<li>Vorhandene Kategorien automatisiert klassifizieren</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="prototypisches-vorgehen-1" class="slide level2 center">
+<h2>Prototypisches Vorgehen</h2>
+<p>Ggf. Präselektion von Kommentaren / Segmenten</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>comments <span class="ot">&lt;-</span> <span class="fu">read_parquet</span>(<span class="st">"http://data.felix-dietrich.de/comments.parquet.gzip"</span>)</span>
+<span id="cb17-2"><a></a></span>
+<span id="cb17-3"><a></a>comments_cleaned <span class="ot">&lt;-</span> </span>
+<span id="cb17-4"><a></a>  comments <span class="sc">|&gt;</span></span>
+<span id="cb17-5"><a></a>  <span class="fu">group_by</span>(channel_id) <span class="sc">|&gt;</span> </span>
+<span id="cb17-6"><a></a>  <span class="fu">filter</span>(<span class="fu">n</span>() <span class="sc">&gt;</span> <span class="dv">1000</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb17-7"><a></a>  <span class="fu">ungroup</span>()</span>
+<span id="cb17-8"><a></a></span>
+<span id="cb17-9"><a></a>comments_cleaned <span class="sc">|&gt;</span> </span>
+<span id="cb17-10"><a></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(<span class="st">"SUCHKRITERIUM"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb17-11"><a></a>  <span class="fu">pull</span>(comment)</span>
+<span id="cb17-12"><a></a></span>
+<span id="cb17-13"><a></a><span class="co"># oder zufällig</span></span>
+<span id="cb17-14"><a></a>comments_cleaned <span class="sc">|&gt;</span> </span>
+<span id="cb17-15"><a></a>  <span class="fu">slice_sample</span>(<span class="at">n =</span> <span class="dv">10</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb17-16"><a></a>  <span class="fu">pull</span>(comment)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="prototypisches-vorgehen-2" class="slide level2 center">
+<h2>Prototypisches Vorgehen</h2>
+<p>Finaler Datensatz sähe dann z.B. so aus:</p>
+<pre><code>  comment_id                 comment                                              cat_1 cat_2 cat_3
+   &lt;chr&gt;                      &lt;chr&gt;                                                &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1 UgyJP-6d-f-Tp8FWqC14AaABAg "I love Penelope happy birthday princess!! Snatch\n…     1     0     0
+ 2 UgzhMxly_wACoAWU6394AaABAg "Happy birthday pea we all love you sucks to sucks"      0     0     0
+ 3 UgwK80w_07qlLUwnyo14AaABAg "I love you guys sooo much 😍😍😍 happy birthday P\…     0     1     0
+ 4 UgwTrNQ-8C_MjGIi22B4AaABAg "Love yaaaaa !!!!!!! Happy Birthday Penelope ❤️❤️❤️❤️❤️ …     0     0     0
+ 5 Ugwi7wGKDLmBrahMrQR4AaABAg "LITERALLY BEEN WAITING FOR YALL TO UPLOAD, I MISSE…     0     1     1
+ 6 UgzqjG7MYkeGo8KHqtl4AaABAg "Awwwe Happy 4th Birthday Penelope 🧁🍰🎂🎉🎁omg th…     1     1     1
+ 7 Ugy17coYF2kOgNmPnix4AaABAg "Happy birthday P!!! Can't believe she's 4 already.…     1     1     1
+ 8 Ugz5EHA4LLA5mjnok514AaABAg "I cannot believe how big she is getting omggg😫 ha…     1     1     0
+ 9 UgyLGznLHC85yYsaYlV4AaABAg "Happy birthday Penelope 😭 I can’t believe your 4!…     1     1     1
+10 UgxKv4x2gTxwp0tZrah4AaABAg "I missed seeing yafit!!!  Happy birthday P !!! Ble…     1     0     1</code></pre>
+<p>Aktuell schon vorhanden:</p>
+<pre><code>[1] "comment_id"          "published_at"        "comment"             "author_channel_id"  
+ [5] "video_id"            "channel_id"          "view_count"          "like_count"         
+ [9] "dislike_count"       "favorite_count"      "video_published_at"  "video_date"         
+[13] "video_comment_count"</code></pre>
+</section>
+<section id="auswertung-deskriptivstatistik" class="slide level2 center">
+<h2>Auswertung: Deskriptivstatistik</h2>
+<p>Machen Sie ein paar “Sanity-Checks” anhand der folgenden Deskriptivmaße</p>
+<ul>
+<li>Maße der zentralen Tendenz (Mittelwert, Median, Minimum, Maximum)</li>
+<li>Dispersionsmaße (Standardabweichung, Range)</li>
+</ul>
+<p>siehe: <a href="https://stats.ifp.uni-mainz.de/ba-datenanalyse/deskriptive-statistik.html" class="uri">https://stats.ifp.uni-mainz.de/ba-datenanalyse/deskriptive-statistik.html</a></p>
+</section>
+<section id="auswertung-hypothesentests-inferenzstatistik" class="slide level2 center">
+<h2>Auswertung: Hypothesentests / Inferenzstatistik</h2>
+<p>Wir testen alle Hypothesen mit linearen Regressionsmodellen:</p>
+<ul>
+<li>Wenn Vergleich von zwei Gruppen: UV = 0 oder 1 (wenn Sie mehr Gruppen haben, bitte melden)</li>
+<li>Wenn Zusammenhangshypothese: Zwei metrisch skalierte Variablen (z.B. Intensität von Self-Disclosure &amp; Intensität von PSI)</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">lm</span>(sympathy <span class="sc">~</span> self_disclosure, <span class="at">data =</span> your_data) <span class="sc">|&gt;</span></span>
+<span id="cb20-2"><a></a>  <span class="fu">report_table</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>siehe: <a href="https://stats.ifp.uni-mainz.de/ba-datenanalyse/korr-regression.html" class="uri">https://stats.ifp.uni-mainz.de/ba-datenanalyse/korr-regression.html</a></p>
+</section>
+<section id="gruppenfeedback" class="slide level2 center">
+<h2>Gruppenfeedback</h2>
+<ul>
+<li>Hypothesen &amp; Forschungsfragen sollten kohärent sein / einen “roten Faden” erkennbar machen</li>
+<li>Dafür hilfreich: zentrale Problemstellung</li>
+<li>Nochmal kritisch prüfen: Können wir die benötigten Informationen aus den Daten gewinnen?</li>
+<li>Überlegungen: Operationalisierung von PSB</li>
+<li>Codierung von Kinder vs.&nbsp;Eltern: 2 Gruppen, ggf. zusammenschließen</li>
+<li>Gruppenspezifisches Feedback: jetzt</li>
+</ul>
+</section>
+<section class="slide level2 center">
+
+<div class="big-text">
+<p>Soweit Fragen?</p>
+</div>
+</section></section>
 <section id="literaturangaben" class="title-slide slide level1 smaller scrollable">
 <h1>Literaturangaben</h1>
 

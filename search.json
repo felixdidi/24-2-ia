@@ -674,6 +674,83 @@
     ]
   },
   {
+    "objectID": "slides/slides.html#agenda-3",
+    "href": "slides/slides.html#agenda-3",
+    "title": "BA Inhaltsanalyse",
+    "section": "Agenda",
+    "text": "Agenda\n\nPrototypisches Vorgehen\nAuswertung / Hyothesentests\nGruppenfeedback",
+    "crumbs": [
+      "Materialien",
+      "Folien"
+    ]
+  },
+  {
+    "objectID": "slides/slides.html#prototypisches-vorgehen",
+    "href": "slides/slides.html#prototypisches-vorgehen",
+    "title": "BA Inhaltsanalyse",
+    "section": "Prototypisches Vorgehen",
+    "text": "Prototypisches Vorgehen\n\nSie haben zur Verfügung:\n\nKommentare klassifiziert auf die PSI-Kategorien\nVideo-Segmente (je 1 Min) klassifiziert auf die Prädiktoren\nReli-Test-Beispiel (mithilfe des Goldstandards)\nValidierungs-Beispiel (mithilfe des Goldstandards)\n\nSie müssen noch tun:\n\nENTWEDER: Entwicklung weiterer Kategorien, dann…\n\nEntwicklung von Codebuch\nmanuelle Codierung von Validierungsdatensatz (mind. 200 Kommentare / Segmente)\nEntwicklung von automatisierter Klassifikation (z.B.: https://aistudio.google.com)\nUmsetzung über Gemini APi oder IfP-Server\nReli- und Vali-Test\nHypothesentests\n\nODER: Weitere Datenerhebung (z.B. Instagram, andere YouTube-Channels), dann…\n\nMethode zur Datenerhebung entwickeln\nVorhandene Kategorien automatisiert klassifizieren",
+    "crumbs": [
+      "Materialien",
+      "Folien"
+    ]
+  },
+  {
+    "objectID": "slides/slides.html#prototypisches-vorgehen-1",
+    "href": "slides/slides.html#prototypisches-vorgehen-1",
+    "title": "BA Inhaltsanalyse",
+    "section": "Prototypisches Vorgehen",
+    "text": "Prototypisches Vorgehen\nGgf. Präselektion von Kommentaren / Segmenten\n\ncomments &lt;- read_parquet(\"http://data.felix-dietrich.de/comments.parquet.gzip\")\n\ncomments_cleaned &lt;- \n  comments |&gt;\n  group_by(channel_id) |&gt; \n  filter(n() &gt; 1000) |&gt; \n  ungroup()\n\ncomments_cleaned |&gt; \n  filter(str_detect(\"SUCHKRITERIUM\")) |&gt; \n  pull(comment)\n\n# oder zufällig\ncomments_cleaned |&gt; \n  slice_sample(n = 10) |&gt; \n  pull(comment)",
+    "crumbs": [
+      "Materialien",
+      "Folien"
+    ]
+  },
+  {
+    "objectID": "slides/slides.html#prototypisches-vorgehen-2",
+    "href": "slides/slides.html#prototypisches-vorgehen-2",
+    "title": "BA Inhaltsanalyse",
+    "section": "Prototypisches Vorgehen",
+    "text": "Prototypisches Vorgehen\nFinaler Datensatz sähe dann z.B. so aus:\n  comment_id                 comment                                              cat_1 cat_2 cat_3\n   &lt;chr&gt;                      &lt;chr&gt;                                                &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1 UgyJP-6d-f-Tp8FWqC14AaABAg \"I love Penelope happy birthday princess!! Snatch\\n…     1     0     0\n 2 UgzhMxly_wACoAWU6394AaABAg \"Happy birthday pea we all love you sucks to sucks\"      0     0     0\n 3 UgwK80w_07qlLUwnyo14AaABAg \"I love you guys sooo much 😍😍😍 happy birthday P\\…     0     1     0\n 4 UgwTrNQ-8C_MjGIi22B4AaABAg \"Love yaaaaa !!!!!!! Happy Birthday Penelope ❤️❤️❤️❤️❤️ …     0     0     0\n 5 Ugwi7wGKDLmBrahMrQR4AaABAg \"LITERALLY BEEN WAITING FOR YALL TO UPLOAD, I MISSE…     0     1     1\n 6 UgzqjG7MYkeGo8KHqtl4AaABAg \"Awwwe Happy 4th Birthday Penelope 🧁🍰🎂🎉🎁omg th…     1     1     1\n 7 Ugy17coYF2kOgNmPnix4AaABAg \"Happy birthday P!!! Can't believe she's 4 already.…     1     1     1\n 8 Ugz5EHA4LLA5mjnok514AaABAg \"I cannot believe how big she is getting omggg😫 ha…     1     1     0\n 9 UgyLGznLHC85yYsaYlV4AaABAg \"Happy birthday Penelope 😭 I can’t believe your 4!…     1     1     1\n10 UgxKv4x2gTxwp0tZrah4AaABAg \"I missed seeing yafit!!!  Happy birthday P !!! Ble…     1     0     1\nAktuell schon vorhanden:\n[1] \"comment_id\"          \"published_at\"        \"comment\"             \"author_channel_id\"  \n [5] \"video_id\"            \"channel_id\"          \"view_count\"          \"like_count\"         \n [9] \"dislike_count\"       \"favorite_count\"      \"video_published_at\"  \"video_date\"         \n[13] \"video_comment_count\"",
+    "crumbs": [
+      "Materialien",
+      "Folien"
+    ]
+  },
+  {
+    "objectID": "slides/slides.html#auswertung-deskriptivstatistik",
+    "href": "slides/slides.html#auswertung-deskriptivstatistik",
+    "title": "BA Inhaltsanalyse",
+    "section": "Auswertung: Deskriptivstatistik",
+    "text": "Auswertung: Deskriptivstatistik\nMachen Sie ein paar “Sanity-Checks” anhand der folgenden Deskriptivmaße\n\nMaße der zentralen Tendenz (Mittelwert, Median, Minimum, Maximum)\nDispersionsmaße (Standardabweichung, Range)\n\nsiehe: https://stats.ifp.uni-mainz.de/ba-datenanalyse/deskriptive-statistik.html",
+    "crumbs": [
+      "Materialien",
+      "Folien"
+    ]
+  },
+  {
+    "objectID": "slides/slides.html#auswertung-hypothesentests-inferenzstatistik",
+    "href": "slides/slides.html#auswertung-hypothesentests-inferenzstatistik",
+    "title": "BA Inhaltsanalyse",
+    "section": "Auswertung: Hypothesentests / Inferenzstatistik",
+    "text": "Auswertung: Hypothesentests / Inferenzstatistik\nWir testen alle Hypothesen mit linearen Regressionsmodellen:\n\nWenn Vergleich von zwei Gruppen: UV = 0 oder 1 (wenn Sie mehr Gruppen haben, bitte melden)\nWenn Zusammenhangshypothese: Zwei metrisch skalierte Variablen (z.B. Intensität von Self-Disclosure & Intensität von PSI)\n\n\nlm(sympathy ~ self_disclosure, data = your_data) |&gt;\n  report_table()\n\nsiehe: https://stats.ifp.uni-mainz.de/ba-datenanalyse/korr-regression.html",
+    "crumbs": [
+      "Materialien",
+      "Folien"
+    ]
+  },
+  {
+    "objectID": "slides/slides.html#gruppenfeedback",
+    "href": "slides/slides.html#gruppenfeedback",
+    "title": "BA Inhaltsanalyse",
+    "section": "Gruppenfeedback",
+    "text": "Gruppenfeedback\n\nHypothesen & Forschungsfragen sollten kohärent sein / einen “roten Faden” erkennbar machen\nDafür hilfreich: zentrale Problemstellung\nNochmal kritisch prüfen: Können wir die benötigten Informationen aus den Daten gewinnen?\nÜberlegungen: Operationalisierung von PSB\nCodierung von Kinder vs. Eltern: 2 Gruppen, ggf. zusammenschließen\nGruppenspezifisches Feedback: jetzt",
+    "crumbs": [
+      "Materialien",
+      "Folien"
+    ]
+  },
+  {
     "objectID": "exercises/validation.html",
     "href": "exercises/validation.html",
     "title": "Kommentar Validierung: Goldstandard",
